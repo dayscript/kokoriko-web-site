@@ -8,6 +8,11 @@
         "drupal/backup_migrate": "^4.0",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.5",
+        "drupal/devel": "^1.2",
+        "drupal/empty_front_page": "1.x-dev",
+        "drupal/fontyourface": "^3.2",
+        "drupal/front": "^1.0@beta",
+        "drupal/promote_disable": "^1.0@alpha",
         "drupal/zurb_foundation": "^5.0@beta",
         "drush/drush": "~8.0|^9.0.0-beta8",
         "hussainweb/drupal-composer-helper": "^1.0"

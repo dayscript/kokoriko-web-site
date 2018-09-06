@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d47de4459f3bd6f4a9443798fd4e0cfa",
+    "content-hash": "2120c6edf7a0c56b47a19977575f0623",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2335,6 +2335,306 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "time": "2018-08-01T20:50:42+00:00"
+        },
+        {
+            "name": "drupal/devel",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/devel",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/devel-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "01f3349ef75f6e21fceef24be9d3d6506ca29647"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "suggest": {
+                "symfony/var-dumper": "Pretty print complex values better with var-dumper available"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1507197844",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Moshe Weitzman",
+                    "homepage": "https://github.com/weitzman",
+                    "email": "weitzman@tejasa.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Hans Salvisberg",
+                    "homepage": "https://www.drupal.org/u/salvis",
+                    "email": "drupal@salvisberg.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Luca Lusso",
+                    "homepage": "https://www.drupal.org/u/lussoluca",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Marco (willzyx)",
+                    "homepage": "https://www.drupal.org/u/willzyx",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/3236/committers"
+                },
+                {
+                    "name": "salvis",
+                    "homepage": "https://www.drupal.org/user/82964"
+                },
+                {
+                    "name": "willzyx",
+                    "homepage": "https://www.drupal.org/user/1043862"
+                }
+            ],
+            "description": "Various blocks, pages, and functions for developers.",
+            "homepage": "http://drupal.org/project/devel",
+            "support": {
+                "source": "http://cgit.drupalcode.org/devel",
+                "issues": "http://drupal.org/project/devel",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/empty_front_page",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/empty_front_page",
+                "reference": "e4b5065eeaf69e98b587306d2bb504f9df83a151"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1414811628",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "pfournier",
+                    "homepage": "https://www.drupal.org/user/160468"
+                }
+            ],
+            "description": "Remove default content from the front page.",
+            "homepage": "https://www.drupal.org/project/empty_front_page",
+            "support": {
+                "source": "http://cgit.drupalcode.org/empty_front_page"
+            },
+            "time": "2014-10-31T23:40:10+00:00"
+        },
+        {
+            "name": "drupal/fontyourface",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/fontyourface",
+                "reference": "8.x-3.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/fontyourface-8.x-3.2.zip",
+                "reference": "8.x-3.2",
+                "shasum": "f509b3dc3e9849ca1cced5607a29d8319709c9ec"
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.2",
+                    "datestamp": "1517458980",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "BTMash",
+                    "homepage": "https://www.drupal.org/user/60422"
+                },
+                {
+                    "name": "BarisW",
+                    "homepage": "https://www.drupal.org/user/107229"
+                },
+                {
+                    "name": "Drave Robber",
+                    "homepage": "https://www.drupal.org/user/984338"
+                },
+                {
+                    "name": "sreynen",
+                    "homepage": "https://www.drupal.org/user/109890"
+                }
+            ],
+            "description": "Web font management tools.",
+            "homepage": "https://www.drupal.org/project/fontyourface",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/fontyourface",
+                "issues": "https://drupal.org/project/issues/fontyourface"
+            }
+        },
+        {
+            "name": "drupal/front",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/front",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/front-8.x-1.0-beta1.zip",
+                "reference": "8.x-1.0-beta1",
+                "shasum": "cee664aaf0eac6829bd551ec5213561d1cb70bce"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1521187985",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dublin Drupaller",
+                    "homepage": "https://www.drupal.org/user/8625"
+                },
+                {
+                    "name": "Simon Georges",
+                    "homepage": "https://www.drupal.org/user/172312"
+                },
+                {
+                    "name": "asenenko",
+                    "homepage": "https://www.drupal.org/user/2641733"
+                },
+                {
+                    "name": "estoyausente",
+                    "homepage": "https://www.drupal.org/user/1232954"
+                },
+                {
+                    "name": "timhilliard",
+                    "homepage": "https://www.drupal.org/user/195493"
+                }
+            ],
+            "homepage": "https://www.drupal.org/project/front",
+            "support": {
+                "source": "http://cgit.drupalcode.org/front"
+            }
+        },
+        {
+            "name": "drupal/promote_disable",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/promote_disable",
+                "reference": "8.x-1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/promote_disable-8.x-1.0-alpha1.zip",
+                "reference": "8.x-1.0-alpha1",
+                "shasum": "b95af13248ee369426207e18c61052c84610dd6a"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1",
+                    "datestamp": "1502175544",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jamiehollern",
+                    "homepage": "https://www.drupal.org/user/884154"
+                },
+                {
+                    "name": "nehajyoti",
+                    "homepage": "https://www.drupal.org/user/2804915"
+                }
+            ],
+            "description": "Allows a user to disable the 'Promote to front page' option when creating nodes.",
+            "homepage": "https://www.drupal.org/project/promote_disable",
+            "support": {
+                "source": "http://cgit.drupalcode.org/promote_disable"
+            }
         },
         {
             "name": "drupal/zurb_foundation",
@@ -7063,6 +7363,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/empty_front_page": 20,
+        "drupal/front": 10,
+        "drupal/promote_disable": 15,
         "drupal/zurb_foundation": 10
     },
     "prefer-stable": true,
