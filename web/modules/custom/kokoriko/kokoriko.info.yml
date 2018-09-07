@@ -1,0 +1,5 @@
+name: 'kokoriko'
+type: module
+description: 'Modulo Kokoriko'
+core: 8.x
+package: 'Kokoriko'

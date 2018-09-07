@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains kokoriko.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function kokoriko_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kokoriko module.
+    case 'help.page.kokoriko':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Modulo Kokoriko') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function kokoriko_theme($existing, $type, $theme, $path) {
+  return [
+    'kokoriko' => [
+      'render element' => 'children',
+    ],
+
+    'full_image_block' => array(
+     'variables' => array('data' => NULL),
+   ),
+  ];
+}

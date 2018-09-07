@@ -1,0 +1,14 @@
+{
+  "name": "drupal/kokoriko",
+  "type": "drupal-module",
+  "description": "Modulo Kokoriko",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/kokoriko",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/kokoriko",
+    "source": "http://cgit.drupalcode.org/kokoriko"
+  },
+  "require": { }
+}
