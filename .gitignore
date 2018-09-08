@@ -3,7 +3,8 @@
 /vendor/
 /web/core/
 /web/modules/contrib/
-/web/themes/contrib/
+/web/themes/contrib/adminimal_theme/
+/web/themes/contrib/zurb_foundation/
 /web/profiles/contrib/
 /web/libraries/
 

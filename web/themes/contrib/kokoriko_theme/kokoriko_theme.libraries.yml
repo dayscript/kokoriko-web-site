@@ -1,0 +1,11 @@
+global:
+  version: VERSION
+  css:
+    base:
+      css/kokoriko_theme.css: {}
+  js:
+    js/kokoriko.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/modernizr
