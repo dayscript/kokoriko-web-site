@@ -1,0 +1,18 @@
+<div class="content large-12 medium-12 columns">
+  {% for field in content.ds_content %}
+      {% if field[0]['#markup'] %}
+      <div class="large-6 medium-6 columns">
+        <div class ="large-12 medium-12 field">
+         <span class="field-price">
+           $ {{ field[0]['#markup'] | number_format(0, '.') }}
+         </span>
+        </div>
+        <div class ="large-12 medium-12 field">
+         <span class="field-label">
+           {{field['#title']}}
+         </span>
+         </div>
+      </div>
+      {% endif %}
+  {% endfor %}
+</div>

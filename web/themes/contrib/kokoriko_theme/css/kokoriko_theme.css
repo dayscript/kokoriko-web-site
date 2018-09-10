@@ -6768,19 +6768,125 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
-body {
-  background-color: #000; }
-
 a {
   color: #FFFFFF; }
+
+section#block-kokoriko-theme-content {
+  display: none; }
+
+h1 {
+  text-transform: uppercase; }
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #ec333b; }
+  h2::before {
+    font-family: 'kokoriko';
+    font-style: normal;
+    font-weight: 400;
+    content: '\E800'; }
+  h2::after {
+    font-family: 'kokoriko';
+    font-style: normal;
+    font-weight: 400;
+    content: '\E801'; }
+
+h3 {
+  text-transform: uppercase;
+  text-align: center; }
+
+.style-none {
+  list-style: none; }
 
 .meta-header {
   background-color: #d0261a; }
 
+.header {
+  position: relative;
+  height: 987px; }
+
+.path-frontpage .body-wrapper {
+  background: url(/themes/contrib/kokoriko_theme/images/texture-paper.jpg); }
+
+#footer-first {
+  background-color: #000000; }
+
+#footer-meddle {
+  background-color: #ec333b; }
+
+#footer-last {
+  background-color: #FFFFFF; }
+
+#footer-end {
+  background-color: #ec333b; }
+
+#block-imagendestacada {
+  position: absolute;
+  padding: 0;
+  background-image: url("/themes/contrib/kokoriko_theme/images/brush-slide.png"); }
+  #block-imagendestacada .field-name-field-imagen-de-fondo img {
+    width: 100%;
+    max-height: 987px; }
+  #block-imagendestacada .field-name-field-imagen-bottom img {
+    position: absolute;
+    bottom: -30px;
+    width: 100%; }
+
 #block-kokoriko-theme-branding {
-  max-width: 209px;
   float: left;
   padding: 0 9px; }
+
+#block-views-block-para-chuparse-los-dedos-block-1 {
+  margin-bottom: 70px; }
+  #block-views-block-para-chuparse-los-dedos-block-1 h3 {
+    font-size: 20px;
+    font-weight: 700;
+    max-width: 253px;
+    margin: 0 auto; }
+  #block-views-block-para-chuparse-los-dedos-block-1 li {
+    margin-bottom: 50px; }
+  #block-views-block-para-chuparse-los-dedos-block-1 .price .field {
+    text-align: center; }
+  #block-views-block-para-chuparse-los-dedos-block-1 .price .field-price {
+    font-size: 35px;
+    color: #ec333b; }
+  #block-views-block-para-chuparse-los-dedos-block-1 .price .field-label {
+    text-transform: uppercase; }
+  #block-views-block-para-chuparse-los-dedos-block-1 .more-link {
+    text-align: center; }
+    #block-views-block-para-chuparse-los-dedos-block-1 .more-link a {
+      display: inline-block;
+      background: #000000;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      padding: 10px 10px;
+      font-size: 24px; }
+
+#block-acomulakokoripesos {
+  padding: 40px 0;
+  text-align: right; }
+  #block-acomulakokoripesos .more-link {
+    text-align: right;
+    margin: 20px; }
+    #block-acomulakokoripesos .more-link a {
+      display: inline-block;
+      background: #ec333b;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      padding: 10px 10px;
+      font-size: 25px;
+      padding: 10px 51px; }
+
+#block-views-block-domicilios-block-1 h2 {
+  color: #FFFFFF;
+  text-align: left; }
+
+#block-views-block-domicilios-block-1 li {
+  list-style: none; }
+  #block-views-block-domicilios-block-1 li h4 {
+    text-transform: uppercase;
+    color: #FFFFFF; }
 
 #block-metamenu li {
   list-style: none; }

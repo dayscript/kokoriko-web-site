@@ -36,6 +36,14 @@ function kokoriko_theme_preprocess_node(&$variables) {
  * Add convenience variables and template suggestions
  */
 function kokoriko_theme_preprocess_page(&$variables) {
+
+  // use to load custom type block in page tpl
+  $block = \Drupal\block\Entity\Block::load('imagendestacada');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+  $variables['imagendestacada'] = $block_content;
+
 }
 
 /**

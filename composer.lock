@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7066464e1e664eef159e7b35ab79abb6",
+    "content-hash": "f2f20bf450d89ae79c58914c81e5603d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2790,6 +2790,64 @@
             "time": "2014-10-31T23:40:10+00:00"
         },
         {
+            "name": "drupal/entity_reference_revisions",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity_reference_revisions",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "417250a105afe8febef508c7f981d02cb138752d"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/diff": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1527241084",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Frans",
+                    "homepage": "https://www.drupal.org/user/514222"
+                },
+                {
+                    "name": "jeroen.b",
+                    "homepage": "https://www.drupal.org/user/1853532"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                }
+            ],
+            "description": "Adds a Entity Reference field type with revision support.",
+            "homepage": "https://www.drupal.org/project/entity_reference_revisions",
+            "support": {
+                "source": "http://cgit.drupalcode.org/entity_reference_revisions"
+            }
+        },
+        {
             "name": "drupal/field_collection",
             "version": "1.0.0-alpha1",
             "source": {
@@ -2850,6 +2908,121 @@
             "homepage": "https://www.drupal.org/project/field_collection",
             "support": {
                 "source": "http://cgit.drupalcode.org/field_collection"
+            }
+        },
+        {
+            "name": "drupal/file_entity",
+            "version": "2.0.0-beta6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/file_entity",
+                "reference": "8.x-2.0-beta6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/file_entity-8.x-2.0-beta6.zip",
+                "reference": "8.x-2.0-beta6",
+                "shasum": "f39fbb263528bff7442fbe9651a0124a0c7d20b4"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/token": "*"
+            },
+            "require-dev": {
+                "drupal/pathauto": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-beta6",
+                    "datestamp": "1522617782",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "DamienMcKenna",
+                    "homepage": "https://www.drupal.org/user/108450"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Devin Carlson",
+                    "homepage": "https://www.drupal.org/user/290182"
+                },
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "Drupal media CI",
+                    "homepage": "https://www.drupal.org/user/3057985"
+                },
+                {
+                    "name": "JacobSingh",
+                    "homepage": "https://www.drupal.org/user/68912"
+                },
+                {
+                    "name": "JeffM2001",
+                    "homepage": "https://www.drupal.org/user/262092"
+                },
+                {
+                    "name": "ParisLiakos",
+                    "homepage": "https://www.drupal.org/user/1011436"
+                },
+                {
+                    "name": "aaron",
+                    "homepage": "https://www.drupal.org/user/33420"
+                },
+                {
+                    "name": "arthurf",
+                    "homepage": "https://www.drupal.org/user/27259"
+                },
+                {
+                    "name": "dsnopek",
+                    "homepage": "https://www.drupal.org/user/266527"
+                },
+                {
+                    "name": "effulgentsia",
+                    "homepage": "https://www.drupal.org/user/78040"
+                },
+                {
+                    "name": "joseph.olstad",
+                    "homepage": "https://www.drupal.org/user/1321830"
+                },
+                {
+                    "name": "mpotter",
+                    "homepage": "https://www.drupal.org/user/616192"
+                },
+                {
+                    "name": "robeano",
+                    "homepage": "https://www.drupal.org/user/67660"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                }
+            ],
+            "description": "Extends Drupal file entities to be fieldable and viewable.",
+            "homepage": "https://www.drupal.org/project/file_entity",
+            "support": {
+                "source": "http://cgit.drupalcode.org/file_entity"
             }
         },
         {
@@ -3076,6 +3249,61 @@
             }
         },
         {
+            "name": "drupal/module_filter",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/module_filter",
+                "reference": "8.x-3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/module_filter-8.x-3.1.zip",
+                "reference": "8.x-3.1",
+                "shasum": "39d627ce60280ae54bcf9beae217b85cce1969e4"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.1",
+                    "datestamp": "1507650844",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "greenSkin",
+                    "homepage": "https://www.drupal.org/user/173855"
+                },
+                {
+                    "name": "realityloop",
+                    "homepage": "https://www.drupal.org/user/139189"
+                },
+                {
+                    "name": "shumushin",
+                    "homepage": "https://www.drupal.org/user/22093"
+                }
+            ],
+            "description": "Filter the modules list.",
+            "homepage": "https://www.drupal.org/project/module_filter",
+            "support": {
+                "source": "http://cgit.drupalcode.org/module_filter"
+            }
+        },
+        {
             "name": "drupal/plugin",
             "version": "2.5.0",
             "source": {
@@ -3186,6 +3414,187 @@
             "homepage": "https://www.drupal.org/project/promote_disable",
             "support": {
                 "source": "http://cgit.drupalcode.org/promote_disable"
+            }
+        },
+        {
+            "name": "drupal/quick_clone",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/quick_clone",
+                "reference": "8.x-1.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/quick_clone-8.x-1.0-beta3.zip",
+                "reference": "8.x-1.0-beta3",
+                "shasum": "9d86a2aac97b6f4cda0ca083595fa0552095267d"
+            },
+            "require": {
+                "drupal/core": "^8.2.0"
+            },
+            "require-dev": {
+                "drupal/diff": "*",
+                "drupal/entity_reference_revisions": "*",
+                "drupal/field_group": "*",
+                "drupal/inline_entity_form": "*",
+                "drupal/paragraphs": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta3",
+                    "datestamp": "1525943884",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "jorgik",
+                    "homepage": "https://www.drupal.org/user/3297381"
+                }
+            ],
+            "description": "Module which allow cloning nodes with paragraph fields",
+            "homepage": "https://www.drupal.org/project/quick_clone",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/quick_clone",
+                "issues": "https://www.drupal.org/project/issues/quick_clone"
+            }
+        },
+        {
+            "name": "drupal/token",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/token",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "fd8d854eaa3fd7698694f4d9a9d66dc437e19cd0"
+            },
+            "require": {
+                "drupal/core": "^8.5"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1536408480",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "eaton",
+                    "homepage": "https://www.drupal.org/user/16496"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "greggles",
+                    "homepage": "https://www.drupal.org/user/36762"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "Provides a user interface for the Token API and some missing core tokens.",
+            "homepage": "https://www.drupal.org/project/token",
+            "support": {
+                "source": "http://cgit.drupalcode.org/token"
+            }
+        },
+        {
+            "name": "drupal/twig_vardumper",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/twig_vardumper",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/twig_vardumper-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "911106c95a713458c90fbe88885a628edf59f305"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/var-dumper": "~2.7|^3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1518539880",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Ruben Egiguren a.k.a keopx",
+                    "homepage": "https://www.drupal.org/user/377362",
+                    "email": "keopx@keopx.net"
+                }
+            ],
+            "description": "Twig vardumper provides a better dump() and vardumper() function that can help you debug Twig variables.",
+            "homepage": "https://www.drupal.org/project/twig_vardumper",
+            "keywords": [
+                "Development",
+                "Drupal",
+                "Twig"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/twig_vardumper",
+                "issues": "https://www.drupal.org/project/issues/twig_vardumper"
             }
         },
         {
@@ -8019,8 +8428,10 @@
     "stability-flags": {
         "drupal/empty_front_page": 20,
         "drupal/field_collection": 15,
+        "drupal/file_entity": 10,
         "drupal/front": 10,
         "drupal/promote_disable": 15,
+        "drupal/quick_clone": 10,
         "drupal/webform": 5,
         "drupal/zurb_foundation": 10
     },

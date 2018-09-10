@@ -1,1 +1,21 @@
 // Non-modular or client styles for .l-footer region.
+footer{
+  // margin: 0 0 0 0 !important;
+  // max-width: 100% !important;
+}
+
+#footer-first{
+    background-color: $black;
+}
+
+#footer-meddle{
+    background-color: $color-title;
+}
+
+#footer-last{
+    background-color: $white;
+}
+
+#footer-end{
+  background-color: $color-title;
+}

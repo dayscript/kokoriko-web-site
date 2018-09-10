@@ -7,10 +7,47 @@
 // %font-serif      { font-family: serif; }
 
 body{
-  background-color: #000;
+  // background-color: #000;
 }
 
 
 a {
   color:$white;
+}
+
+
+section#block-kokoriko-theme-content {
+    display: none;
+}
+
+h1{
+ text-transform: uppercase;
+}
+h2{
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-title;
+  &::before{
+    font-family: 'kokoriko';
+    font-style: normal;
+    font-weight: 400;
+    content: '\E800';
+  }
+  &::after{
+    font-family: 'kokoriko';
+    font-style: normal;
+    font-weight: 400;
+    content: '\E801';
+  }
+}
+
+h3{
+  text-transform: uppercase;
+  text-align: center; 
+
+}
+
+
+.style-none {
+  list-style: none;
 }
