@@ -1,3 +1,4 @@
+
 // Common abstract classes to extend or parametrics are stored here.
 
 // Example parametrics.
@@ -16,9 +17,9 @@ a {
 }
 
 
-section#block-kokoriko-theme-content {
-    display: none;
-}
+// section#block-kokoriko-theme-content {
+//     display: none;
+// }
 
 h1{
  text-transform: uppercase;
@@ -27,6 +28,7 @@ h2{
   text-transform: uppercase;
   text-align: center;
   color: $color-title;
+  //font-size: 85px;
   &::before{
     font-family: 'kokoriko';
     font-style: normal;
@@ -43,7 +45,7 @@ h2{
 
 h3{
   text-transform: uppercase;
-  text-align: center; 
+  text-align: center;
 
 }
 

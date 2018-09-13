@@ -1,17 +1,18 @@
 #block-imagendestacada{
-  position: absolute;
+  //position: absolute;
   padding: 0;
+  z-index: -1;
   background-image: url('/themes/contrib/kokoriko_theme/images/brush-slide.png');
   .field-name-field-imagen-de-fondo{
     img{
       width: 100%;
-      max-height: 987px;
+      max-height: 955px;
     }
   }
   .field-name-field-imagen-bottom{
     img{
       position: absolute;
-      bottom: -30px;
+      bottom: 0px;
       width: 100%;
     }
   }
@@ -85,16 +86,55 @@
 
 
 #block-views-block-domicilios-block-1{
+  padding: 72px 0 113px 0px;
+}
+
+
+
+#block-views-block-domicilios-block-1{
   h2{
     color: $white;
     text-align: left;
+  }
+  .views-field-field-telefono{
+    h4{
+      text-align: right;
+    }
   }
   li{
     list-style: none;
     h4{
       text-transform: uppercase;
       color:$white;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 2px 0;
 
     }
+  }
+}
+
+
+#block-views-block-domicilios-block-1{
+  h2{
+    &::before{content: ""}
+    &::after{content: ""}
+  }
+  ul{
+    margin:0;
+    li{
+      margin:0;
+    }
+    div{
+      margin: 0;
+    }
+  }
+}
+
+#block-webform{
+  h2{
+    text-align: left;
+    &::before{content: ""}
+    &::after{content: ""}
   }
 }

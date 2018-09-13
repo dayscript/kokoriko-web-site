@@ -5528,7 +5528,7 @@ h1 {
   font-size: 2.125rem; }
 
 h2 {
-  font-size: 1.6875rem; }
+  font-size: 1.5625rem; }
 
 h3 {
   font-size: 1.375rem; }
@@ -5702,7 +5702,7 @@ blockquote p {
   h1 {
     font-size: 2.75rem; }
   h2 {
-    font-size: 2.3125rem; }
+    font-size: 5.3125rem; }
   h3 {
     font-size: 1.6875rem; }
   h4 {
@@ -6771,9 +6771,6 @@ th.hide-for-touch {
 a {
   color: #FFFFFF; }
 
-section#block-kokoriko-theme-content {
-  display: none; }
-
 h1 {
   text-transform: uppercase; }
 
@@ -6804,33 +6801,42 @@ h3 {
 
 .header {
   position: relative;
-  height: 987px; }
+  display: inline-block; }
 
 .path-frontpage .body-wrapper {
-  background: url(/themes/contrib/kokoriko_theme/images/texture-paper.jpg); }
+  background: url(/themes/contrib/kokoriko_theme/images/texture-paper.jpg);
+  padding-top: 45px; }
 
 #footer-first {
   background-color: #000000; }
 
 #footer-meddle {
-  background-color: #ec333b; }
+  background: url("/themes/contrib/kokoriko_theme/images/brush-1.png") #ec333b;
+  background-position: bottom;
+  background-repeat: no-repeat; }
 
 #footer-last {
   background-color: #FFFFFF; }
 
 #footer-end {
-  background-color: #ec333b; }
+  padding: 100px 0 0 0; }
+
+#footer {
+  background: url("/themes/contrib/kokoriko_theme/images/brush-2.png") #ec333b;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 350px; }
 
 #block-imagendestacada {
-  position: absolute;
   padding: 0;
+  z-index: -1;
   background-image: url("/themes/contrib/kokoriko_theme/images/brush-slide.png"); }
   #block-imagendestacada .field-name-field-imagen-de-fondo img {
     width: 100%;
-    max-height: 987px; }
+    max-height: 955px; }
   #block-imagendestacada .field-name-field-imagen-bottom img {
     position: absolute;
-    bottom: -30px;
+    bottom: 0px;
     width: 100%; }
 
 #block-kokoriko-theme-branding {
@@ -6878,15 +6884,44 @@ h3 {
       font-size: 25px;
       padding: 10px 51px; }
 
+#block-views-block-domicilios-block-1 {
+  padding: 72px 0 113px 0px; }
+
 #block-views-block-domicilios-block-1 h2 {
   color: #FFFFFF;
   text-align: left; }
+
+#block-views-block-domicilios-block-1 .views-field-field-telefono h4 {
+  text-align: right; }
 
 #block-views-block-domicilios-block-1 li {
   list-style: none; }
   #block-views-block-domicilios-block-1 li h4 {
     text-transform: uppercase;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 2px 0; }
+
+#block-views-block-domicilios-block-1 h2::before {
+  content: ""; }
+
+#block-views-block-domicilios-block-1 h2::after {
+  content: ""; }
+
+#block-views-block-domicilios-block-1 ul {
+  margin: 0; }
+  #block-views-block-domicilios-block-1 ul li {
+    margin: 0; }
+  #block-views-block-domicilios-block-1 ul div {
+    margin: 0; }
+
+#block-webform h2 {
+  text-align: left; }
+  #block-webform h2::before {
+    content: ""; }
+  #block-webform h2::after {
+    content: ""; }
 
 #block-metamenu li {
   list-style: none; }
@@ -6896,7 +6931,15 @@ h3 {
   float: right; }
 
 .main-menu {
-  margin: 23px 0; }
+  padding: 0px; }
+
+.menu-region {
+  display: inline-block;
+  position: absolute;
+  padding: 24px 0 0 0;
+  margin: 0 auto;
+  max-width: 75rem;
+  width: 100%; }
 
 #block-kokoriko-theme-main-menu {
   display: inline-block; }

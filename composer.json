@@ -23,6 +23,7 @@
         "drupal/module_filter": "^3.1",
         "drupal/promote_disable": "^1.0@alpha",
         "drupal/quick_clone": "^1.0@beta",
+        "drupal/superfish": "^1.2",
         "drupal/twig_vardumper": "^1.1",
         "drupal/webform": "^5.0@RC",
         "drupal/zurb_foundation": "^5.0@beta",

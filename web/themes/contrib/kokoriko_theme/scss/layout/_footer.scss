@@ -9,13 +9,22 @@ footer{
 }
 
 #footer-meddle{
-    background-color: $color-title;
+  background: url("/themes/contrib/kokoriko_theme/images/brush-1.png") $color-title;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 #footer-last{
     background-color: $white;
+
+}
+#footer-end{
+  padding: 100px 0 0 0;
 }
 
-#footer-end{
-  background-color: $color-title;
+#footer{
+  background: url("/themes/contrib/kokoriko_theme/images/brush-2.png") $color-title;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 350px;
 }

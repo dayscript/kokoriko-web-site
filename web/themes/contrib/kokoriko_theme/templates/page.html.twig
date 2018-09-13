@@ -55,6 +55,8 @@
  */
 #}
 
+{% if is_front %}
+{% endif %}
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
     <aside class="left-off-canvas-menu" role="complementary">
@@ -97,16 +99,15 @@
           </div>
         {% endif %}
       </header> -->
-
       <div class="large-12 medium-12 header">
-      {% if page.header %}
-        {% if imagendestacada %}
-          {{  imagendestacada }}
-        {% endif %}
-        <div class="row">
-          <div class="large-12 columns main-menu">
-            {{ page.header }}
+       {% if page.header %}
+        <div class="large-12 columns main-menu">
+          <div class="row-1 menu-region">
+          {{ page.header }}
           </div>
+          {% if imagendestacada %}
+            {{  imagendestacada }}
+          {% endif %} -->
         </div>
       {% endif %}
       </div>
@@ -218,7 +219,7 @@
           <div id="footer-end">
             <div class="row">
               {% if page.footer_end %}
-                <div id="footer-end" class="large-12 medium-12 columns">
+                <div class="large-12 medium-12 columns">
                   {{ page.footer_end }}
                 </div>
               {% endif %}
