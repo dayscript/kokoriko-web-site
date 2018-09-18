@@ -1,23 +1,24 @@
-.main-menu{
-      padding: 0px;
-}
-
-.menu-region{
-  display: inline-block;
-  position: absolute;
-  padding: 24px 0 0 0;
-  margin: 0 auto;
-  max-width: 75rem;
-  width: 100%;
-  div{
-    // display: inline-block;
-    // width: 100%;
-    // margin: 0 auto;
-    }
-}
+// .main-menu{
+//       padding: 0px;
+// }
+//
+// .menu-region{
+//   display: inline-block;
+//   position: absolute;
+//   padding: 24px 0 0 0;
+//   margin: 0 auto;
+//   max-width: 75rem;
+//   width: 100%;
+//   div{
+//     // display: inline-block;
+//     // width: 100%;
+//     // margin: 0 auto;
+//     }
+// }
 
 #block-kokoriko-theme-main-menu{
   display: inline-block;
+  padding: 13px 0;
   ul{
     li{
       float: left;

@@ -40,14 +40,14 @@ function kokoriko_theme_preprocess_page(&$variables) {
   //Unable bock-view main-content in the front page
   if($variables['is_front']){
     unset($variables['page']['content']['kokoriko_theme_content']);
-  }
+    // Use to load custom type block in page tpl
+    $block = \Drupal\block\Entity\Block::load('imagendestacada');
+    $block_content = \Drupal::entityTypeManager()
+      ->getViewBuilder('block')
+      ->view($block);
+    $variables['imagendestacada'] = $block_content;
 
-  // Use to load custom type block in page tpl
-  $block = \Drupal\block\Entity\Block::load('imagendestacada');
-  $block_content = \Drupal::entityTypeManager()
-    ->getViewBuilder('block')
-    ->view($block);
-  $variables['imagendestacada'] = $block_content;
+  }
 
 }
 

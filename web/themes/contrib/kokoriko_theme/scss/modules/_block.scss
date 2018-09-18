@@ -1,3 +1,12 @@
+#block-kokoriko-theme-page-title{
+  padding: 45px 0 157px 0px;
+  h1{
+    text-align: center;
+    font-size: 100px;
+    color:$white;
+  }
+}
+
 #block-imagendestacada{
   //position: absolute;
   padding: 0;
@@ -12,7 +21,7 @@
   .field-name-field-imagen-bottom{
     img{
       position: absolute;
-      bottom: 0px;
+      bottom: -1px;
       width: 100%;
     }
   }
@@ -131,10 +140,111 @@
   }
 }
 
-#block-webform{
+#block-contactenos{
   h2{
     text-align: left;
     &::before{content: ""}
     &::after{content: ""}
   }
+  .mailto{
+    color:$color-title;
+    &hover{
+      color:$color-title;
+    }
+  }
+  input,textarea{
+    background: #f6f6f6;
+    border: solid 1px #e2e2e2;
+  }
+  .webform-button--submit{
+    background-color: $black;
+    color: $white;
+    font-family: 'BlockBE-Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 3px 35px;
+    text-transform: uppercase;
+  }
+   .webform-actions{
+      text-align: right;
+   }
+}
+#block-logokokorikofooter{
+  text-align: center;
+  padding: 45px;
+}
+
+#block-kokoriko-theme-footer{
+  padding: 42px 42px 0 42px;
+}
+
+.block-kokoriko-theme-footer{
+  float: none!important;
+  ul{
+    list-style: none;
+    margin: 0 auto;
+
+    width: 100%;
+    text-align: center;
+    li{
+      display: inline-block;
+      padding: 0px 30px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+#block-formularioexpuestomenupage-1-2{
+  .fieldset-legend{
+      color: $color-title;
+      font-size: 33px;
+      text-transform:uppercase;
+      font-family: 'BlockBE-Condensed';
+      font-style: normal;
+      font-weight: 400;
+
+  }
+  // label{
+  //   text-transform: uppercase;
+  //   font-family: "Lato", sans-serif;
+  //   font-style: normal;
+  //   font-weight: normal;
+  //   font-weight: 600;
+  // }
+
+  input[type=checkbox] {
+		position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+	}
+
+	input[type=checkbox] + label {
+		padding-left:22px;
+		height:17px;
+		display:inline-block;
+		line-height:17px;
+		background-repeat:no-repeat;
+		background-position: 0 0;
+		font-size:17px;
+		vertical-align:middle;
+		cursor:pointer;
+
+	}
+
+		input[type=checkbox]:checked + label {
+			background-position: 0 -17px;
+		}
+		label {
+      margin: 15px 0;
+      text-transform: uppercase;
+       font-family: "Lato", sans-serif;
+       font-style: normal;
+       font-weight: normal;
+			background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_314a66eb1641f8832a7ada19bbf96697.png);
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
 }

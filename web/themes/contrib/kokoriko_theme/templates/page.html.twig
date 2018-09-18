@@ -100,16 +100,16 @@
         {% endif %}
       </header> -->
       <div class="large-12 medium-12 header">
-       {% if page.header %}
-        <div class="large-12 columns main-menu">
-          <div class="row-1 menu-region">
-          {{ page.header }}
+        {% if imagendestacada %}
+          {{  imagendestacada }}
+        {% endif %}
+        {% if page.header %}
+          <div class="row sub-wrapper">
+            <div class="large-12 columns sub-header">
+            {{ page.header }}
+            </div>
           </div>
-          {% if imagendestacada %}
-            {{  imagendestacada }}
-          {% endif %} -->
-        </div>
-      {% endif %}
+        {% endif %}
       </div>
       <div class="row">
         {% if show_account_info %}
@@ -211,7 +211,7 @@
             {% if page.footer_last %}
               <div id="footer-last" class="large-12 medium-12 columns">
                 {{ page.footer_last }}
-              </div>
+                </div>
             {% endif %}
           </div>
         </div>
@@ -219,17 +219,15 @@
           <div id="footer-end">
             <div class="row">
               {% if page.footer_end %}
-                <div class="large-12 medium-12 columns">
+                <div class="large-12 medium-12 columns left">
                   {{ page.footer_end }}
-                </div>
-              {% endif %}
-              <div class="bottom-bar panel">
-                <div class="row">
-                  <div class="large-12 columns">
-                  &copy; {{ "now"|date('Y') }} {{ site_name }} {{ 'All rights reserved.'|t }}
+                  <div class="large-8 columns copyright">
+                    Email: servicioalcliente@kokoriko.com.co   Telefono: +571-4100099
+                    <br>
+                    Copyright {{ "now"|date('Y') }} {{ site_name }}. {{ 'All rights reserved.'|t }}
                   </div>
                 </div>
-              </div>
+              {% endif %}
             </div>
           </div>
         </footer>
