@@ -6818,7 +6818,8 @@ h3 {
   padding-top: 45px; }
 
 #block-kokoriko-theme-content {
-  display: inline-block; }
+  display: inline-block;
+  width: 100%; }
 
 #footer-first {
   background-color: #000000; }
@@ -7029,7 +7030,7 @@ h3 {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: normal;
-  background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_314a66eb1641f8832a7ada19bbf96697.png);
+  background-image: url(/themes/contrib/kokoriko_theme/images/checkbox.png);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -7057,3 +7058,56 @@ h3 {
       background-image: url("/themes/contrib/kokoriko_theme/images/menu-active.png");
       background-position: 1px 16px;
       background-repeat: no-repeat; }
+
+.path-restaurantes ul {
+  list-style: none; }
+
+#views-exposed-form-restaurantes-page-1 {
+  text-align: center; }
+  #views-exposed-form-restaurantes-page-1 select {
+    width: 33%;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #fff;
+    margin: 25px; }
+    #views-exposed-form-restaurantes-page-1 select option {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      text-transform: uppercase; }
+  #views-exposed-form-restaurantes-page-1 label {
+    font-family: 'BlockBE-Condensed';
+    font-style: normal;
+    font-weight: 400;
+    color: #ec333b;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center; }
+    #views-exposed-form-restaurantes-page-1 label::before {
+      font-family: 'kokoriko';
+      font-style: normal;
+      font-weight: 400;
+      content: '\E800'; }
+    #views-exposed-form-restaurantes-page-1 label::after {
+      font-family: 'kokoriko';
+      font-style: normal;
+      font-weight: 400;
+      content: '\E801'; }
+
+.path-restaurantes .body-wrapper .views-field-title .field-content {
+  font-weight: 600;
+  text-transform: uppercase; }
+
+.path-restaurantes .body-wrapper .row {
+  margin: 0;
+  max-width: 100%; }
+
+.path-restaurantes .body-wrapper #main {
+  padding: 0; }
+
+.path-restaurantes #block-kokoriko-theme-content .row {
+  margin: 0 auto;
+  max-width: 75rem !important;
+  width: 100%; }

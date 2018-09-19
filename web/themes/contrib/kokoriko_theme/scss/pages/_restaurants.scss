@@ -1,0 +1,73 @@
+
+
+  #views-exposed-form-restaurantes-page-1{
+    text-align: center;
+    select{
+      width: 33%;
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 600;
+      text-transform: uppercase;
+      background: #fff;
+      margin:25px;
+      option{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        text-transform: uppercase;
+
+
+      }
+    }
+    label{
+      font-family: 'BlockBE-Condensed';
+      font-style: normal;
+      font-weight: 400;
+      color: $color-title;
+      font-size: 50px;
+      text-transform: uppercase;
+      text-align: center;
+      &::before {
+          font-family: 'kokoriko';
+          font-style: normal;
+          font-weight: 400;
+          content: '\E800';
+      }
+
+      &::after {
+          font-family: 'kokoriko';
+          font-style: normal;
+          font-weight: 400;
+          content: '\E801';
+      }
+    }
+
+
+  }
+
+.path-restaurantes{
+  .body-wrapper{
+    .views-field-title{
+      .field-content{
+        font-weight: 600;
+          text-transform: uppercase;
+      }
+    }
+  }
+  .body-wrapper{
+    .row{
+      margin:0;
+      max-width: 100%;
+    }
+    #main{
+      padding: 0;
+    }
+  }
+  #block-kokoriko-theme-content  {
+    .row{
+      margin: 0 auto;
+      max-width: 75rem!important;
+      width: 100%;
+    }
+  }
+}

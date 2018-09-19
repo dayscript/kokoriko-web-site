@@ -219,7 +219,7 @@
 
 	input[type=checkbox] + label {
 		padding-left:22px;
-		height:17px;
+		height:17px; 
 		display:inline-block;
 		line-height:17px;
 		background-repeat:no-repeat;
@@ -236,10 +236,10 @@
 		label {
       margin: 15px 0;
       text-transform: uppercase;
-       font-family: "Lato", sans-serif;
-       font-style: normal;
-       font-weight: normal;
-			background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_314a66eb1641f8832a7ada19bbf96697.png);
+      font-family: "Lato", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      background-image: url(/themes/contrib/kokoriko_theme/images/checkbox.png);
 			-webkit-touch-callout: none;
 			-webkit-user-select: none;
 			-khtml-user-select: none;
