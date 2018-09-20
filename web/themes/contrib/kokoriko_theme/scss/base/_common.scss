@@ -14,13 +14,17 @@ body{
 
 a {
   color:$white;
+  &:hover{
+    color:$white;
+
+  }
 }
 
 
 // section#block-kokoriko-theme-content {
 //     display: none;
 // }
-
+ 
 h1{
  text-transform: uppercase;
 }

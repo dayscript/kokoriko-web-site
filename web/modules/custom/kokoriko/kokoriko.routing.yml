@@ -1,0 +1,7 @@
+drupal_angular.app_form:
+  path: '/drupal-angular' # Path that you want for your form
+  defaults:
+    _title: 'Drupal Angular Form'
+    _form: '\Drupal\kokoriko\Form\AngularAppForm'
+  requirements:
+    _permission: 'access content'

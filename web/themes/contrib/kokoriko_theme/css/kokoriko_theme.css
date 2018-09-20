@@ -6770,6 +6770,8 @@ th.hide-for-touch {
 
 a {
   color: #FFFFFF; }
+  a:hover {
+    color: #FFFFFF; }
 
 h1 {
   text-transform: uppercase; }
