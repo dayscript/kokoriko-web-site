@@ -24,11 +24,11 @@ class AngularAppForm extends FormBase
         $form[] = [
           '#type' => 'html_tag',
           '#tag' => 'app-root',
-          '#attached' => [
-            'library' => [
-              'kokoriko/drupal_angular_lib',
-            ],
-          ],
+          // '#attached' => [
+          //   'library' => [
+          //     'kokoriko/drupal_angular_lib',
+          //   ],
+          // ],
         ];
 
         $form['phone_number'] = [

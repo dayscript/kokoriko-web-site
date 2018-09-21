@@ -1,8 +1,0 @@
-drupal_angular_lib:
-  version: 1.x
-  js:
-    kokoriko/dist/kokoriko/runtime.js: {}
-    kokoriko/dist/kokoriko/polyfills.js: {}
-    kokoriko/dist/kokoriko/styles.js: {}
-    kokoriko/dist/kokoriko/vendor.js: {}
-    kokoriko/dist/kokoriko/main.js: {}
