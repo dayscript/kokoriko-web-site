@@ -7039,6 +7039,40 @@ h3 {
   -ms-user-select: none;
   user-select: none; }
 
+#block-accompaniments {
+  bottom: -590px; }
+  #block-accompaniments div {
+    text-align: center; }
+    #block-accompaniments div span {
+      color: #FFFFFF;
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 33px;
+      text-transform: lowercase;
+      display: inline-block; }
+    #block-accompaniments div h3 {
+      font-family: 'BlockBE-Condensed';
+      font-style: normal;
+      font-weight: 400;
+      color: #ec333b;
+      font-size: 65px;
+      display: inline-block;
+      width: 100%;
+      line-height: 0.8; }
+  #block-accompaniments .text {
+    font-size: 16px;
+    text-transform: uppercase; }
+  #block-accompaniments .number {
+    font-size: 26px; }
+  #block-accompaniments .container {
+    background-color: #b02125b5; }
+    #block-accompaniments .container h3 {
+      color: #FFFFFF;
+      font-size: 48px; }
+  #block-accompaniments .active {
+    background-color: #000000a3; }
+
 #block-metamenu li {
   list-style: none; }
 

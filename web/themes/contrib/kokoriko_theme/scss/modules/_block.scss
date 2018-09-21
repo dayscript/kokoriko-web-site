@@ -219,7 +219,7 @@
 
 	input[type=checkbox] + label {
 		padding-left:22px;
-		height:17px; 
+		height:17px;
 		display:inline-block;
 		line-height:17px;
 		background-repeat:no-repeat;
@@ -247,4 +247,48 @@
 			-ms-user-select: none;
 			user-select: none;
 		}
+}
+
+#block-accompaniments{
+  bottom: -590px;
+  div{
+    text-align: center;
+
+    span{
+      color: #FFFFFF;
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 33px;
+      text-transform: lowercase;
+      display: inline-block;
+    }
+    h3{
+      font-family: 'BlockBE-Condensed';
+      font-style: normal;
+      font-weight: 400;
+      color: $color-title;
+      font-size: 65px;
+      display: inline-block;
+      width: 100%;
+      line-height: 0.8;
+    }
+  }
+  .text{
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .number{
+    font-size: 26px;
+  }
+  .container{
+    background-color: #b02125b5;
+    h3{
+      color:$white;
+      font-size: 48px;
+    }
+  }
+  .active {
+    background-color: #000000a3;
+  }
 }
