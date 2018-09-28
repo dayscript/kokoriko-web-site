@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'block-accompaniments',
-  templateUrl: './app.component.html',
+  selector: 'app-component',
+  //templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {

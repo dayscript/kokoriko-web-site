@@ -1,0 +1,25 @@
+#block-domicilios-block {
+    max-width: 70px;
+    background-color: $white;
+    display: inline-block;
+}
+
+app-addresses{
+  .image{
+    text-align: center;
+
+  }
+  .text{
+    a{
+      font-family: 'BlockBE-Condensed';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      transform: rotate(-90deg);
+      color:$color-title;
+      }
+    }
+    .wrapper-block{
+      position: relative;
+    }
+  }

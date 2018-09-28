@@ -1,0 +1,11 @@
+angular:
+  version: 1.x
+  js:
+    js/angular/runtime.js: {}
+    js/angular/polyfills.js: {}
+    js/angular/styles.js: {}
+    js/angular/vendor.js: {}
+    js/angular/main.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

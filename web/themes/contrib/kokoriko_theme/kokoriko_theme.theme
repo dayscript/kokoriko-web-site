@@ -22,7 +22,7 @@ function kokoriko_theme_preprocess_field(&$variables) {
 function kokoriko_theme_preprocess_html(&$variables) {
 
   #include angular 6 library
-  $variables['#attached']['library'][] = 'kokoriko_theme/angular';
+  //$variables['#attached']['library'][] = 'kokoriko_theme/angular';
 
 }
 
