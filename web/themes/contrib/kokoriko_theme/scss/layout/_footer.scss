@@ -12,6 +12,7 @@ footer{
   background: url("/themes/contrib/kokoriko_theme/images/brush-1.png") $color-title;
   background-position: bottom;
   background-repeat: no-repeat;
+  background-size: 100%
 }
 
 #footer-last{
@@ -27,8 +28,9 @@ footer{
   background-position: top;
   background-repeat: no-repeat;
   height: 350px;
+  background-size: 100%
 }
-
+ 
 .copyright{
   color: $white;
     text-align: center;

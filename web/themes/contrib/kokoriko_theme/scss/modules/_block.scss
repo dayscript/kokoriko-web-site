@@ -10,7 +10,6 @@
 #block-imagendestacada{
   //position: absolute;
   padding: 0;
-  z-index: -1;
   background-image: url('/themes/contrib/kokoriko_theme/images/brush-slide.png');
   .field-name-field-imagen-de-fondo{
     img{
@@ -282,13 +281,13 @@
     font-size: 26px;
   }
   .container{
-    background-color: #b02125b5;
+    background-color: rgba(236, 51, 59, 0.38);;
     h3{
       color:$white;
       font-size: 48px;
     }
   }
   .active {
-    background-color: #000000a3;
+    background-color: rgba(0, 0, 0, 0.68);
   }
 }

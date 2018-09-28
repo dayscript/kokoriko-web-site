@@ -6829,7 +6829,8 @@ h3 {
 #footer-meddle {
   background: url("/themes/contrib/kokoriko_theme/images/brush-1.png") #ec333b;
   background-position: bottom;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: 100%; }
 
 #footer-last {
   background-color: #FFFFFF; }
@@ -6841,7 +6842,8 @@ h3 {
   background: url("/themes/contrib/kokoriko_theme/images/brush-2.png") #ec333b;
   background-position: top;
   background-repeat: no-repeat;
-  height: 350px; }
+  height: 350px;
+  background-size: 100%; }
 
 .copyright {
   color: #FFFFFF;
@@ -6857,7 +6859,6 @@ h3 {
 
 #block-imagendestacada {
   padding: 0;
-  z-index: -1;
   background-image: url("/themes/contrib/kokoriko_theme/images/brush-slide.png"); }
   #block-imagendestacada .field-name-field-imagen-de-fondo img {
     width: 100%;
@@ -7066,12 +7067,12 @@ h3 {
   #block-accompaniments .number {
     font-size: 26px; }
   #block-accompaniments .container {
-    background-color: #b02125b5; }
+    background-color: rgba(236, 51, 59, 0.38); }
     #block-accompaniments .container h3 {
       color: #FFFFFF;
       font-size: 48px; }
   #block-accompaniments .active {
-    background-color: #000000a3; }
+    background-color: rgba(0, 0, 0, 0.68); }
 
 #block-metamenu li {
   list-style: none; }
