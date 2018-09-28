@@ -104,7 +104,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper-block\">\n  <div class=\"image\">\n    <img [src]= renderImage(elements.image) />\n  </div>\n  <div class=\"text\">\n    <a class=\"rotate-left\"> {{elements.label}}</a>\n  </div>\n</div>\n"
+module.exports = "<div class=\"wrapper-block\">\n  <div class=\"image\">\n    <img [src]= renderImage(elements.image) />\n  </div>\n  <div class=\"text\">\n    <a href=\"#footer-middle\"class=\"rotate-left\"> {{elements.label}}</a>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -266,7 +266,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/ariel/projects/kokoriko/web/modules/custom/kokoriko/angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/ariel/projects/web/kokoriko/web/modules/custom/kokoriko/angular/src/main.ts */"./src/main.ts");
 
 
 /***/ })

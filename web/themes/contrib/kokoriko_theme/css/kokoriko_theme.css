@@ -7148,23 +7148,34 @@ h3 {
   max-width: 75rem !important;
   width: 100%; }
 
-#block-domicilios-block {
-  max-width: 70px;
+#block-domiciliosblock {
+  top: 308px;
   background-color: #FFFFFF;
-  display: inline-block; }
+  display: inline-block;
+  position: absolute;
+  left: -320px;
+  top: 300px;
+  float: left !important;
+  padding: 0; }
 
-app-addresses .image {
-  text-align: center; }
-
-app-addresses .text a {
-  font-family: 'BlockBE-Condensed';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  color: #ec333b; }
-
-app-addresses .wrapper-block {
-  position: relative; }
+app-addresses {
+  display: inline-block;
+  height: 269px;
+  padding: 28px 0;
+  background: white;
+  max-width: 100px; }
+  app-addresses .image {
+    text-align: center;
+    margin-bottom: 80px; }
+  app-addresses .text {
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg); }
+    app-addresses .text a {
+      font-family: 'BlockBE-Condensed';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      color: #ec333b; }
+  app-addresses .wrapper-block {
+    position: relative; }

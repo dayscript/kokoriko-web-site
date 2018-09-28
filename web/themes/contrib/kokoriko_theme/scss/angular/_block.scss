@@ -1,21 +1,33 @@
-#block-domicilios-block {
-    max-width: 70px;
+#block-domiciliosblock {
+    top: 308px;
     background-color: $white;
     display: inline-block;
+    position: absolute;
+    left: -320px;
+    top: 300px;
+    float: left!important;
+    padding: 0;
+
 }
 
 app-addresses{
+    display: inline-block;
+    height: 269px;
+    padding: 28px 0;
+    background: white;
+    max-width: 100px;
   .image{
     text-align: center;
+    margin-bottom: 80px;
 
   }
   .text{
+    transform: rotate(-90deg);
     a{
       font-family: 'BlockBE-Condensed';
       font-style: normal;
       font-weight: 400;
       font-size: 35px;
-      transform: rotate(-90deg);
       color:$color-title;
       }
     }
