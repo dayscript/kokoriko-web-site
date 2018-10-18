@@ -6829,7 +6829,8 @@ h3 {
 #footer-meddle {
   background: url("/themes/contrib/kokoriko_theme/images/brush-1.png") #ec333b;
   background-position: bottom;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: 100%; }
 
 #footer-last {
   background-color: #FFFFFF; }
@@ -6841,7 +6842,8 @@ h3 {
   background: url("/themes/contrib/kokoriko_theme/images/brush-2.png") #ec333b;
   background-position: top;
   background-repeat: no-repeat;
-  height: 350px; }
+  height: 350px;
+  background-size: 100%; }
 
 .copyright {
   color: #FFFFFF;
@@ -6857,7 +6859,6 @@ h3 {
 
 #block-imagendestacada {
   padding: 0;
-  z-index: -1;
   background-image: url("/themes/contrib/kokoriko_theme/images/brush-slide.png"); }
   #block-imagendestacada .field-name-field-imagen-de-fondo img {
     width: 100%;
@@ -7066,12 +7067,12 @@ h3 {
   #block-accompaniments .number {
     font-size: 26px; }
   #block-accompaniments .container {
-    background-color: #b02125b5; }
+    background-color: rgba(236, 51, 59, 0.38); }
     #block-accompaniments .container h3 {
       color: #FFFFFF;
       font-size: 48px; }
   #block-accompaniments .active {
-    background-color: #000000a3; }
+    background-color: rgba(0, 0, 0, 0.68); }
 
 #block-metamenu li {
   list-style: none; }
@@ -7147,3 +7148,35 @@ h3 {
   margin: 0 auto;
   max-width: 75rem !important;
   width: 100%; }
+
+#block-domiciliosblock {
+  top: 308px;
+  background-color: #FFFFFF;
+  display: inline-block;
+  position: absolute;
+  left: -320px;
+  top: 300px;
+  float: left !important;
+  padding: 0; }
+
+app-addresses {
+  display: inline-block;
+  height: 269px;
+  padding: 28px 0;
+  background: white;
+  max-width: 100px; }
+  app-addresses .image {
+    text-align: center;
+    margin-bottom: 80px; }
+  app-addresses .text {
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg); }
+    app-addresses .text a {
+      font-family: 'BlockBE-Condensed';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      color: #ec333b; }
+  app-addresses .wrapper-block {
+    position: relative; }
