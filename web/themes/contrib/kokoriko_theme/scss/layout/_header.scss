@@ -8,7 +8,7 @@
 .not-frontpage{
   .header{
     background-image: url(/themes/contrib/kokoriko_theme/images/header-pages.png);
-    background-size: 100%;
+    background-size: 100% 100%;
     background-position: bottom;
   }
 }
@@ -23,5 +23,5 @@
 }
 
 .sub-header{
-  margin: 20px 0;
+  margin: 20px 0; 
 }
