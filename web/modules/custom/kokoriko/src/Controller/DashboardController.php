@@ -4,7 +4,7 @@ namespace Drupal\kokoriko\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\user\Entity\User;
-
+use Symfony\Component\Routing\RouteCollection;
 /**
  * Defines HelloController class.
  */
