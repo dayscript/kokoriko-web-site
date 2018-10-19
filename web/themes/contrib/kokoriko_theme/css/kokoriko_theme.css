@@ -7132,7 +7132,8 @@ ul.social-media-links--platforms.platforms.inline.horizontal {
   padding: .2em 1em; }
 
 .pasos {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  padding: 40px 0; }
 
 #block-metamenu li {
   list-style: none; }
