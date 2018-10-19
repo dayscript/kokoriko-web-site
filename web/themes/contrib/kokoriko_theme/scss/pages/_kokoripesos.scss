@@ -1,0 +1,42 @@
+.section-kokoripesos{
+  .field-name-body{
+    margin: 40px 0;
+  }
+}
+#cuenta{
+  .user-container{
+    .columns{
+      padding-left: 0.3rem;
+      padding-right: 0.3rem;
+    }
+    .photo{
+      border-radius: 80px;
+    }
+    .hi{
+      font-size: 2em;
+    }
+    .user{
+      font-size: 1.2em;
+    }
+  }
+  .container-cuenta{
+    background-color: #fbfbfb;
+    padding: 20px;
+    text-align: center;
+    h3{
+      font-size: 1.4em;
+    }
+    .kokoripesos{
+      font-size: 4em;
+      font-family: 'BlockBE-Condensed';
+    }
+    .fecha{
+      color: $red;
+    }
+    .vencidos, .recent{
+      span{
+        color: $red;
+      }
+    }
+  }
+}
