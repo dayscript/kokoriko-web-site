@@ -7341,6 +7341,11 @@ ul.row.restaurantes {
   padding-left: 0.3rem;
   padding-right: 0.3rem; }
 
+@media screen and (max-width: 600px) {
+  #cuenta .user-container .columns {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem; } }
+
 #cuenta .user-container .photo {
   border-radius: 80px; }
 
@@ -7363,6 +7368,9 @@ ul.row.restaurantes {
     color: #EC333B; }
   #cuenta .container-cuenta .vencidos span, #cuenta .container-cuenta .recent span {
     color: #EC333B; }
+
+#cuenta img.banner {
+  margin-bottom: 16px; }
 
 #block-domiciliosblock {
   top: 308px;

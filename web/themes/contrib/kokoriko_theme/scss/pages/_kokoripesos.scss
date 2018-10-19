@@ -9,6 +9,12 @@
       padding-left: 0.3rem;
       padding-right: 0.3rem;
     }
+    @media screen and (max-width: 600px){
+      .columns{
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+      }
+    }
     .photo{
       border-radius: 80px;
     }
@@ -38,5 +44,8 @@
         color: $red;
       }
     }
+  }
+  img.banner{
+    margin-bottom: 16px;
   }
 }
