@@ -6794,6 +6794,9 @@ h3 {
   margin: 20px 0;
   font-family: 'BlockBE-Condensed';
   font-size: 1.4em; }
+  .button.account {
+    border-radius: 30px;
+    margin-left: 10px; }
 
 .meta-header {
   background-color: #EC333B;
@@ -6801,6 +6804,9 @@ h3 {
   .meta-header .columns {
     padding-left: 0.2rem;
     padding-right: 0.2rem; }
+
+.header {
+  background-color: #000000; }
 
 .not-frontpage .header {
   background-image: url(/themes/contrib/kokoriko_theme/images/header-pages.png);
@@ -6838,6 +6844,13 @@ h3 {
 
 #footer-first {
   background-color: #000000; }
+
+.path-frontpage #footer-first {
+  background-color: #000000;
+  background: url("/themes/contrib/kokoriko_theme/images/bg-kokoripesos.jpg");
+  background-size: cover; }
+  .path-frontpage #footer-first #footer-first {
+    background-image: none; }
 
 #footer-meddle {
   background: url("/themes/contrib/kokoriko_theme/images/brush-1.png") #ec333b;
@@ -6884,6 +6897,11 @@ h3 {
     bottom: -1px;
     width: 100%; }
 
+@media screen and (max-width: 600px) {
+  #block-imagendestacada {
+    margin-top: 90px;
+    background-color: #000000; } }
+
 #block-kokoriko-theme-branding {
   float: left;
   padding: 0 9px; }
@@ -6898,29 +6916,42 @@ h3 {
     line-height: 22px;
     min-height: 60px; }
   #block-views-block-para-chuparse-los-dedos-block-1 li {
-    margin-bottom: 50px; }
-  #block-views-block-para-chuparse-los-dedos-block-1 .price .field {
-    text-align: center; }
-  #block-views-block-para-chuparse-los-dedos-block-1 .price .field-price {
-    font-size: 35px;
-    color: #EC333B;
-    line-height: 1em; }
-  #block-views-block-para-chuparse-los-dedos-block-1 .price .field-label {
+    margin-bottom: 30px;
+    border-bottom: 0px solid #EC333B;
+    padding-bottom: 50px; }
+  @media screen and (max-width: 600px) {
+    #block-views-block-para-chuparse-los-dedos-block-1 li {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #EC333B;
+      padding-bottom: 50px; } }
+
+.price .field {
+  text-align: center; }
+
+.price .field-price {
+  font-size: 35px;
+  color: #EC333B;
+  line-height: 1em; }
+
+.price .field-label {
+  text-transform: uppercase;
+  letter-spacing: -1px; }
+
+.more-link {
+  text-align: center; }
+  .more-link a {
+    display: inline-block;
+    background: #000000;
+    color: #FFFFFF;
     text-transform: uppercase;
-    letter-spacing: -1px; }
-  #block-views-block-para-chuparse-los-dedos-block-1 .more-link {
-    text-align: center; }
-    #block-views-block-para-chuparse-los-dedos-block-1 .more-link a {
-      display: inline-block;
-      background: #000000;
-      color: #FFFFFF;
-      text-transform: uppercase;
-      padding: 10px 10px;
-      font-size: 24px; }
-  #block-views-block-para-chuparse-los-dedos-block-1 h2.block-title {
-    padding: 0 10%; }
-  #block-views-block-para-chuparse-los-dedos-block-1 .views-field-field-image {
-    margin-bottom: 16px; }
+    padding: 10px 10px;
+    font-size: 24px; }
+
+h2.block-title {
+  padding: 0 10%; }
+
+.views-field-field-image {
+  margin-bottom: 16px; }
 
 #block-acomulakokoripesos {
   padding: 40px 0; }
@@ -7133,7 +7164,14 @@ ul.social-media-links--platforms.platforms.inline.horizontal {
 
 .pasos {
   color: #FFFFFF;
-  padding: 40px 0; }
+  padding: 60px 0; }
+  .pasos h2 {
+    margin-bottom: 40px;
+    color: #FFFFFF; }
+  .pasos .paso {
+    margin-top: 20px; }
+  .pasos .container-paso {
+    min-height: 250px; }
 
 #block-metamenu li {
   list-style: none; }
@@ -7210,10 +7248,16 @@ ul.sf-menu.sf-style-black li:hover, ul.sf-menu.sf-style-black li.sfHover, ul.sf-
 
 .section-menu .producto {
   min-height: 400px;
-  margin-bottom: 20px; }
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 0px solid #e3e3e3; }
   .section-menu .producto .columns {
     padding-left: 0.4rem;
     padding-right: 0.4rem; }
+
+@media screen and (max-width: 600px) {
+  .section-menu .producto {
+    border-bottom: 1px solid #e3e3e3; } }
 
 #views-exposed-form-restaurantes-page-1 {
   text-align: center; }
@@ -7290,9 +7334,43 @@ ul.row.restaurantes {
   .views-field-field-horario .field-content {
     margin-left: 10px; }
 
-.section-kokoripesos .field-name-body p {
-  margin: 20px 0;
-  text-align: center !important; }
+.section-kokoripesos .field-name-body {
+  margin: 40px 0; }
+
+#cuenta .user-container .columns {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem; }
+
+@media screen and (max-width: 600px) {
+  #cuenta .user-container .columns {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem; } }
+
+#cuenta .user-container .photo {
+  border-radius: 80px; }
+
+#cuenta .user-container .hi {
+  font-size: 2em; }
+
+#cuenta .user-container .user {
+  font-size: 1.2em; }
+
+#cuenta .container-cuenta {
+  background-color: #fbfbfb;
+  padding: 20px;
+  text-align: center; }
+  #cuenta .container-cuenta h3 {
+    font-size: 1.4em; }
+  #cuenta .container-cuenta .kokoripesos {
+    font-size: 4em;
+    font-family: 'BlockBE-Condensed'; }
+  #cuenta .container-cuenta .fecha {
+    color: #EC333B; }
+  #cuenta .container-cuenta .vencidos span, #cuenta .container-cuenta .recent span {
+    color: #EC333B; }
+
+#cuenta img.banner {
+  margin-bottom: 16px; }
 
 #block-domiciliosblock {
   top: 308px;
