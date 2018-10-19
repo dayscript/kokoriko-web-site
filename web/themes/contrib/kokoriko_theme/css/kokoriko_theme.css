@@ -6798,6 +6798,9 @@ h3 {
 .meta-header {
   background-color: #EC333B;
   padding: 4px 0; }
+  .meta-header .columns {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem; }
 
 .not-frontpage .header {
   background-image: url(/themes/contrib/kokoriko_theme/images/header-pages.png);
@@ -7118,13 +7121,32 @@ h3 {
   #block-accompaniments .active {
     background-color: rgba(0, 0, 0, 0.68); }
 
+.social-media-links--platforms ul {
+  margin-left: 0rem;
+  margin-bottom: 0rem; }
+
+ul.social-media-links--platforms.platforms.inline.horizontal {
+  margin-bottom: 0rem; }
+
+.social-media-links--platforms.horizontal li {
+  padding: .2em 1em; }
+
+.pasos {
+  color: #FFFFFF;
+  padding: 40px 0; }
+
 #block-metamenu li {
   list-style: none; }
 
 #block-metamenu a {
   text-transform: uppercase;
   float: right;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  margin-top: 6px; }
+
+@media screen and (max-width: 600px) {
+  #block-metamenu a {
+    float: left; } }
 
 #block-kokoriko-theme-main-menu {
   display: inline-block;

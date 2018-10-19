@@ -168,7 +168,7 @@
               {{ page.sidebar_first }}
             </div>
           {% endif %}
-          <main id="main" class="{{ page.sidebar_first ? 'medium-9' : 'medium-12' }} columns" role="main">
+          <main id="main" class=" {{ page.sidebar_first ? 'medium-9':'medium-12' }} columns" role="main">
             {% if page.highlighted %}
               {% spaceless %}
                 {{ page.highlighted }}
