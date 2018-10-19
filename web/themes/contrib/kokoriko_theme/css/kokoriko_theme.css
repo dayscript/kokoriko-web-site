@@ -7341,6 +7341,14 @@ ul.row.restaurantes {
   padding-left: 0.3rem;
   padding-right: 0.3rem; }
 
+<<<<<<< HEAD
+=======
+@media screen and (max-width: 600px) {
+  #cuenta .user-container .columns {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem; } }
+
+>>>>>>> 16e64621fc0acf95fcb269b2b7db92bc80802a0d
 #cuenta .user-container .photo {
   border-radius: 80px; }
 
@@ -7364,6 +7372,12 @@ ul.row.restaurantes {
   #cuenta .container-cuenta .vencidos span, #cuenta .container-cuenta .recent span {
     color: #EC333B; }
 
+<<<<<<< HEAD
+=======
+#cuenta img.banner {
+  margin-bottom: 16px; }
+
+>>>>>>> 16e64621fc0acf95fcb269b2b7db92bc80802a0d
 #block-domiciliosblock {
   top: 308px;
   background-color: #FFFFFF;
