@@ -50,4 +50,8 @@ h3{
   margin: 20px 0;
   font-family: 'BlockBE-Condensed';
   font-size: 1.4em;
+  &.account{
+    border-radius: 30px;
+    margin-left: 10px;
+  }
 }

@@ -22,10 +22,17 @@ h4{
   }
   .producto {
     min-height: 400px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 0px solid #e3e3e3;
     .columns{
       padding-left: 0.4rem;
       padding-right: 0.4rem;
+    }
+  }
+  @media screen and (max-width: 600px){
+    .producto{
+      border-bottom: 1px solid #e3e3e3;
     }
   }
 }

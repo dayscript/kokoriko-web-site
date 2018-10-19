@@ -28,7 +28,12 @@
     }
   }
 }
-
+@media screen and (max-width: 600px){
+  #block-imagendestacada{
+    margin-top: 90px;
+    background-color: $black;
+  }
+}
 
 #block-kokoriko-theme-branding{
     // max-width: 209px;
@@ -49,7 +54,17 @@
     min-height: 60px;
   }
   li{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    border-bottom: 0px solid $red;
+    padding-bottom: 50px;
+  }
+  @media screen and (max-width: 600px) {
+    li{
+      margin-bottom: 30px;
+      border-bottom: 1px solid $red;
+      padding-bottom: 50px;
+    }
+  }
   }
   .price{
       .field{
@@ -84,7 +99,7 @@
   .views-field-field-image {
     margin-bottom: 16px;
   }
-}
+
 
 
 #block-acomulakokoripesos{
@@ -349,5 +364,15 @@ ul.social-media-links--platforms.platforms.inline.horizontal{
 //Pasos
 .pasos{
   color: $white;
-  padding: 40px 0;
+  padding: 60px 0;
+  h2{
+    margin-bottom: 40px;
+    color: $white;
+  }
+  .paso{
+    margin-top: 20px;
+  }
+  .container-paso{
+    min-height: 250px;
+  }
 }

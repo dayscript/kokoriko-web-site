@@ -7,6 +7,17 @@ footer{
 #footer-first{
     background-color: $black;
 }
+.path-frontpage{
+  #footer-first{
+    background-color: $black;
+    background: url("/themes/contrib/kokoriko_theme/images/bg-kokoripesos.jpg");
+    background-size: cover;
+    #footer-first{
+      background-image: none;
+    }
+  }
+}
+
 
 #footer-meddle{
   background: url("/themes/contrib/kokoriko_theme/images/brush-1.png") $color-title;
