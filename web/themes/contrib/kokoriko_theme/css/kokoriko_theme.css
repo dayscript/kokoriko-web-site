@@ -7268,6 +7268,10 @@ ul.row.restaurantes {
   .views-field-field-horario .field-content {
     margin-left: 10px; }
 
+.section-kokoripesos .field-name-body p {
+  margin: 20px 0;
+  text-align: center !important; }
+
 #block-domiciliosblock {
   top: 308px;
   background-color: #FFFFFF;
