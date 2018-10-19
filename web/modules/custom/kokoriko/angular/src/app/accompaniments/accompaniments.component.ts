@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
+declare var Drupal : any;
+declare var drupalSettings : any;
 
 @Component({
   selector: 'block-accompaniments',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccompanimentsComponent implements OnInit {
 
-  constructor() { }
+  elements: any;
+  constructor() {
+     this.elements = drupalSettings.kokoriko.kokorikoJS
+   }
 
   ngOnInit() {
+    console.log(this.elements);
   }
 
 }

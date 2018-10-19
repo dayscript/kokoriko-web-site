@@ -1,7 +1,7 @@
 drupal_angular.app_form:
-  path: '/drupal-angular' # Path that you want for your form
+  path: '/user/dashboard'
   defaults:
-    _title: 'Drupal Angular Form'
-    _form: '\Drupal\kokoriko\Form\AngularAppForm'
+    _controller: '\Drupal\kokoriko\Controller\DashboardController::Overview'
+    _title: 'Kokoripe$os'
   requirements:
     _permission: 'access content'

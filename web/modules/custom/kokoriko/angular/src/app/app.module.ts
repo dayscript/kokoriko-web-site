@@ -7,7 +7,7 @@ import { AddressesComponent } from './addresses/addresses.component';
 @NgModule({
   declarations: [
     AccompanimentsComponent,
-    AddressesComponent
+    // AddressesComponent
   ],
   imports: [
     BrowserModule
@@ -15,7 +15,7 @@ import { AddressesComponent } from './addresses/addresses.component';
   providers: [],
   bootstrap: [
     AccompanimentsComponent,
-    AddressesComponent
+    // AddressesComponent
   ]
 })
 export class AppModule { }

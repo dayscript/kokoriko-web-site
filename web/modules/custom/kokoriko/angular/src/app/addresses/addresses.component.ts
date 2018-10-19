@@ -9,7 +9,7 @@ declare var drupalSettings : any;
   styleUrls: ['./addresses.component.css']
 })
 export class AddressesComponent implements OnInit {
-   elements: any;
+  elements: any;
   constructor() {
      this.elements = drupalSettings.kokoriko.kokorikoJS
    }
