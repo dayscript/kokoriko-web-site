@@ -32,19 +32,7 @@ h2{
   text-transform: uppercase;
   text-align: center;
   color: $color-title;
-  //font-size: 85px;
-  &::before{
-    font-family: 'kokoriko';
-    font-style: normal;
-    font-weight: 400;
-    content: '\E800';
-  }
-  &::after{
-    font-family: 'kokoriko';
-    font-style: normal;
-    font-weight: 400;
-    content: '\E801';
-  }
+  line-height: 1em;
 }
 
 h3{
@@ -56,4 +44,10 @@ h3{
 
 .style-none {
   list-style: none;
+}
+.button{
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-family: 'BlockBE-Condensed';
+  font-size: 1.4em;
 }

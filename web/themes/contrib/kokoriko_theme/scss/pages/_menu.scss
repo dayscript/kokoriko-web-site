@@ -3,3 +3,29 @@
     list-style: none;
   }
 }
+.section-menu{
+h4{
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+  .field-price {
+    font-family: 'BlockBE-Regular';
+    font-style: normal;
+    font-weight: 400;
+    color: $red;
+    font-size: 1.2em;
+    line-height: 12px;
+  }
+  .field-label {
+    text-transform: uppercase;
+    font-size: 0.75em;
+  }
+  .producto {
+    min-height: 400px;
+    margin-bottom: 20px;
+    .columns{
+      padding-left: 0.4rem;
+      padding-right: 0.4rem;
+    }
+  }
+}

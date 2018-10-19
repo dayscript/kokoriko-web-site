@@ -114,14 +114,14 @@ $font-weight-bold: bold;
 // $steel       : #666666;
 // $charcoal    : #555555;
 // $tuatara     : #444444;
-// $oil         : #333333;
+ $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
-   $red         : #d0261a;
+   $red         : #EC333B;
    $color-title : #ec333b;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: #EC333B;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -225,16 +225,16 @@ $body-font-family: $font-family-sans-serif;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(44);
-$h2-font-size: rem-calc(85);
+$h1-font-size: rem-calc(90);
+$h2-font-size: rem-calc(80);
 $h3-font-size: rem-calc(27);
 $h4-font-size: rem-calc(23);
 $h5-font-size: rem-calc(18);
 $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-$h1-font-reduction: rem-calc(10);
-$h2-font-reduction: rem-calc(60);
+$h1-font-reduction: rem-calc(40);
+$h2-font-reduction: rem-calc(50);
 $h3-font-reduction: rem-calc(5);
 $h4-font-reduction: rem-calc(5);
 $h5-font-reduction: 0;
