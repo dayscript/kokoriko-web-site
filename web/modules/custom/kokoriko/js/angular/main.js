@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"acompañamientos row\">\n  <div class=\"columns\">\n    <div class=\"large-4 medium-4 columns active large-offset-1\">\n      <div>\n        <span>8 Presas</span>\n        <h3>$ 24.900</h3>\n      </div>\n    </div>\n    <div class=\"large-3 medium-3 columns container\">\n      <div>\n        <span class=\"number\">2</span><br>\n        <span class=\"text\">Acompañamientos</span>\n        <h3>$ 24.900</h3>\n      </div>\n    </div>\n    <div class=\"large-3 medium-3 columns container end\">\n      <div>\n        <span class=\"number\">3</span><br>\n        <span class=\"text\">Acompañamientos</span>\n        <h3>$ 24.900</h3>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div id=\"cuenta\">\n    <!--Hola + Botones de usuario-->\n    <div class=\"row user-container\">\n\n        <div class=\"medium-4 columns\">\n            <div class=\"row\">\n                <div class=\"medium-4 columns\">\n                    <img src=\"/themes/contrib/kokoriko_theme/images/default-user.jpg\" alt=\"\" class=\"photo\">\n                </div>\n\n                <div class=\"medium-8 columns text-align-left\">\n                    <div class=\"hi\">HOLA</div>\n                    <div class=\"user\">Ginna Paola Delgado</div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"columns medium-7\">\n            <div class=\"botones\">\n                <a href=\"#\" class=\"button account\">¿Cómo funciona?</a>\n                <a href=\"#\" class=\"button account\">Actualizar datos</a>\n                <a href=\"#\" class=\"button account\">Cerrar sesión</a>\n            </div>\n        </div>\n    </div>\n    <!--Hola + Botones de usuario-->\n\n\n    <!--Banner central-->\n    <div class=\"row\">\n        <div class=\"columns medium-12\">\n            <img src=\"/themes/contrib/kokoriko_theme/images/banner-kkp.jpg\" alt=\"\" class=\"banner\">\n        </div>\n    </div>\n    <!--Banner central-->\n\n    <!--Estado de cuenta-->\n    <div class=\"row\">\n        <!--Navegador izquierda-->\n        <div class=\"columns medium-4\">\n            <div class=\"container-cuenta\">\n                <h3>Estado de cuenta</h3>\n                <hr>\n                <div class=\"fecha\">Septiembre 20 de 2018</div>\n                <div>Tienes disponibles</div>\n\n                <div class=\"kokoripesos\">25.000</div>\n                <img src=\"dsdsd\" alt=\"\">\n                <hr>\n                <div class=\"vencidos\"><span>1.050 Kokoripesos </span> por vencer</div>\n                <div class=\"fecha\">Septiembre 20 de 2018</div>\n                <hr>\n                <div class=\"recent\">Ultima redención: <span>Septiembre 20 de 2018</span></div>\n                <div class=\"recent\">Ultima acumulación: <span>Septiembre 20 de 2018</span></div>\n            </div>\n        </div>\n        <!--Navegador izquierda-->\n\n        <!--Tabla derecha-->\n        <div class=\"columns medium-8\">\n\n            <ul class=\"tabs\" data-deep-link=\"true\" data-update-history=\"true\" data-deep-link-smudge=\"true\"\n                data-deep-link-smudge-delay=\"500\" data-tabs id=\"deeplinked-tabs\">\n                <li class=\"tabs-title is-active\"><a href=\"#panel1d\" aria-selected=\"true\">Tab 1</a></li>\n                <li class=\"tabs-title\"><a href=\"#panel2d\">Tab 2</a></li>\n                <li class=\"tabs-title\"><a href=\"#panel3d\">Tab 3</a></li>\n                <li class=\"tabs-title\"><a href=\"#panel4d\">Tab 4</a></li>\n            </ul>\n\n            <div class=\"tabs-content\" data-tabs-content=\"deeplinked-tabs\">\n                <div class=\"tabs-panel is-active\" id=\"panel1d\">\n                    <table border=\"1\">\n                        <tbody>\n                        <tr style=\"background-color: red;\">\n                            <th>FECHA FACTURA</th>\n                            <th>N° FACTURA</th>\n                            <th>RESTAURANTE</th>\n                            <th>VR. FACTURA</th>\n                            <th>KOKORIPESOS</th>\n                        </tr>\n                        <tr>\n                            <td>03/11/2017</td>\n                            <td>T57-210301</td>\n                            <td>Diver Plaza Alamos Bogotá</td>\n                            <td>$10200</td>\n                            <td>102</td>\n                        </tr>\n                        <tr>\n                            <td>03/11/2017</td>\n                            <td>T57-210301</td>\n                            <td>Diver Plaza Alamos Bogotá</td>\n                            <td>$10200</td>\n                            <td>102</td>\n                        </tr>\n                        <tr>\n                            <td>03/11/2017</td>\n                            <td>T57-210301</td>\n                            <td>Diver Plaza Alamos Bogotá</td>\n                            <td>$10200</td>\n                            <td>102</td>\n                        </tr>\n                        <tr>\n                            <td>03/11/2017</td>\n                            <td>T57-210301</td>\n                            <td>Diver Plaza Alamos Bogotá</td>\n                            <td>$10200</td>\n                            <td>102</td>\n                        </tr>\n                        </tbody>\n                    </table>\n\n                </div>\n                <div class=\"tabs-panel\" id=\"panel2d\">\n                    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend\n                        nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl\n                        tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>\n                </div>\n                <div class=\"tabs-panel\" id=\"panel3d\">\n                    <img class=\"thumbnail\" src=\"assets/img/generic/rectangle-3.jpg\">\n                </div>\n                <div class=\"tabs-panel\" id=\"panel4d\">\n                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore\n                        et dolore magna aliqua.</p>\n                </div>\n            </div>\n\n\n\n        </div>\n        <!--Tabla derecha-->\n    </div>\n    <!--Estado de cuenta-->\n\n\n</div>"
 
 /***/ }),
 
@@ -68,8 +68,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var AccompanimentsComponent = /** @class */ (function () {
     function AccompanimentsComponent() {
+        this.elements = drupalSettings.kokoriko.kokorikoJS;
     }
     AccompanimentsComponent.prototype.ngOnInit = function () {
+        console.log(this.elements);
     };
     AccompanimentsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -80,75 +82,6 @@ var AccompanimentsComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], AccompanimentsComponent);
     return AccompanimentsComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/addresses/addresses.component.css":
-/*!***************************************************!*\
-  !*** ./src/app/addresses/addresses.component.css ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/addresses/addresses.component.html":
-/*!****************************************************!*\
-  !*** ./src/app/addresses/addresses.component.html ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wrapper-block\">\n  <div class=\"image\">\n    <img [src]= renderImage(elements.image) />\n  </div>\n  <div class=\"text\">\n    <a href=\"#footer-middle\"class=\"rotate-left\"> {{elements.label}}</a>\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/addresses/addresses.component.ts":
-/*!**************************************************!*\
-  !*** ./src/app/addresses/addresses.component.ts ***!
-  \**************************************************/
-/*! exports provided: AddressesComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddressesComponent", function() { return AddressesComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var AddressesComponent = /** @class */ (function () {
-    function AddressesComponent() {
-        this.elements = drupalSettings.kokoriko.kokorikoJS;
-    }
-    AddressesComponent.prototype.ngOnInit = function () {
-        console.log(this.elements);
-    };
-    AddressesComponent.prototype.renderImage = function (path) {
-        var base_path = '/sites/default/files/';
-        return path.replace('public://', base_path);
-    };
-    AddressesComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-addresses',
-            template: __webpack_require__(/*! ./addresses.component.html */ "./src/app/addresses/addresses.component.html"),
-            styles: [__webpack_require__(/*! ./addresses.component.css */ "./src/app/addresses/addresses.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], AddressesComponent);
-    return AddressesComponent;
 }());
 
 
@@ -168,14 +101,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _accompaniments_accompaniments_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./accompaniments/accompaniments.component */ "./src/app/accompaniments/accompaniments.component.ts");
-/* harmony import */ var _addresses_addresses_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./addresses/addresses.component */ "./src/app/addresses/addresses.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -186,7 +117,6 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
                 _accompaniments_accompaniments_component__WEBPACK_IMPORTED_MODULE_2__["AccompanimentsComponent"],
-                _addresses_addresses_component__WEBPACK_IMPORTED_MODULE_3__["AddressesComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]
@@ -194,7 +124,6 @@ var AppModule = /** @class */ (function () {
             providers: [],
             bootstrap: [
                 _accompaniments_accompaniments_component__WEBPACK_IMPORTED_MODULE_2__["AccompanimentsComponent"],
-                _addresses_addresses_component__WEBPACK_IMPORTED_MODULE_3__["AddressesComponent"]
             ]
         })
     ], AppModule);
@@ -266,7 +195,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/ariel/projects/web/kokoriko/web/modules/custom/kokoriko/angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/ariel/projects/kokoriko/web/modules/custom/kokoriko/angular/src/main.ts */"./src/main.ts");
 
 
 /***/ })

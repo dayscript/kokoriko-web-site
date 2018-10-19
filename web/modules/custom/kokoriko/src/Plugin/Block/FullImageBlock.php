@@ -33,7 +33,7 @@ class FullImageBlock extends BlockBase {
       '#attributes' => ['id' => 'response'],
     ];
 
-    
+
     return $return;
   }
 }

@@ -5,5 +5,12 @@
   a{
     text-transform: uppercase;
     float: right;
+    font-size: 0.8em;
+    margin-top: 6px;
+  }
+  @media screen and (max-width: 600px) {
+    a{
+      float: left;
+    }
   }
 }

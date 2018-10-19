@@ -1,15 +1,24 @@
 // Non-modular or client styles for .l-header region.
 //
 .header{
-  // position: relative;
-  // display: inline-block;
+  background-color: $black;
 }
 
 .not-frontpage{
   .header{
     background-image: url(/themes/contrib/kokoriko_theme/images/header-pages.png);
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: bottom;
+    background-color: $white;
+  }
+  @media screen and (max-width: 600px) {
+    .header{
+      background-image: none;
+      background-color: $black;
+    }
+  }
+  .row.sub-wrapper {
+    margin-bottom: 40px;
   }
 }
 
@@ -23,5 +32,8 @@
 }
 
 .sub-header{
-  margin: 20px 0; 
+  margin: 20px 0 60px 0;
+}
+.row.sub-wrapper {
+  margin-bottom: 0px;
 }

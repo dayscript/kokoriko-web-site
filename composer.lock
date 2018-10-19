@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "54a1feeb8c3008be8deb4185bae35488",
+    "content-hash": "7ee6bce3f162add4acad2c4fb332f53f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3516,6 +3516,53 @@
             }
         },
         {
+            "name": "drupal/menu_item_role_access",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/menu_item_role_access",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_item_role_access-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "2862276f066b3d5189cb5397db6814681d782311"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1532437381",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "LiamPower",
+                    "homepage": "https://www.drupal.org/user/3016225"
+                }
+            ],
+            "description": "Provide role based access to menu items.",
+            "homepage": "https://www.drupal.org/project/menu_item_role_access",
+            "support": {
+                "source": "http://cgit.drupalcode.org/menu_item_role_access"
+            }
+        },
+        {
             "name": "drupal/menu_link_attributes",
             "version": "1.0.0",
             "source": {
@@ -3793,6 +3840,61 @@
             }
         },
         {
+            "name": "drupal/redirect",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/redirect",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/redirect-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "3f9620d186e25f36ac56755979932b8ea965b8c7"
+            },
+            "require": {
+                "drupal/core": "~8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1539682684",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "pifagor",
+                    "homepage": "https://www.drupal.org/user/2375692"
+                }
+            ],
+            "description": "Allows users to redirect from old URLs to new URLs.",
+            "homepage": "https://www.drupal.org/project/redirect",
+            "support": {
+                "source": "http://cgit.drupalcode.org/redirect"
+            }
+        },
+        {
             "name": "drupal/restui",
             "version": "1.15.0",
             "source": {
@@ -3849,6 +3951,67 @@
             "homepage": "https://www.drupal.org/project/restui",
             "support": {
                 "source": "http://cgit.drupalcode.org/restui"
+            }
+        },
+        {
+            "name": "drupal/rules",
+            "version": "3.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/rules",
+                "reference": "8.x-3.0-alpha4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/rules-8.x-3.0-alpha4.zip",
+                "reference": "8.x-3.0-alpha4",
+                "shasum": "d6f11a6bd867b3479504b00278b4465a5b138d3a"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/typed_data": "*"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "dev-master",
+                "drupal/coder": "8.2.*",
+                "squizlabs/php_codesniffer": "2.9.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-alpha4",
+                    "datestamp": "1526654284",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "TR",
+                    "homepage": "https://www.drupal.org/user/202830"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "klausi",
+                    "homepage": "https://www.drupal.org/user/262198"
+                }
+            ],
+            "description": "React on events and conditionally evaluate actions.",
+            "homepage": "https://www.drupal.org/project/rules",
+            "support": {
+                "source": "http://cgit.drupalcode.org/rules"
             }
         },
         {
@@ -3967,6 +4130,54 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/simple_fb_connect",
                 "issues": "https://www.drupal.org/project/issues/simple_fb_connect"
+            }
+        },
+        {
+            "name": "drupal/social_media_links",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/social_media_links",
+                "reference": "8.x-2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/social_media_links-8.x-2.6.zip",
+                "reference": "8.x-2.6",
+                "shasum": "53462cb307b104552ae5370b917e55ca50fba526"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.6",
+                    "datestamp": "1510489384",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "cbeier",
+                    "homepage": "https://www.drupal.org/user/1500710"
+                }
+            ],
+            "description": "The module provides a block that display links (icons) to your profiles on various social networking sites.",
+            "homepage": "https://www.drupal.org/project/social_media_links",
+            "support": {
+                "source": "http://cgit.drupalcode.org/social_media_links",
+                "issues": "https://www.drupal.org/project/issues/social_media_links"
             }
         },
         {
@@ -4140,6 +4351,63 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/twig_vardumper",
                 "issues": "https://www.drupal.org/project/issues/twig_vardumper"
+            }
+        },
+        {
+            "name": "drupal/typed_data",
+            "version": "1.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/typed_data",
+                "reference": "8.x-1.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/typed_data-8.x-1.0-alpha2.zip",
+                "reference": "8.x-1.0-alpha2",
+                "shasum": "a4e5f9fe5ad5842c335414ae2cbfb2aed69ef0fe"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "dev-master",
+                "drupal/coder": "8.2.*",
+                "squizlabs/php_codesniffer": "2.9.*",
+                "symfony/yaml": "3.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha2",
+                    "datestamp": "1536437580",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "TR",
+                    "homepage": "https://www.drupal.org/user/202830"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                }
+            ],
+            "description": "Extends the core Typed Data API with new APIS and features.",
+            "homepage": "https://www.drupal.org/project/typed_data",
+            "support": {
+                "source": "http://cgit.drupalcode.org/typed_data"
             }
         },
         {
@@ -9065,6 +9333,7 @@
         "drupal/front": 10,
         "drupal/promote_disable": 15,
         "drupal/quick_clone": 10,
+        "drupal/rules": 15,
         "drupal/services": 10,
         "drupal/webform": 5,
         "drupal/zurb_foundation": 10
