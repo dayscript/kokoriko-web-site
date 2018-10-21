@@ -4,6 +4,7 @@
   }
 }
 #cuenta{
+  margin-bottom: 40px;
   .user-container{
     .columns{
       padding-left: 0.3rem;
@@ -23,6 +24,7 @@
     }
     .hi{
       font-size: 2em;
+      color: $red;
     }
     .user{
       font-size: 1.2em;
@@ -46,6 +48,11 @@
       span{
         color: $red;
       }
+      @media screen and (max-width: 600px){
+        span{
+          display: block;
+        }
+      }
     }
   }
 <<<<<<< HEAD
@@ -53,5 +60,65 @@
   img.banner{
     margin-bottom: 16px;
   }
+<<<<<<< HEAD
 >>>>>>> 16e64621fc0acf95fcb269b2b7db92bc80802a0d
+=======
+}
+//TABS
+
+.tabs dd > a, .tabs .tab-title > a {
+  display: block;
+  background-color: #EFEFEF;
+  color: #222222;
+  font-family: "Lato", sans-serif;
+  font-size: 0.8rem;
+  padding: 1.7rem 2.2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ececec;
+}
+.postfix.button {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9em;
+}
+.container-redimir{
+  padding: 8em 4em;
+  .redimir{
+    font-size: 2em;
+    margin-bottom: 16px;
+  }
+  @media screen and (max-width: 600px){
+    .redimir{
+      font-size: 1em;
+      margin-bottom: 12px;
+    }
+  }
+  .note{
+    font-size: 0.8em;
+    margin-top: 12px;
+  }
+}
+@media screen and (max-width: 600px){
+  .container-redimir{
+    padding: 2em 0.9em;
+  }
+}
+.tabs-content {
+  padding: 12px 25px 12px 0;
+}
+@media screen and (max-width: 600px){
+  .tabs-content {
+    padding: 0.9em;
+  }
+}
+table thead tr th, table thead tr td {
+  color: $white;
+  background: $red;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 0.5rem 0.625rem 0.625rem;
+}
+.menu-cuenta{
+  margin-top: 20px;
+>>>>>>> ba83cd16245fb3470c13a9a032c3341e30cdf492
 }

@@ -4658,7 +4658,7 @@ table {
     .tabs dd.active > a,
     .tabs .tab-title.active > a {
       background-color: #FFFFFF;
-      color: #222222; }
+      color: #EC333B; }
   .tabs.radius dd:first-child a,
   .tabs.radius .tab:first-child a {
     -webkit-border-bottom-left-radius: 3px;
@@ -6797,6 +6797,12 @@ h3 {
   .button.account {
     border-radius: 30px;
     margin-left: 10px; }
+  @media screen and (max-width: 600px) {
+    .button.account {
+      border-radius: 0px;
+      margin-left: 0px;
+      margin: 6px 0;
+      width: 100%; } }
 
 .meta-header {
   background-color: #EC333B;
@@ -7337,6 +7343,7 @@ ul.row.restaurantes {
 .section-kokoripesos .field-name-body {
   margin: 40px 0; }
 
+<<<<<<< HEAD
 #cuenta .user-container .columns {
   padding-left: 0.3rem;
   padding-right: 0.3rem; }
@@ -7344,38 +7351,104 @@ ul.row.restaurantes {
 <<<<<<< HEAD
 =======
 @media screen and (max-width: 600px) {
+=======
+#cuenta {
+  margin-bottom: 40px; }
+>>>>>>> ba83cd16245fb3470c13a9a032c3341e30cdf492
   #cuenta .user-container .columns {
-    padding-left: 0.9rem;
-    padding-right: 0.9rem; } }
+    padding-left: 0.3rem;
+    padding-right: 0.3rem; }
+  @media screen and (max-width: 600px) {
+    #cuenta .user-container .columns {
+      padding-left: 0.9rem;
+      padding-right: 0.9rem; } }
+  #cuenta .user-container .photo {
+    border-radius: 80px; }
+  #cuenta .user-container .hi {
+    font-size: 2em;
+    color: #EC333B; }
+  #cuenta .user-container .user {
+    font-size: 1.2em; }
+  #cuenta .container-cuenta {
+    background-color: #fbfbfb;
+    padding: 20px;
+    text-align: center; }
+    #cuenta .container-cuenta h3 {
+      font-size: 1.4em; }
+    #cuenta .container-cuenta .kokoripesos {
+      font-size: 4em;
+      font-family: 'BlockBE-Condensed'; }
+    #cuenta .container-cuenta .fecha {
+      color: #EC333B; }
+    #cuenta .container-cuenta .vencidos span, #cuenta .container-cuenta .recent span {
+      color: #EC333B; }
+    @media screen and (max-width: 600px) {
+      #cuenta .container-cuenta .vencidos span, #cuenta .container-cuenta .recent span {
+        display: block; } }
+  #cuenta img.banner {
+    margin-bottom: 16px; }
 
+.tabs dd > a, .tabs .tab-title > a {
+  display: block;
+  background-color: #EFEFEF;
+  color: #222222;
+  font-family: "Lato", sans-serif;
+  font-size: 0.8rem;
+  padding: 1.7rem 2.2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ececec; }
+
+.postfix.button {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9em; }
+
+<<<<<<< HEAD
 >>>>>>> 16e64621fc0acf95fcb269b2b7db92bc80802a0d
 #cuenta .user-container .photo {
   border-radius: 80px; }
+=======
+.container-redimir {
+  padding: 8em 4em; }
+  .container-redimir .redimir {
+    font-size: 2em;
+    margin-bottom: 16px; }
+  @media screen and (max-width: 600px) {
+    .container-redimir .redimir {
+      font-size: 1em;
+      margin-bottom: 12px; } }
+  .container-redimir .note {
+    font-size: 0.8em;
+    margin-top: 12px; }
+>>>>>>> ba83cd16245fb3470c13a9a032c3341e30cdf492
 
-#cuenta .user-container .hi {
-  font-size: 2em; }
+@media screen and (max-width: 600px) {
+  .container-redimir {
+    padding: 2em 0.9em; } }
 
-#cuenta .user-container .user {
-  font-size: 1.2em; }
+.tabs-content {
+  padding: 12px 25px 12px 0; }
 
-#cuenta .container-cuenta {
-  background-color: #fbfbfb;
-  padding: 20px;
-  text-align: center; }
-  #cuenta .container-cuenta h3 {
-    font-size: 1.4em; }
-  #cuenta .container-cuenta .kokoripesos {
-    font-size: 4em;
-    font-family: 'BlockBE-Condensed'; }
-  #cuenta .container-cuenta .fecha {
-    color: #EC333B; }
-  #cuenta .container-cuenta .vencidos span, #cuenta .container-cuenta .recent span {
-    color: #EC333B; }
+@media screen and (max-width: 600px) {
+  .tabs-content {
+    padding: 0.9em; } }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 #cuenta img.banner {
   margin-bottom: 16px; }
+=======
+table thead tr th, table thead tr td {
+  color: #FFFFFF;
+  background: #EC333B;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 0.5rem 0.625rem 0.625rem; }
+
+.menu-cuenta {
+  margin-top: 20px; }
+>>>>>>> ba83cd16245fb3470c13a9a032c3341e30cdf492
 
 >>>>>>> 16e64621fc0acf95fcb269b2b7db92bc80802a0d
 #block-domiciliosblock {
