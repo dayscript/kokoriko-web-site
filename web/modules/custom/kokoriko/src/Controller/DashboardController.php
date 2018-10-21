@@ -5,6 +5,7 @@ namespace Drupal\kokoriko\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\user\Entity\User;
 use Symfony\Component\Routing\RouteCollection;
+use Drupal;
 /**
  * Defines HelloController class.
  */
@@ -18,12 +19,18 @@ class DashboardController extends ControllerBase {
    *   Return markup array.
    */
 
+   public function __construct() {
+     $this->account     = Drupal::currentUser();
+     $this->user        = User::load( $this->account ->id() );
+     $this->user_fields = ['field_nombres','field_apellidos','field_mail','user_picture','field_no_identificacion','field_nombres'];
+     $this->output      = [];
+   }
 
   public function Overview(){
 
-    $user = \Drupal\user\Entity\User::load(40);
-    $user = $user->field_no_identificacion->value;
-
+    foreach ($this->user_fields as $key => $value) {
+      $this->output[$value] = $this->user->get($value)->value;
+    }
 
 
     $return = [
@@ -31,7 +38,7 @@ class DashboardController extends ControllerBase {
       '#tag' => 'block-accompaniments', // Selector of the your app root component from the Angular app
       '#attributes' => ['id' => 'response'],
     ];
-    $return['#attached']['drupalSettings']['kokoriko']['kokorikoJS'] = $user;
+    $return['#attached']['drupalSettings']['kokoriko']['kokorikoJS'] = $this->output;
 
     return $return;
   }
