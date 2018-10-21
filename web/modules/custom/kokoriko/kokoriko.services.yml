@@ -1,0 +1,5 @@
+services:
+  kokoriko.route_subscriber:
+    class: Drupal\kokoriko\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
