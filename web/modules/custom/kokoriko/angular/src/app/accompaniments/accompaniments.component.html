@@ -27,7 +27,7 @@
 
 
     <!--Banner central-->
-    <div class="row">
+    <div class="row hide-for-small-only">
         <div class="columns medium-12">
             <img src="/themes/contrib/kokoriko_theme/images/banner-kkp.jpg" alt="" class="banner">
         </div>
@@ -45,7 +45,7 @@
                 <div>Tienes disponibles</div>
 
                 <div class="kokoripesos">25.000</div>
-                <img src="dsdsd" alt="">
+                <img src="/themes/contrib/kokoriko_theme/images/kokoripesos-red.png" alt="" class="text-center">
                 <hr>
                 <div class="vencidos"><span>1.050 Kokoripesos </span> por vencer</div>
                 <div class="fecha">Septiembre 20 de 2018</div>
@@ -59,25 +59,54 @@
         <!--Tabla derecha-->
         <div class="columns medium-8">
 
-            <ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true"
-                data-deep-link-smudge-delay="500" data-tabs id="deeplinked-tabs">
-                <li class="tabs-title is-active"><a href="#panel1d" aria-selected="true">Tab 1</a></li>
-                <li class="tabs-title"><a href="#panel2d">Tab 2</a></li>
-                <li class="tabs-title"><a href="#panel3d">Tab 3</a></li>
-                <li class="tabs-title"><a href="#panel4d">Tab 4</a></li>
+            <ul class="tabs hide-for-small-only" data-tab>
+                <li class="tab-title active"><a href="#panel1">Redime tus Kokoripesos</a></li>
+                <li class="tab-title"><a href="#panel2">Kokoripesos acumulados</a></li>
+                <li class="tab-title"><a href="#panel3">Listado de mis redenciones</a></li>
             </ul>
+            <div class="menu-cuenta show-for-small-only">
+                <select>
+                    <option value="">Redime tus Kokoripesos</option>
+                    <option value="">Kokoripesos acumulados</option>
+                    <option value="">Listado de mis redenciones</option>
+                </select>
+            </div>
+            <div class="tabs-content">
+                <div class="content active" id="panel1">
+                    <div class="row text-center">
+                       <div class="container-redimir">
+                           <div class="medium-12 columns">
+                               <div class="redimir">Ingresa el valor que deseas redimir</div>
 
-            <div class="tabs-content" data-tabs-content="deeplinked-tabs">
-                <div class="tabs-panel is-active" id="panel1d">
-                    <table border="1">
-                        <tbody>
-                        <tr style="background-color: red;">
+                               <div class="row">
+                                   <div class="medium-12 columns">
+                                       <div class="row collapse">
+                                           <div class="small-8 medium-10 columns">
+                                               <input type="text" placeholder="Ingrese el monto a redimir">
+                                           </div>
+                                           <div class="small-4 medium-2 columns">
+                                               <a href="#" class="button postfix">Redimir</a>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="note">El cupón con el valor redimido será enviado a su correo electrónico</div>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="content" id="panel2">
+                    <table border="1" width="100%">
+                        <thead>
+                        <tr>
                             <th>FECHA FACTURA</th>
                             <th>N° FACTURA</th>
                             <th>RESTAURANTE</th>
                             <th>VR. FACTURA</th>
                             <th>KOKORIPESOS</th>
                         </tr>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>03/11/2017</td>
                             <td>T57-210301</td>
@@ -108,22 +137,11 @@
                         </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="content" id="panel3">
 
-                </div>
-                <div class="tabs-panel" id="panel2d">
-                    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend
-                        nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl
-                        tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-                </div>
-                <div class="tabs-panel" id="panel3d">
-                    <img class="thumbnail" src="assets/img/generic/rectangle-3.jpg">
-                </div>
-                <div class="tabs-panel" id="panel4d">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua.</p>
                 </div>
             </div>
-
 
 
         </div>
