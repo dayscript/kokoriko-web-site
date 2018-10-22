@@ -9,9 +9,9 @@ footer{
 }
 .path-frontpage{
   #footer-first{
-    background-color: $black;
-    background: url("/themes/contrib/kokoriko_theme/images/bg-kokoripesos.jpg");
-    background-size: cover;
+      background-color: #000000;
+      background: url(/themes/contrib/kokoriko_theme/images/bg-kokoripesos.jpg) no-repeat fixed 0 0 transparent;
+      background-size: cover;
     #footer-first{
       background-image: none;
     }
@@ -48,3 +48,11 @@ footer{
     padding: 0px 42px 0 42px;
 }
 
+.block-socialmedialinks-2{
+  bottom: 68px;
+}
+@media screen and (max-width: 600px){
+  .block-socialmedialinks-2{
+    bottom: 0px;
+  }
+}
