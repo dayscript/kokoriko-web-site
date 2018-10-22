@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AccompanimentsComponent } from './accompaniments/accompaniments.component';
 import { AddressesComponent } from './addresses/addresses.component';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,6 +16,7 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [HttpClient, HttpClientModule],
   bootstrap: [

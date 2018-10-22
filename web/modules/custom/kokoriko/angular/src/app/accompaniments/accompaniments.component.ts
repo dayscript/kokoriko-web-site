@@ -12,17 +12,21 @@ declare var drupalSettings: any;
 export class AccompanimentsComponent implements OnInit {
 
   elements: any;
+  incentives: any;
+  load: any;
+  redemption_value:any = 0;
+  errors: any;
+
   constructor(private http: HttpClient) {
     this.elements = drupalSettings.kokoriko.kokorikoJS
     this.elements.validator = true;
-    
+    this.load = false;
 
   }
 
   ngOnInit() {
     this.validateData();
     this.getData();
-    console.log(this.elements);
   }
 
 
@@ -31,10 +35,15 @@ export class AccompanimentsComponent implements OnInit {
         this.http.get("http://incentives.kokoriko.local:8000/api/entities/" + this.elements.field_no_identificacion)
               .subscribe(
                   data => {
-                      console.log("PUT Request is successful ", data);
+                      this.incentives = data;
+                      this.load= true;
+                      this.errors = null;
+                      console.log("GET Request is successful ", this.incentives.entity);
+
                   },
                   error => {
-                      console.log("error", error);
+                    this.errors = error;
+                    console.log("error", this.errors);
                   }
               );
 
@@ -47,5 +56,21 @@ export class AccompanimentsComponent implements OnInit {
       this.elements.validator = false;
     }
   }
+
+  redemptionPost(){
+    this.http.post("http://incentives.kokoriko.local:8000/api/redemptions",{'entity_id':this.incentives.entity.id,'value':this.redemption_value})
+          .subscribe(
+              data => {
+                  this.errors = null;
+                  console.log("POST Request is successful ", data);
+                  this.getData();
+              },
+              error => {
+                  this.errors = error;
+                  console.log("error", this.errors);
+              }
+          );
+
+        }
 
 }

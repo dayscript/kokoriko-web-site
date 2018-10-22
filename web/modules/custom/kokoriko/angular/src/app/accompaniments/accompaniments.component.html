@@ -5,7 +5,7 @@
         <div class="medium-4 columns">
             <div class="row">
                 <div class="small-4 columns">
-                    <img src="/themes/contrib/kokoriko_theme/images/default-user.jpg" alt="" class="photo">
+                    <img src="{{elements.user_picture}}" alt="" class="photo">
                 </div>
 
                 <div class="small-8 columns text-align-left">
@@ -41,13 +41,13 @@
             <div class="container-cuenta">
                 <h3>Estado de cuenta</h3>
                 <hr>
-                <div class="fecha">Septiembre 20 de 2018</div>
+                <div class="fecha"></div>
                 <div>Tienes disponibles</div>
 
-                <div class="kokoripesos">25.000</div>
+                <div class="kokoripesos">{{incentives?.entity?.points}}</div>
                 <img src="/themes/contrib/kokoriko_theme/images/kokoripesos-red.png" alt="" class="text-center">
                 <hr>
-                <div class="vencidos"><span>1.050 Kokoripesos </span> por vencer</div>
+                <div class="vencidos"><span>10 Kokoripesos </span> por vencer</div>
                 <div class="fecha">Septiembre 20 de 2018</div>
                 <hr>
                 <div class="recent">Ultima redención: <span>Septiembre 20 de 2018</span></div>
@@ -82,15 +82,23 @@
                                    <div class="medium-12 columns">
                                        <div class="row collapse">
                                            <div class="small-8 medium-10 columns">
-                                               <input type="text" placeholder="Ingrese el monto a redimir">
+                                               <input  [(ngModel)]="redemption_value" type="text" placeholder="Ingrese el monto a redimir">
                                            </div>
                                            <div class="small-4 medium-2 columns">
-                                               <a href="#" class="button postfix">Redimir</a>
+                                               <a (click)="redemptionPost($event)" class="button postfix">Redimir</a>
                                            </div>
                                        </div>
                                    </div>
                                </div>
+                                 <div *ngIf="errors?.status" class="note-error"></div>
+                                 <div [ngSwitch]="erros.status">
+                                   <span *ngSwitchCase="422">El valor a redimir solo puede contener numeros</span>
+                                   <span *ngSwitchCase="401">...</span>
+                                   <span *ngSwitchDefault>No es posible redimir en estos momentos, por favor intentelo mas tarde.</span>
+                                 </div>
                                <div class="note">El cupón con el valor redimido será enviado a su correo electrónico</div>
+
+
                            </div>
                        </div>
                     </div>
@@ -106,40 +114,41 @@
                             <th>KOKORIPESOS</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <td>03/11/2017</td>
-                            <td>T57-210301</td>
-                            <td>Diver Plaza Alamos Bogotá</td>
-                            <td>$10200</td>
+                        <tbody *ngIf="incentives?.entity?.invoices">
+                        <tr *ngFor="let invoice of incentives?.entity?.invoices">
+                            <td>{{invoice.invoice_date_up}}</td>
+                            <td>{{invoice.invoice_code}}</td>
+                            <td>{{invoice.restaurant_code}}</td>
+                            <td>$ {{invoice.value}}</td>
                             <td>102</td>
                         </tr>
-                        <tr>
-                            <td>03/11/2017</td>
-                            <td>T57-210301</td>
-                            <td>Diver Plaza Alamos Bogotá</td>
-                            <td>$10200</td>
-                            <td>102</td>
-                        </tr>
-                        <tr>
-                            <td>03/11/2017</td>
-                            <td>T57-210301</td>
-                            <td>Diver Plaza Alamos Bogotá</td>
-                            <td>$10200</td>
-                            <td>102</td>
-                        </tr>
-                        <tr>
-                            <td>03/11/2017</td>
-                            <td>T57-210301</td>
-                            <td>Diver Plaza Alamos Bogotá</td>
-                            <td>$10200</td>
-                            <td>102</td>
-                        </tr>
+                        <div *ngIf="!incentives?.entity?.invoices">
+                           No se han encontrado datos.
+                        </div>
+
                         </tbody>
                     </table>
                 </div>
                 <div class="content" id="panel3">
-
+                  <table border="1" width="100%">
+                      <thead>
+                        <tr>
+                            <th>FECHA DE REDENCIÓN</th>
+                            <th>CÓDIGO</th>
+                            <th>VALOR</th>
+                        </tr>
+                      </thead>
+                      <tbody *ngIf="incentives?.entity?.redemptions">
+                        <tr *ngFor="let redemption of incentives?.entity?.redemptions">
+                            <td>{{redemption.created_at}}</td>
+                            <td>{{redemption.token}}</td>
+                            <td>$ {{redemption.value}}</td>
+                        </tr>
+                        <div *ngIf="!incentives?.entity?.invoices">
+                           No se han encontrado datos.
+                        </div>
+                      </tbody>
+                  </table>
                 </div>
             </div>
 

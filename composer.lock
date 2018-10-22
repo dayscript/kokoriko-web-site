@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ee6bce3f162add4acad2c4fb332f53f",
+    "content-hash": "0a82650d72dbb3efde1392b405cf8ae6",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4092,6 +4092,65 @@
             "homepage": "https://www.drupal.org/project/rules",
             "support": {
                 "source": "http://cgit.drupalcode.org/rules"
+            }
+        },
+        {
+            "name": "drupal/scroll_to_destination_anchors",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/scroll_to_destination_anchors",
+                "reference": "8.x-1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/scroll_to_destination_anchors-8.x-1.0-alpha1.zip",
+                "reference": "8.x-1.0-alpha1",
+                "shasum": "471efba36b3deb91a6210e0bea0b850892088e75"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1",
+                    "datestamp": "1502175544",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Anonymous",
+                    "homepage": "https://www.drupal.org/user/0"
+                },
+                {
+                    "name": "StephenWard",
+                    "homepage": "https://www.drupal.org/user/676214"
+                },
+                {
+                    "name": "nehajyoti",
+                    "homepage": "https://www.drupal.org/user/2804915"
+                },
+                {
+                    "name": "webuneek",
+                    "homepage": "https://www.drupal.org/user/140603"
+                }
+            ],
+            "description": "Makes destination anchor links that start with a hashtag scroll users to the destination instead of the browser default jump behavior.",
+            "homepage": "https://www.drupal.org/project/scroll_to_destination_anchors",
+            "support": {
+                "source": "http://cgit.drupalcode.org/scroll_to_destination_anchors"
             }
         },
         {
@@ -9414,6 +9473,7 @@
         "drupal/promote_disable": 15,
         "drupal/quick_clone": 10,
         "drupal/rules": 15,
+        "drupal/scroll_to_destination_anchors": 15,
         "drupal/services": 10,
         "drupal/webform": 5,
         "drupal/zurb_foundation": 10
