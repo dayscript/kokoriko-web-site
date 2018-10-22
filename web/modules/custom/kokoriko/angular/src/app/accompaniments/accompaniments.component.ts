@@ -13,14 +13,14 @@ export class AccompanimentsComponent implements OnInit {
 
   elements: any;
   incentives: any;
-  load: any;
   redemption_value:any = 0;
-  errors: any;
+  redemption_last:any;
+  invoice_last:any;
+  errors: any = null;
 
   constructor(private http: HttpClient) {
     this.elements = drupalSettings.kokoriko.kokorikoJS
     this.elements.validator = true;
-    this.load = false;
 
   }
 
@@ -36,8 +36,10 @@ export class AccompanimentsComponent implements OnInit {
               .subscribe(
                   data => {
                       this.incentives = data;
-                      this.load= true;
+                      this.redemption_value = this.incentives.points;
                       this.errors = null;
+                      this.redemption_last = this.incentives.entity.redemptions[this.incentives.entity.redemptions.length - 1].created_at;
+                      this.invoice_last = this.incentives.entity.invoices[this.incentives.entity.invoices.length - 1].created_at;
                       console.log("GET Request is successful ", this.incentives.entity);
 
                   },
@@ -61,6 +63,7 @@ export class AccompanimentsComponent implements OnInit {
     this.http.post("http://incentives.kokoriko.local:8000/api/redemptions",{'entity_id':this.incentives.entity.id,'value':this.redemption_value})
           .subscribe(
               data => {
+                  this.incentives = data;
                   this.errors = null;
                   console.log("POST Request is successful ", data);
                   this.getData();
