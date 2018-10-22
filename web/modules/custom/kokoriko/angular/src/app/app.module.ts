@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AccompanimentsComponent } from './accompaniments/accompaniments.component';
 import { AddressesComponent } from './addresses/addresses.component';
+import { HttpClient, HttpClientModule } from "@angular/common/http";
+
+
 
 @NgModule({
   declarations: [
@@ -10,9 +13,10 @@ import { AddressesComponent } from './addresses/addresses.component';
     // AddressesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [HttpClient, HttpClientModule],
   bootstrap: [
     AccompanimentsComponent,
     // AddressesComponent

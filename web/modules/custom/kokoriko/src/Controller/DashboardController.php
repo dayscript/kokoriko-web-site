@@ -32,6 +32,10 @@ class DashboardController extends ControllerBase {
       $this->output[$value] = $this->user->get($value)->value;
     }
 
+    $this->output['id'] = $this->account->id();
+    $this->output['account_name'] = $this->account->getDisplayName();
+    $this->output['last_access'] = $this->account->getLastAccessedTime();
+
 
     $return = [
       '#type' => 'html_tag',

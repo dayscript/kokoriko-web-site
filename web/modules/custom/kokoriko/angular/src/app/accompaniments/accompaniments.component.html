@@ -10,16 +10,16 @@
 
                 <div class="small-8 columns text-align-left">
                     <div class="hi">HOLA</div>
-                    <div class="user">Ginna Paola Delgado</div>
+                    <div class="user">{{elements.field_nombres}} {{elements.field_apellidos}}</div>
                 </div>
             </div>
         </div>
 
         <div class="columns medium-7">
             <div class="botones">
-                <a href="#" class="button account">¿Cómo funciona?</a>
-                <a href="#" class="button account">Actualizar datos</a>
-                <a href="#" class="button account">Cerrar sesión</a>
+                <a href="/" class="button account">¿Cómo funciona?</a>
+                <a href="/user/{{elements.id}}/edit" class="button account">Actualizar datos</a>
+                <a href="/user/logout" class="button account">Cerrar sesión</a>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
     <div class="row hide-for-small-only">
         <div class="columns medium-12">
             <img src="/themes/contrib/kokoriko_theme/images/banner-kkp.jpg" alt="" class="banner">
-        </div>  
+        </div>
     </div>
     <!--Banner central-->
 
