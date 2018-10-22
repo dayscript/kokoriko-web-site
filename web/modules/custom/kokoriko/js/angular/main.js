@@ -224,6 +224,6 @@ module.exports = __webpack_require__(/*! /home/ariel/projects/web/kokoriko/web/m
 
 
 /***/ })
-
+ 
 },[[0,"runtime","vendor"]]]);
 //# sourceMappingURL=main.js.map
