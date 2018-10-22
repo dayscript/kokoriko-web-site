@@ -14,7 +14,7 @@
  * following:
  *
  * - Base: CSS reset/normalize plus HTML element styling.
- * - Layout: Macro arrangement of a web page, including any grid systems.
+ * - Layout: Macro arrangement of a web page, including any grid sys tems.
  * - Modules: Dictate minor layout modules or reusable elements.
  * - States: Describe the appearance of a module in various states.
  * - Theme: Specific customizations for your subtheme.
@@ -7412,18 +7412,8 @@ ul.row.restaurantes {
 .section-kokoripesos .field-name-body {
   margin: 40px 0; }
 
-<<<<<<< HEAD
-#cuenta .user-container .columns {
-  padding-left: 0.3rem;
-  padding-right: 0.3rem; }
-
-<<<<<<< HEAD
-=======
-@media screen and (max-width: 600px) {
-=======
 #cuenta {
   margin-bottom: 40px; }
->>>>>>> ba83cd16245fb3470c13a9a032c3341e30cdf492
   #cuenta .user-container .columns {
     padding-left: 0.3rem;
     padding-right: 0.3rem; }
@@ -7472,11 +7462,6 @@ ul.row.restaurantes {
   font-family: "Lato", sans-serif;
   font-size: 0.9em; }
 
-<<<<<<< HEAD
->>>>>>> 16e64621fc0acf95fcb269b2b7db92bc80802a0d
-#cuenta .user-container .photo {
-  border-radius: 80px; }
-=======
 .container-redimir {
   padding: 8em 4em; }
   .container-redimir .redimir {
@@ -7489,7 +7474,6 @@ ul.row.restaurantes {
   .container-redimir .note {
     font-size: 0.8em;
     margin-top: 12px; }
->>>>>>> ba83cd16245fb3470c13a9a032c3341e30cdf492
 
 @media screen and (max-width: 600px) {
   .container-redimir {
@@ -7502,12 +7486,6 @@ ul.row.restaurantes {
   .tabs-content {
     padding: 0.9em; } }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-#cuenta img.banner {
-  margin-bottom: 16px; }
-=======
 table thead tr th, table thead tr td {
   color: #FFFFFF;
   background: #EC333B;
@@ -7517,9 +7495,7 @@ table thead tr th, table thead tr td {
 
 .menu-cuenta {
   margin-top: 20px; }
->>>>>>> ba83cd16245fb3470c13a9a032c3341e30cdf492
 
->>>>>>> 16e64621fc0acf95fcb269b2b7db92bc80802a0d
 #block-domiciliosblock {
   top: 308px;
   background-color: #FFFFFF;
