@@ -6853,7 +6853,7 @@ h3 {
 
 .path-frontpage #footer-first {
   background-color: #000000;
-  background: url("/themes/contrib/kokoriko_theme/images/bg-kokoripesos.jpg");
+  background: url(/themes/contrib/kokoriko_theme/images/bg-kokoripesos.jpg) no-repeat fixed 0 0 transparent;
   background-size: cover; }
   .path-frontpage #footer-first #footer-first {
     background-image: none; }
@@ -6881,6 +6881,13 @@ h3 {
   color: #FFFFFF;
   text-align: center;
   padding: 0px 42px 0 42px; }
+
+.block-socialmedialinks-2 {
+  bottom: 68px; }
+
+@media screen and (max-width: 600px) {
+  .block-socialmedialinks-2 {
+    bottom: 0px; } }
 
 #block-kokoriko-theme-page-title {
   padding: 70px 0 70px 0px; }
