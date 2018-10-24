@@ -7552,12 +7552,11 @@ table thead tr th, table thead tr td {
   margin-top: 20px; }
 
 #block-domiciliosblock {
-  top: 308px;
+  top: 10%;
   background-color: #FFFFFF;
   display: inline-block;
   position: absolute;
   left: -320px;
-  top: 300px;
   float: left !important;
   padding: 0; }
 
