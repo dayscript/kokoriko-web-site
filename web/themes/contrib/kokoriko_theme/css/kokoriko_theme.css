@@ -7557,12 +7557,12 @@ table thead tr th, table thead tr td {
   padding: 0; }
 
 app-addresses, #block-domicilios-block {
-  height: 296px;
+  height: 320px;
   padding: 28px 0;
   background: white;
   max-width: 100px;
   position: fixed;
-  top: 300px; }
+  top: 12%; }
   app-addresses .image, #block-domicilios-block .image {
     text-align: center;
     margin-bottom: 80px; }
@@ -7574,7 +7574,7 @@ app-addresses, #block-domicilios-block {
       font-family: 'BlockBE-Condensed';
       font-style: normal;
       font-weight: 400;
-      font-size: 35px;
+      font-size: 28px;
       color: #ec333b; }
   app-addresses .wrapper-block, #block-domicilios-block .wrapper-block {
     position: relative; }
