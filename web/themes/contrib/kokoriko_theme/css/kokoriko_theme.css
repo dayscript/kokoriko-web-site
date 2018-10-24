@@ -7258,6 +7258,9 @@ ul.social-media-links--platforms.platforms.inline.horizontal {
 li.producto {
   list-style: none; }
 
+.location-content .posted {
+  display: none; }
+
 #block-metamenu li {
   list-style: none; }
 
