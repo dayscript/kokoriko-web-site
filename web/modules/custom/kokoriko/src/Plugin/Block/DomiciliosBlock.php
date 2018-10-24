@@ -74,15 +74,15 @@ class DomiciliosBlock extends BlockBase {
     $return = [
       '#markup' => '<div class="wrapper-block">
                       <div class="image">
-                        <img src="'.$data['image'].'"/>
+                        <img src="/sites/default/files/custom-blocks/kokoriko-domicilio.png"/>
                       </div>
                       <div class="text">
-                        <a href="#footer-middle"class="rotate-left">'.$this->configuration['text'].'</a>
+                        <a href="#footer-middle"class="rotate-left">DOMICILIOS #711</a>
                       </div>
                     </div>'
     ];
 
-    
+
     return $return;
   }
 }
