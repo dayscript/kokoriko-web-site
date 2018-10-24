@@ -65,11 +65,11 @@ class DomiciliosBlock extends BlockBase {
    */
   public function build() {
 
-    $file = \Drupal\file\Entity\File::load($this->configuration['image'][0]);
-    $data = array(
-      'image' =>  str_replace( 'public://', '/sites/default/files/', $file->getFileUri() ),
-      'label'  => $this->configuration['text']
-    );
+    // $file = \Drupal\file\Entity\File::load($this->configuration['image'][0]);
+    // $data = array(
+    //   'image' =>  str_replace( 'public://', '/sites/default/files/', $file->getFileUri() ),
+    //   'label'  => $this->configuration['text']
+    // );
 
     $return = [
       '#markup' => '<div class="wrapper-block">
@@ -81,7 +81,7 @@ class DomiciliosBlock extends BlockBase {
                       </div>
                     </div>'
     ];
- 
+
 
     return $return;
   }
