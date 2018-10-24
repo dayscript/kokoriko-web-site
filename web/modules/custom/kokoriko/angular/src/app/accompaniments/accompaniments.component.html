@@ -90,6 +90,9 @@
                                        </div>
                                    </div>
                                </div>
+                               <div *ngIf="incentives?.status === 200">
+                                 <span>Has redimido {{redemption_value}} kokoripesos, y se ha enviado una notificación a tu correo electronico </span>
+                               </div>
                                <div *ngIf="errors?.status || errors?.status === 0">
                                  <div [ngSwitch]="errors.status" class="errors">
                                    <span *ngSwitchCase="422">El valor a redimir solo puede contener numeros</span>
