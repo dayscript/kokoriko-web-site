@@ -5528,7 +5528,7 @@ h1 {
   font-size: 3.125rem; }
 
 h2 {
-  font-size: 1.875rem; }
+  font-size: 1.5625rem; }
 
 h3 {
   font-size: 1.375rem; }
@@ -6813,6 +6813,11 @@ h3 {
 
 .header {
   background-color: #000000; }
+  .header .banner {
+    margin-top: 0px; }
+  @media screen and (max-width: 600px) {
+    .header .banner {
+      margin-top: 50px; } }
 
 .not-frontpage .header {
   background-image: url(/themes/contrib/kokoriko_theme/images/header-pages.png);
@@ -7561,19 +7566,20 @@ table thead tr th, table thead tr td {
   padding: 0; }
 
 app-addresses, #block-domicilios-block {
-  height: 320px;
-  padding: 28px 0;
+  height: 280px;
+  padding: 16px 0;
   background: white;
-  max-width: 100px;
+  max-width: 80px;
   position: fixed;
-  top: 12%; }
+  top: 20%; }
   app-addresses .image, #block-domicilios-block .image {
     text-align: center;
-    margin-bottom: 80px; }
+    margin-bottom: 120px; }
   app-addresses .text, #block-domicilios-block .text {
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg); }
+            transform: rotate(-90deg);
+    white-space: nowrap; }
     app-addresses .text a, #block-domicilios-block .text a {
       font-family: 'BlockBE-Condensed';
       font-style: normal;

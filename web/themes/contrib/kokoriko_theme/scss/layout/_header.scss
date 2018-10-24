@@ -2,6 +2,14 @@
 //
 .header{
   background-color: $black;
+  .banner{
+    margin-top: 0px;
+  }
+  @media screen and (max-width: 600px){
+    .banner{
+      margin-top: 50px;
+    }
+  }
 }
 
 .not-frontpage{
