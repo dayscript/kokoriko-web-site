@@ -52,12 +52,12 @@ function kokoriko_theme_preprocess_page(&$variables) {
     $variables['imagendestacada'] = $block_content;
 
   }
- 
-  $block = \Drupal\block\Entity\Block::load('domiciliosblock_2');
-  $block_content = \Drupal::entityTypeManager()
-    ->getViewBuilder('block')
-    ->view($block);
-  $variables['domiciliosblock_2'] = $block_content;
+
+  // $block = \Drupal\block\Entity\Block::load('domiciliosblock_2');
+  // $block_content = \Drupal::entityTypeManager()
+  //   ->getViewBuilder('block')
+  //   ->view($block);
+  // $variables['domiciliosblock_2'] = $block_content;
 
 }
 
