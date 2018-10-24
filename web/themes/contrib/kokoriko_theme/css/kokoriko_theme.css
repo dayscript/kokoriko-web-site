@@ -7255,6 +7255,9 @@ ul.social-media-links--platforms.platforms.inline.horizontal {
   #facebook-register .text div {
     margin-top: 20px; }
 
+li.producto {
+  list-style: none; }
+
 #block-metamenu li {
   list-style: none; }
 
