@@ -45,12 +45,12 @@ function kokoriko_theme_preprocess_page(&$variables) {
   if($variables['is_front']){
     unset($variables['page']['content']['kokoriko_theme_content']);
     // Use to load custom type block in page tpl
-    $block = \Drupal\block\Entity\Block::load('imagendestacada');
+    $block = \Drupal\block\Entity\Block::load('views_block__banner_block_1');
     if($block){
       $block_content = \Drupal::entityTypeManager()
         ->getViewBuilder('block')
         ->view($block);
-      $variables['imagendestacada'] = $block_content;
+      $variables['views_block__banner_block_1'] = $block_content;
     }
   }
 
