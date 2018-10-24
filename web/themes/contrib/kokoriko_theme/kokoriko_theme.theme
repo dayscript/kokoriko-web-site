@@ -51,11 +51,11 @@ function kokoriko_theme_preprocess_page(&$variables) {
       ->view($block);
     $variables['imagendestacada'] = $block_content;
 
-    $block = \Drupal\block\Entity\Block::load('domicilios_block');
-    $block_content = \Drupal::entityTypeManager()
-      ->getViewBuilder('block')
-      ->view($block);
-    $variables['domicilios_block'] = $block_content;
+    // $block = \Drupal\block\Entity\Block::load('domicilios_block');
+    // $block_content = \Drupal::entityTypeManager()
+    //   ->getViewBuilder('block')
+    //   ->view($block);
+    // $variables['domicilios_block'] = $block_content;
 
   }
 
