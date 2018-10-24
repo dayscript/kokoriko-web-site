@@ -505,10 +505,27 @@ li.producto {
 
 //REGISTRO
 
-.user-register-form{
+.user-register-form, .user-pass, .user-login-form{
   padding: 0 20%;
   .description{
     font-size: 0.8em;
-    color: #4E4E4E;
+    color: #999999;
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 600px){
+  .user-register-form, .user-pass{
+    padding: 0 2%;
+  }
+}
+.user-pass{
+  text-align: center;
+}
+.password-strength__title, .password-confirm, #edit-user-picture-0-upload{
+  font-size: 0.9em;
+}
+section#block-kokoriko-theme-local-tasks {
+  .button-group{
+    display: none;
   }
 }
