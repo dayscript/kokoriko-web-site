@@ -7513,24 +7513,24 @@ table thead tr th, table thead tr td {
   float: left !important;
   padding: 0; }
 
-app-addresses {
+app-addresses, #block-domiciliosblock-2 {
   display: inline-block;
   height: 269px;
   padding: 28px 0;
   background: white;
   max-width: 100px; }
-  app-addresses .image {
+  app-addresses .image, #block-domiciliosblock-2 .image {
     text-align: center;
     margin-bottom: 80px; }
-  app-addresses .text {
+  app-addresses .text, #block-domiciliosblock-2 .text {
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg); }
-    app-addresses .text a {
+    app-addresses .text a, #block-domiciliosblock-2 .text a {
       font-family: 'BlockBE-Condensed';
       font-style: normal;
       font-weight: 400;
       font-size: 35px;
       color: #ec333b; }
-  app-addresses .wrapper-block {
+  app-addresses .wrapper-block, #block-domiciliosblock-2 .wrapper-block {
     position: relative; }

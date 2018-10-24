@@ -64,24 +64,25 @@ class DomiciliosBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    // $build = [];
-    // $build['domicilios_block_inputtext']['#markup'] = '<p>' . $this->configuration['inputtext'] . '</p>';
-    // return $build;
-    //
+
     $file = \Drupal\file\Entity\File::load($this->configuration['image'][0]);
     $data = array(
-      'image' => $file->getFileUri(),
+      'image' =>  str_replace( 'public://', '/sites/default/files/', $file->getFileUri() ),
       'label'  => $this->configuration['text']
     );
+
     $return = [
-      '#type' => 'html_tag',
-      '#tag' => 'app-addresses', // Selector of the your app root component from the Angular app
-      '#attributes' => ['id' => 'response'],
-      //'#cache' => array('max-age'=> 0),
+      '#markup' => '<div class="wrapper-block">
+                      <div class="image">
+                        <img src="'.$data['image'].'"/>
+                      </div>
+                      <div class="text">
+                        <a href="#footer-middle"class="rotate-left">'.$this->configuration['text'].'</a>
+                      </div>
+                    </div>'
     ];
 
-    $return['#attached']['drupalSettings']['kokoriko']['kokorikoJS'] = $data;
-
+    
     return $return;
   }
 }
