@@ -46,21 +46,20 @@ function kokoriko_theme_preprocess_page(&$variables) {
     unset($variables['page']['content']['kokoriko_theme_content']);
     // Use to load custom type block in page tpl
     $block = \Drupal\block\Entity\Block::load('imagendestacada');
-    $block_content = \Drupal::entityTypeManager()
-      ->getViewBuilder('block')
-      ->view($block);
-    $variables['imagendestacada'] = $block_content;
-
-    // $block = \Drupal\block\Entity\Block::load('domicilios_block');
-    // $block_content = \Drupal::entityTypeManager()
-    //   ->getViewBuilder('block')
-    //   ->view($block);
-    // $variables['domicilios_block'] = $block_content;
-
+    if($block){
+      $block_content = \Drupal::entityTypeManager()
+        ->getViewBuilder('block')
+        ->view($block);
+      $variables['imagendestacada'] = $block_content;
+    }
   }
 
+  $block_entity = Drupal\block_content\Entity\BlockContent::load('domicilios_block');// BLOCK_ID
 
-
+  if ($block_entity) {
+      $block_view = \Drupal::entityTypeManager()->getViewBuilder('block_content')->view($block_entity, 'DISPLAY_VIEW_NAME');
+      $variables['domicilios_block'] = $block_view;
+  }
 }
 
 /**

@@ -7552,25 +7552,25 @@ table thead tr th, table thead tr td {
   float: left !important;
   padding: 0; }
 
-app-addresses, #block-domiciliosblock-2 {
+app-addresses, #block-domicilios-block {
   height: 296px;
   padding: 28px 0;
   background: white;
   max-width: 100px;
   position: fixed;
   top: 300px; }
-  app-addresses .image, #block-domiciliosblock-2 .image {
+  app-addresses .image, #block-domicilios-block .image {
     text-align: center;
     margin-bottom: 80px; }
-  app-addresses .text, #block-domiciliosblock-2 .text {
+  app-addresses .text, #block-domicilios-block .text {
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg); }
-    app-addresses .text a, #block-domiciliosblock-2 .text a {
+    app-addresses .text a, #block-domicilios-block .text a {
       font-family: 'BlockBE-Condensed';
       font-style: normal;
       font-weight: 400;
       font-size: 35px;
       color: #ec333b; }
-  app-addresses .wrapper-block, #block-domiciliosblock-2 .wrapper-block {
+  app-addresses .wrapper-block, #block-domicilios-block .wrapper-block {
     position: relative; }
