@@ -11,16 +11,17 @@
 }
 
 app-addresses, #block-domiciliosblock-2{
-    display: inline-block;
-    height: 269px;
+    height: 296px;
     padding: 28px 0;
     background: white;
     max-width: 100px;
+    position: fixed;
+    top: 300px;
   .image{
     text-align: center;
     margin-bottom: 80px;
 
-  } 
+  }
   .text{
     transform: rotate(-90deg);
     a{
