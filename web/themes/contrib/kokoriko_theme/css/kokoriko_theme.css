@@ -7295,6 +7295,10 @@ section#block-kokoriko-theme-local-tasks .button-group {
   display: none; }
 
 #block-views-block-banner-block-1 {
+  background-image: url(/themes/contrib/kokoriko_theme/images/brush-slide.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
   padding: 0; }
   #block-views-block-banner-block-1 div.owl-item {
     width: 100%; }

@@ -527,7 +527,7 @@ li.producto {
 .user-pass{
   text-align: center;
 }
-.password-strength__title, .password-confirm, #edit-user-picture-0-upload{
+.password-strength__title, .password-confirm, #edit-user-picture-0-upload{ 
   font-size: 0.9em;
 }
 section#block-kokoriko-theme-local-tasks {
@@ -537,6 +537,10 @@ section#block-kokoriko-theme-local-tasks {
 }
 
 #block-views-block-banner-block-1 {
+    background-image: url(/themes/contrib/kokoriko_theme/images/brush-slide.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
     padding: 0;
     div.owl-item{
       width: 100%;
