@@ -176,7 +176,7 @@
 #block-contactenos{
   h2{
     text-align: left;
-    padding-left: 0.9375rem; 
+    padding-left: 0.9375rem;
   }
   @media screen and (max-width: 600px) {
     h2{
@@ -513,6 +513,7 @@ li.producto {
     margin-bottom: 16px;
   }
 }
+<<<<<<< HEAD
 @media screen and (max-width: 600px){
   .user-register-form, .user-pass{
     padding: 0 2%;
@@ -529,3 +530,13 @@ section#block-kokoriko-theme-local-tasks {
     display: none;
   }
 }
+=======
+
+#block-views-block-banner-block-1 {
+    padding: 0;
+    div.owl-item{
+      width: 100%;
+    }
+
+}
+>>>>>>> da346d7a7cf84468f81941a308453b07b402b6ad
