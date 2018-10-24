@@ -176,7 +176,7 @@
 #block-contactenos{
   h2{
     text-align: left;
-    padding-left: 0.9375rem; 
+    padding-left: 0.9375rem;
   }
   @media screen and (max-width: 600px) {
     h2{
@@ -511,4 +511,12 @@ li.producto {
     font-size: 0.8em;
     color: #4E4E4E;
   }
+}
+
+#block-views-block-banner-block-1 {
+    padding: 0;
+    div.owl-item{
+      width: 100%;
+    }
+
 }
