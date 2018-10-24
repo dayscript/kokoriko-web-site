@@ -7258,6 +7258,28 @@ ul.social-media-links--platforms.platforms.inline.horizontal {
 li.producto {
   list-style: none; }
 
+.location-content .posted, .location-content .field-name-field-coordenadas {
+  display: none; }
+
+.location-content h2.node-title {
+  font-size: 1.4em;
+  color: #EC333B;
+  text-align: left;
+  font-family: "Lato", sans-serif; }
+  .location-content h2.node-title a {
+    color: #EC333B;
+    font-family: "Lato", sans-serif; }
+
+.location-content .field-node--body p {
+  margin-bottom: 0;
+  font-size: 0.9em; }
+
+.user-register-form {
+  padding: 0 20%; }
+  .user-register-form .description {
+    font-size: 0.8em;
+    color: #4E4E4E; }
+
 #block-metamenu li {
   list-style: none; }
 
