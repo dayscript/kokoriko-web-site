@@ -6899,6 +6899,10 @@ h3 {
   #block-kokoriko-theme-page-title {
     padding: 40px 0 0px 0px; } }
 
+#block-views-block-banner-block-1 {
+  padding: 0;
+  background-image: url("/themes/contrib/kokoriko_theme/images/brush-slide.png"); }
+
 #block-imagendestacada {
   padding: 0;
   background-image: url("/themes/contrib/kokoriko_theme/images/brush-slide.png"); }
