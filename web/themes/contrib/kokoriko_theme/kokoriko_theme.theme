@@ -58,7 +58,7 @@ function kokoriko_theme_preprocess_page(&$variables) {
     ->getViewBuilder('block')
     ->view($block);
   $variables['domicilios_block'] = $block_content;
-
+  
 }
 
 /**
