@@ -22,9 +22,11 @@
     .hi{
       font-size: 2em;
       color: $red;
+      margin-left: 18px;
     }
     .user{
-      font-size: 1.2em;
+      font-size: 1.3em;
+      margin-left: 18px;
     }
   }
   .container-cuenta{
@@ -54,6 +56,7 @@
   }
   img.banner{
     margin-bottom: 16px;
+    border-top: 3px solid $red;
   }
 }
 //TABS
