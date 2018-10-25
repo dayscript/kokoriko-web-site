@@ -32,7 +32,7 @@ export class AccompanimentsComponent implements OnInit {
 
   getData(){
     if(this.elements.validator){
-        this.http.get("http://incentives.kokoriko.local:8000/api/entities/" + this.elements.field_no_identificacion)
+        this.http.get("https://incentives.demodayscript.com/api/entities/" + this.elements.field_no_identificacion)
               .subscribe(
                   data => {
                       this.incentives = data;
@@ -62,7 +62,7 @@ export class AccompanimentsComponent implements OnInit {
   }
 
   redemptionPost(){
-    this.http.post("http://incentives.kokoriko.local:8000/api/redemptions",{'entity_id':this.incentives.entity.id,'value':this.redemption_value})
+    this.http.post("https://incentives.demodayscript.com/api/redemptions",{'entity_id':this.incentives.entity.id,'value':this.redemption_value})
           .subscribe(
               data => {
                   this.incentives = data;

@@ -84,7 +84,7 @@ var AccompanimentsComponent = /** @class */ (function () {
     AccompanimentsComponent.prototype.getData = function () {
         var _this = this;
         if (this.elements.validator) {
-            this.http.get("http://incentives.kokoriko.local:8000/api/entities/" + this.elements.field_no_identificacion)
+            this.http.get("https://incentives.demodayscript.com/api/entities/" + this.elements.field_no_identificacion)
                 .subscribe(function (data) {
                 _this.incentives = data;
                 _this.redemption_value = _this.incentives.points;
@@ -108,7 +108,7 @@ var AccompanimentsComponent = /** @class */ (function () {
     };
     AccompanimentsComponent.prototype.redemptionPost = function () {
         var _this = this;
-        this.http.post("http://incentives.kokoriko.local:8000/api/redemptions", { 'entity_id': this.incentives.entity.id, 'value': this.redemption_value })
+        this.http.post("https://incentives.demodayscript.com/api/redemptions", { 'entity_id': this.incentives.entity.id, 'value': this.redemption_value })
             .subscribe(function (data) {
             _this.incentives = data;
             _this.errors = null;
