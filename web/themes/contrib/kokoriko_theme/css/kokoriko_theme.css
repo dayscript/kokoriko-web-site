@@ -7295,9 +7295,9 @@ li.producto {
   margin-bottom: 0;
   font-size: 0.9em; }
 
-.user-register-form, .user-pass, .user-login-form {
+.user-register-form, .user-pass, .user-login-form, .user-form {
   padding: 0 20%; }
-  .user-register-form .description, .user-pass .description, .user-login-form .description {
+  .user-register-form .description, .user-pass .description, .user-login-form .description, .user-form .description {
     font-size: 0.8em;
     color: #999999;
     margin-bottom: 16px; }
@@ -7511,9 +7511,11 @@ ul.row.restaurantes {
     border-radius: 80px; }
   #cuenta .user-container .hi {
     font-size: 2em;
-    color: #EC333B; }
+    color: #EC333B;
+    margin-left: 18px; }
   #cuenta .user-container .user {
-    font-size: 1.2em; }
+    font-size: 1.3em;
+    margin-left: 18px; }
   #cuenta .container-cuenta {
     background-color: #fbfbfb;
     padding: 20px;
@@ -7531,7 +7533,8 @@ ul.row.restaurantes {
       #cuenta .container-cuenta .vencidos span, #cuenta .container-cuenta .recent span {
         display: block; } }
   #cuenta img.banner {
-    margin-bottom: 16px; }
+    margin-bottom: 16px;
+    border-top: 3px solid #EC333B; }
 
 .tabs dd > a, .tabs .tab-title > a {
   display: block;
