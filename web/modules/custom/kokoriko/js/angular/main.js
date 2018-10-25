@@ -75,6 +75,7 @@ var AccompanimentsComponent = /** @class */ (function () {
         this.errors = null;
         this.elements = drupalSettings.kokoriko.kokorikoJS;
         this.elements.validator = true;
+        console.log(this.elements);
     }
     AccompanimentsComponent.prototype.ngOnInit = function () {
         this.validateData();

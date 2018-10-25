@@ -20,6 +20,7 @@ class DashboardController extends ControllerBase {
    */
 
    public function __construct() {
+
      $this->account     = Drupal::currentUser();
      $this->user        = User::load( $this->account ->id() );
      $this->user_fields = ['field_nombres','field_apellidos','field_no_identificacion','field_nombres'];

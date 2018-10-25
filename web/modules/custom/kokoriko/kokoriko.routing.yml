@@ -5,3 +5,5 @@ drupal_angular.app_form:
     _title: 'Kokoripe$os'
   requirements:
     _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
