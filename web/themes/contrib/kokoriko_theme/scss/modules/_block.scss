@@ -18,7 +18,7 @@
 #block-imagendestacada{
   //position: absolute;
   padding: 0;
-  background-image: url('/themes/contrib/kokoriko_theme/images/brush-slide.png');
+  //background-image: url('/themes/contrib/kokoriko_theme/images/brush-slide.png');
   .field-name-field-imagen-de-fondo{
     img{
       width: 100%;
@@ -404,7 +404,10 @@ ul.social-media-links--platforms.platforms.inline.horizontal{
     }
   form#user-login-form {
       text-align: center;
-      padding: 47px 72px 4px 72px;
+      padding: 16px 72px;
+    .create-account-link{
+      display: none;
+    }
   }
   #edit-actions{
     background-color: $black;
@@ -485,7 +488,11 @@ ul.social-media-links--platforms.platforms.inline.horizontal{
 li.producto {
   list-style: none;
 }
-
+.section-kokoripesos{
+  .layout__region--second{
+    margin-bottom: 40px;
+  }
+}
 .location-content{
  .posted, .field-name-field-coordenadas{
     display: none;
@@ -537,7 +544,7 @@ section#block-kokoriko-theme-local-tasks {
 }
 
 #block-views-block-banner-block-1 {
-    background-image: url(/themes/contrib/kokoriko_theme/images/brush-slide.png);
+    //background-image: url(/themes/contrib/kokoriko_theme/images/brush-slide.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100%;
