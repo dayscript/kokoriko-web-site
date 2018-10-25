@@ -7566,15 +7566,16 @@ table thead tr th, table thead tr td {
   padding: 0; }
 
 app-addresses, #block-domicilios-block {
-  height: 280px;
-  padding: 16px 0;
+  height: 230px;
+  padding: 16px 6px;
   background: white;
-  max-width: 80px;
+  max-width: 66px;
   position: fixed;
-  top: 20%; }
+  top: 30%; }
   app-addresses .image, #block-domicilios-block .image {
     text-align: center;
-    margin-bottom: 120px; }
+    margin-bottom: 100px;
+    width: 90%; }
   app-addresses .text, #block-domicilios-block .text {
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
@@ -7584,7 +7585,7 @@ app-addresses, #block-domicilios-block {
       font-family: 'BlockBE-Condensed';
       font-style: normal;
       font-weight: 400;
-      font-size: 28px;
+      font-size: 22px;
       color: #ec333b; }
   app-addresses .wrapper-block, #block-domicilios-block .wrapper-block {
     position: relative; }
