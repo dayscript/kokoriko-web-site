@@ -110,3 +110,16 @@ function kokoriko_preprocess_image_widget(&$variables) {
       $variables['data'][$child] = $element[$child];
     }
 }
+
+
+function kokoriko_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+
+    if($form_id == 'user_register_form'){
+      // kint($form['field_no_identificacion']);
+      $form['field_no_identificacion']['widget'][0]['value']['#required'] = true;
+      $form['field_no_identificacion']['widget'][0]['#required'] = true;
+
+    }
+
+
+}
