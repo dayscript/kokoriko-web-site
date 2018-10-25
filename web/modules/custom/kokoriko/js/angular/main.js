@@ -75,6 +75,7 @@ var AccompanimentsComponent = /** @class */ (function () {
         this.errors = null;
         this.elements = drupalSettings.kokoriko.kokorikoJS;
         this.elements.validator = true;
+        console.log(this.elements);
     }
     AccompanimentsComponent.prototype.ngOnInit = function () {
         this.validateData();
@@ -246,7 +247,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/ariel/projects/kokoriko/web/modules/custom/kokoriko/angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/ariel/projects/web/kokoriko/web/modules/custom/kokoriko/angular/src/main.ts */"./src/main.ts");
 
 
 /***/ })

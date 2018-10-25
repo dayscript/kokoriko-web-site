@@ -21,7 +21,7 @@ export class AccompanimentsComponent implements OnInit {
   constructor(private http: HttpClient) {
     this.elements = drupalSettings.kokoriko.kokorikoJS
     this.elements.validator = true;
-
+    console.log(this.elements);
   }
 
   ngOnInit() {
