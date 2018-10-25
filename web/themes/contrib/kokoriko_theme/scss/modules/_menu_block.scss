@@ -46,7 +46,7 @@ ul.menu.nav-bar{
   span{
     display: none;
   }
-}
+} 
 div.sf-accordion-toggle.sf-style-black a {
   background: none;
   border: 1px solid #000;
@@ -65,4 +65,9 @@ li#main-standardfront-page-accordion{
 ul.sf-menu.sf-style-black li:hover, ul.sf-menu.sf-style-black li.sfHover, ul.sf-menu.sf-style-black a:focus, ul.sf-menu.sf-style-black a:hover, ul.sf-menu.sf-style-black span.nolink:hover {
   background: $red;
   color: #ffffff;
+}
+
+
+.no-background{
+  background: none!important;
 }

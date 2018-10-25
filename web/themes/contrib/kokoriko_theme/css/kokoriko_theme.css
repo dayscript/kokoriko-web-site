@@ -7362,6 +7362,9 @@ ul.sf-menu.sf-style-black li:hover, ul.sf-menu.sf-style-black li.sfHover, ul.sf-
   background: #EC333B;
   color: #ffffff; }
 
+.no-background {
+  background: none !important; }
+
 .path-restaurantes ul {
   list-style: none; }
 

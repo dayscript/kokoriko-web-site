@@ -40,10 +40,12 @@ export class AccompanimentsComponent implements OnInit {
                       this.errors = null;
                       this.redemption_last = this.incentives.entity.redemptions[this.incentives.entity.redemptions.length - 1].created_at;
                       this.invoice_last = this.incentives.entity.invoices[this.incentives.entity.invoices.length - 1].created_at;
+                      this.incentives.entity.points  = (this.incentives.entity.points >= 1) ? 0:this.incentives.entity.points;
                       console.log("GET Request is successful ", this.incentives.entity);
 
                   },
                   error => {
+                    this.incentives.entity.points  = (this.incentives.entity.points >= 1) ? 0:this.incentives.entity.points;
                     this.errors = error;
                     console.log("error", this.errors);
                   }

@@ -90,8 +90,10 @@ var AccompanimentsComponent = /** @class */ (function () {
                 _this.errors = null;
                 _this.redemption_last = _this.incentives.entity.redemptions[_this.incentives.entity.redemptions.length - 1].created_at;
                 _this.invoice_last = _this.incentives.entity.invoices[_this.incentives.entity.invoices.length - 1].created_at;
+                _this.incentives.entity.points = (_this.incentives.entity.points >= 1) ? 0 : _this.incentives.entity.points;
                 console.log("GET Request is successful ", _this.incentives.entity);
             }, function (error) {
+                _this.incentives.entity.points = (_this.incentives.entity.points >= 1) ? 0 : _this.incentives.entity.points;
                 _this.errors = error;
                 console.log("error", _this.errors);
             });
