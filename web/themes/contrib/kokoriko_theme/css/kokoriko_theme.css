@@ -7217,7 +7217,7 @@ ul.social-media-links--platforms.platforms.inline.horizontal {
     padding-top: 41px; }
   .layout__region--second form#user-login-form {
     text-align: center;
-    padding: 16px 72px; }
+    padding: 16px 40px; }
     .layout__region--second form#user-login-form .create-account-link {
       display: none; }
   .layout__region--second #edit-actions {
@@ -7252,7 +7252,8 @@ ul.social-media-links--platforms.platforms.inline.horizontal {
   #facebook-register .drupal-wrapper-center {
     padding: 30px 72px 61px 72px; }
   #facebook-register .drupal-wrapper {
-    background-color: #000000; }
+    background-color: #000000;
+    display: none; }
     #facebook-register .drupal-wrapper a {
       font-family: 'BlockBE-Condensed';
       font-style: normal;
@@ -7321,6 +7322,14 @@ section#block-kokoriko-theme-local-tasks .button-group {
   padding: 0; }
   #block-views-block-banner-block-1 div.owl-item {
     width: 100%; }
+
+a.create-account-link {
+  text-transform: uppercase;
+  float: left; }
+
+.request-password-link {
+  text-transform: uppercase;
+  float: right; }
 
 #block-metamenu li {
   list-style: none; }

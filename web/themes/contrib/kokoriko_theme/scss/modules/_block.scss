@@ -404,7 +404,7 @@ ul.social-media-links--platforms.platforms.inline.horizontal{
     }
   form#user-login-form {
       text-align: center;
-      padding: 16px 72px;
+      padding: 16px 40px;
     .create-account-link{
       display: none;
     }
@@ -455,6 +455,7 @@ ul.social-media-links--platforms.platforms.inline.horizontal{
   }
   .drupal-wrapper{
     background-color: $black;
+    display: none;
     a{
       font-family: 'BlockBE-Condensed';
     font-style: normal;
@@ -553,4 +554,15 @@ section#block-kokoriko-theme-local-tasks {
       width: 100%;
     }
 
+}
+
+//Login
+
+a.create-account-link {
+   text-transform: uppercase;
+  float: left;
+ }
+.request-password-link {
+  text-transform: uppercase;
+  float: right;
 }
