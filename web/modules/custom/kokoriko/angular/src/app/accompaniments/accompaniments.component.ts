@@ -51,7 +51,7 @@ export class AccompanimentsComponent implements OnInit {
                   }
               );
 
-            }
+            } 
   }
 
   validateData(){
