@@ -40,6 +40,7 @@
         "drupal/simple_fb_connect": "^3.1",
         "drupal/social_media_links": "^2.6",
         "drupal/superfish": "^1.2",
+        "drupal/tawkto": "^1.1",
         "drupal/twig_vardumper": "^1.1",
         "drupal/webform": "^5.0@RC",
         "drupal/zurb_foundation": "^5.0@beta",
