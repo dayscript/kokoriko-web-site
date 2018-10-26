@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { HttpClient, HttpClientModule,HttpHeaders  } from "@angular/common/http";
 import * as $ from 'jquery';
 declare var Drupal: any;
 declare var drupalSettings: any;
@@ -45,9 +45,8 @@ export class AccompanimentsComponent implements OnInit {
                       }
                       if(this.incentives.entity.invoices.length != 0 ){
                         this.invoice_last = this.incentives.entity.invoices[this.incentives.entity.invoices.length - 1].created_at;
-
                       }
-                      
+
                       this.incentives.entity.points  = (this.incentives.entity.points <= 0) ? 0:this.incentives.entity.points;
 
                       console.log("GET Request is successful ", this.incentives.entity);

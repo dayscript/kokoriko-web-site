@@ -6,6 +6,8 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\user\Entity\User;
 use Symfony\Component\Routing\RouteCollection;
 use Drupal;
+use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+
 /**
  * Defines HelloController class.
  */
@@ -32,6 +34,7 @@ class DashboardController extends ControllerBase {
     foreach ($this->user_fields as $key => $value) {
       $this->output[$value] = $this->user->get($value)->value;
     }
+
 
     $this->output['id'] = $this->account->id();
     $this->output['user_picture'] = '/themes/contrib/kokoriko_theme/images/default-user.jpg';
