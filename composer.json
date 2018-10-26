@@ -36,6 +36,7 @@
         "drupal/scroll_to_destination_anchors": "^1.0@alpha",
         "drupal/services": "^4.0@beta",
         "drupal/simple_fb_connect": "^3.1",
+        "drupal/smtp": "^1.0@beta",
         "drupal/social_media_links": "^2.6",
         "drupal/superfish": "^1.2",
         "drupal/twig_vardumper": "^1.1",
