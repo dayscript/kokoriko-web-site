@@ -542,7 +542,7 @@ li.producto {
     margin-bottom: 16px;
   }
 }
-#block-menuactualizardatos, .block-meniactualizardatos{
+#block-menuactualizardatos, #block-meniactualizardatos{
   padding: 0 14%;
 }
 
@@ -589,10 +589,10 @@ a.create-account-link {
 }
 // Actualizar datos
 
-#block-menuactualizardatos, .block-meniactualizardatos{
+#block-menuactualizardatos, #block-meniactualizardatos{
   h2.block-title {
     padding: 0 10%;
-    font-size: 2.4em;
+    font-size: 2.4em; 
   }
   .botones{
     float: none;

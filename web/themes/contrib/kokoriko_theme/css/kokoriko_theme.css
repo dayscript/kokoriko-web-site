@@ -7317,7 +7317,7 @@ li.producto {
     color: #999999;
     margin-bottom: 16px; }
 
-#block-menuactualizardatos, .block-meniactualizardatos {
+#block-menuactualizardatos, #block-meniactualizardatos {
   padding: 0 14%; }
 
 @media screen and (max-width: 600px) {
@@ -7352,11 +7352,11 @@ a.create-account-link {
   text-transform: uppercase;
   float: right; }
 
-#block-menuactualizardatos h2.block-title, .block-meniactualizardatos h2.block-title {
+#block-menuactualizardatos h2.block-title, #block-meniactualizardatos h2.block-title {
   padding: 0 10%;
   font-size: 2.4em; }
 
-#block-menuactualizardatos .botones, .block-meniactualizardatos .botones {
+#block-menuactualizardatos .botones, #block-meniactualizardatos .botones {
   float: none; }
 
 .restaurante {
