@@ -176,6 +176,22 @@
       margin: 0;
     }
   }
+  header {
+    position: absolute;
+    float: right;
+    right: 0;
+    bottom: 6px;
+    padding-right: 20px;
+    font-size: 4em;
+    font-family: 'BlockBE-Condensed';
+  }
+  @media screen and (max-width: 600px){
+    header{
+      font-size: 2em;
+      bottom: -3px;
+      padding-right: 16px
+    }
+  }
 }
 
 #block-contactenos{
