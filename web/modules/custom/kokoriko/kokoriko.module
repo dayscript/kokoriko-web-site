@@ -114,12 +114,34 @@ function kokoriko_preprocess_image_widget(&$variables) {
 
 function kokoriko_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
 
+    #require field for login facebook module
     if($form_id == 'user_register_form'){
-      // kint($form['field_no_identificacion']);
       $form['field_no_identificacion']['widget'][0]['value']['#required'] = true;
       $form['field_no_identificacion']['widget'][0]['#required'] = true;
+      $form['#validate'][] = '_form_validation_field_no_indentification_validate';
+    }
+
+    #block field_no_identificacion if yours value is diferent to null
+    if($form_id == 'user_form'){
+      if($form['field_no_identificacion']['widget'][0]['value']['#default_value']){
+          $form['field_no_identificacion']['#disabled'] = 'disabled';
+      }else{
+        $form['#validate'][] = '_form_validation_field_no_indentification_validate';
+      }
 
     }
 
+    // dump($form);
+}
 
+
+function _form_validation_field_no_indentification_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+  if ($form_state->hasValue('field_no_identificacion')) {
+      $identification = $form_state->getValue('field_no_identificacion');
+      $entities = \Drupal::entityTypeManager()->getStorage('user')->loadByProperties(['field_no_identificacion' => $identification[0]['value']]);
+      if($entities){
+        $form_state->setErrorByName('field_no_identificacion', t('El numero de cedula ya esta registrado'));
+      }
+    }
 }
