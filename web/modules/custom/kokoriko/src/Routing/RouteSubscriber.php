@@ -22,14 +22,14 @@ class RouteSubscriber implements EventSubscriberInterface {
   public function __construct() {
     $this->account = \Drupal::currentUser();
     $this->current_path = (\Drupal::service('path.current')->getPath() == '/kokoripesos');
-    $this->user_profile_path = (\Drupal::service('path.current')->getPath() == '/user');
+    $this->user_profile_path = (\Drupal::service('path.current')->getPath() == '/usersss');
 
   }
 
   public function checkAuthStatus(GetResponseEvent $event) {
 
 
-    if ( !$this->account->isAnonymous() && ( $this->current_path || $this->user_profile_path ) ) {
+    if ( !$this->account->isAnonymous() && $this->current_path ) {
       $response = new RedirectResponse('/user/dashboard', 301);
       $event->setResponse($response);
     }
