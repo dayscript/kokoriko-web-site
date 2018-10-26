@@ -434,7 +434,7 @@ html, body {
 
 html,
 body {
-  font-size: 100%; }
+  font-size: 94%; }
 
 body {
   background: #fff;
@@ -6792,8 +6792,8 @@ h3 {
 .button {
   text-transform: uppercase;
   margin: 20px 0;
-  font-family: 'BlockBE-Condensed';
-  font-size: 1.4em; }
+  font-family: 'lato';
+  font-size: 0.9em; }
   .button.account {
     border-radius: 30px;
     margin-left: 10px; }
@@ -6829,7 +6829,7 @@ h3 {
       margin-top: 50px; } }
 
 .not-frontpage .header {
-  background-image: url(/themes/contrib/kokoriko_theme/images/header-pages.png);
+  background-image: url(/themes/contrib/kokoriko_theme/images/header-pages.jpg);
   background-size: cover;
   background-position: bottom;
   background-color: #FFFFFF; }
@@ -6937,7 +6937,7 @@ h3 {
 #block-views-block-para-chuparse-los-dedos-block-1 {
   margin-bottom: 70px; }
   #block-views-block-para-chuparse-los-dedos-block-1 h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     max-width: 253px;
     margin: 0 auto;
@@ -6957,7 +6957,7 @@ h3 {
   text-align: center; }
 
 .price .field-price {
-  font-size: 35px;
+  font-size: 30px;
   color: #EC333B;
   line-height: 1em; }
 
@@ -7069,11 +7069,11 @@ h2.block-title {
 #block-contactenos .webform-button--submit {
   background-color: #000000;
   color: #FFFFFF;
-  font-family: 'BlockBE-Condensed';
+  font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  padding: 3px 35px;
+  font-size: 18px;
+  padding: 8px 35px;
   text-transform: uppercase; }
 
 #block-contactenos .webform-actions {
@@ -7317,6 +7317,9 @@ li.producto {
     color: #999999;
     margin-bottom: 16px; }
 
+#block-menuactualizardatos {
+  padding: 0 14%; }
+
 @media screen and (max-width: 600px) {
   .user-register-form, .user-pass {
     padding: 0 2%; } }
@@ -7338,6 +7341,9 @@ section#block-kokoriko-theme-local-tasks .button-group {
   #block-views-block-banner-block-1 div.owl-item {
     width: 100%; }
 
+.botones {
+  float: right; }
+
 a.create-account-link {
   text-transform: uppercase;
   float: left; }
@@ -7345,6 +7351,13 @@ a.create-account-link {
 .request-password-link {
   text-transform: uppercase;
   float: right; }
+
+#block-menuactualizardatos h2.block-title {
+  padding: 0 10%;
+  font-size: 2.4em; }
+
+#block-menuactualizardatos .botones {
+  float: none; }
 
 #block-metamenu li {
   list-style: none; }
@@ -7634,3 +7647,5 @@ app-addresses, #block-domicilios-block {
       color: #ec333b; }
   app-addresses .wrapper-block, #block-domicilios-block .wrapper-block {
     position: relative; }
+  app-addresses .field-name-body, #block-domicilios-block .field-name-body {
+    margin: 0; }
