@@ -7359,6 +7359,9 @@ a.create-account-link {
 #block-menuactualizardatos .botones {
   float: none; }
 
+.restaurante {
+  min-height: 142px; }
+
 #block-metamenu li {
   list-style: none; }
 
@@ -7521,7 +7524,7 @@ ul.row.restaurantes {
   display: -ms-inline-flexbox;
   display: inline-flex; }
   .views-field-field-horario .field-content {
-    margin-left: 10px; }
+    margin-left: 0px; }
 
 .section-kokoripesos .field-name-body {
   margin: 40px 0; }
