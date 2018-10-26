@@ -7033,6 +7033,21 @@ h2.block-title {
   #block-views-block-domicilios-block-1 ul div {
     margin: 0; }
 
+#block-views-block-domicilios-block-1 header {
+  position: absolute;
+  float: right;
+  right: 0;
+  bottom: 6px;
+  padding-right: 20px;
+  font-size: 4em;
+  font-family: 'BlockBE-Condensed'; }
+
+@media screen and (max-width: 600px) {
+  #block-views-block-domicilios-block-1 header {
+    font-size: 2em;
+    bottom: -3px;
+    padding-right: 16px; } }
+
 #block-contactenos h2 {
   text-align: left;
   padding-left: 0.9375rem; }
