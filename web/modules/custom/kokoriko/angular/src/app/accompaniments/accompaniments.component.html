@@ -47,8 +47,8 @@
                 <div class="kokoripesos">{{incentives?.entity?.points}}</div>
                 <img src="/themes/contrib/kokoriko_theme/images/kokoripesos-red.png" alt="" class="text-center">
                 <hr>
-                <div class="vencidos"><span>10 Kokoripesos </span> por vencer</div>
-                <div class="fecha">Septiembre 20 de 2018</div>
+                <div class="vencidos"><span>{{incentives?.entity?.points_overcome}} Kokoripesos </span> por vencer</div>
+                <div class="fecha"> {{getDate() | date: 'mediumDate'}}</div>
                 <hr>
                 <div class="recent">Ultima redención: <span>{{redemption_last | date}}</span></div>
                 <div class="recent">Ultima acumulación: <span>{{invoice_last | date}}</span></div>
