@@ -89,12 +89,16 @@ var AccompanimentsComponent = /** @class */ (function () {
                 _this.incentives = data;
                 _this.redemption_value = _this.incentives.points;
                 _this.errors = null;
-                _this.redemption_last = _this.incentives.entity.redemptions[_this.incentives.entity.redemptions.length - 1].created_at;
-                _this.invoice_last = _this.incentives.entity.invoices[_this.incentives.entity.invoices.length - 1].created_at;
+                if (_this.incentives.entity.redemptions.length != 0) {
+                    _this.redemption_last = _this.incentives.entity.redemptions[_this.incentives.entity.redemptions.length - 1].created_at;
+                }
+                if (_this.incentives.entity.invoices.length != 0) {
+                    _this.invoice_last = _this.incentives.entity.invoices[_this.incentives.entity.invoices.length - 1].created_at;
+                }
                 _this.incentives.entity.points = (_this.incentives.entity.points <= 0) ? 0 : _this.incentives.entity.points;
                 console.log("GET Request is successful ", _this.incentives.entity);
             }, function (error) {
-                _this.incentives.entity.points = (_this.incentives.entity.points >= 1) ? 0 : _this.incentives.entity.points;
+                _this.createEntity();
                 _this.errors = error;
                 console.log("error", _this.errors);
             });
@@ -112,6 +116,17 @@ var AccompanimentsComponent = /** @class */ (function () {
             .subscribe(function (data) {
             _this.incentives = data;
             _this.errors = null;
+            console.log("POST Request is successful ", data);
+            _this.getData();
+        }, function (error) {
+            _this.errors = error;
+            console.log("error", _this.errors);
+        });
+    };
+    AccompanimentsComponent.prototype.createEntity = function () {
+        var _this = this;
+        this.http.post("https://incentives.demodayscript.com/api/entities", { 'identification': this.elements.field_no_identificacion, 'name': this.elements.field_nombres })
+            .subscribe(function (data) {
             console.log("POST Request is successful ", data);
             _this.getData();
         }, function (error) {
