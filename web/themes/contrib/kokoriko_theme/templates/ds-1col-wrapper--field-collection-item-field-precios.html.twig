@@ -1,7 +1,7 @@
-<div class="content large-12 medium-12 columns">
+<div class="content row">
   {% for field in content.ds_content %}
       {% if field[0]['#markup'] %}
-      <div class="large-6 medium-6 columns">
+      <div class="small-6 {{ field['#label_display'] == 'hidden' ? 'small-centered' : 'medium-uncentered' }}  columns">
         <div class ="large-12 medium-12 field">
          <span class="field-price">
            $ {{ field[0]['#markup'] | number_format(0, '.') }}
@@ -9,9 +9,11 @@
         </div>
         <div class ="large-12 medium-12 field">
          <span class="field-label">
-           {{field['#title']}}
+          {% if field['#label_display'] != 'hidden' %}
+            {{field['#title']}}
+          {% endif %}
          </span>
-         </div>
+        </div>
       </div>
       {% endif %}
   {% endfor %}
