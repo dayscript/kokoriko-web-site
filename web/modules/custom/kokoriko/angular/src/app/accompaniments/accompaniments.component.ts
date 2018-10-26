@@ -18,6 +18,7 @@ export class AccompanimentsComponent implements OnInit {
   invoice_last:any;
   errors: any = null;
 
+
   constructor(private http: HttpClient) {
     this.elements = drupalSettings.kokoriko.kokorikoJS
     this.elements.validator = true;
@@ -40,7 +41,8 @@ export class AccompanimentsComponent implements OnInit {
                       this.errors = null;
                       this.redemption_last = this.incentives.entity.redemptions[this.incentives.entity.redemptions.length - 1].created_at;
                       this.invoice_last = this.incentives.entity.invoices[this.incentives.entity.invoices.length - 1].created_at;
-                      this.incentives.entity.points  = (this.incentives.entity.points >= 1) ? 0:this.incentives.entity.points;
+                      this.incentives.entity.points  = (this.incentives.entity.points <= 0) ? 0:this.incentives.entity.points;
+
                       console.log("GET Request is successful ", this.incentives.entity);
 
                   },
@@ -51,7 +53,7 @@ export class AccompanimentsComponent implements OnInit {
                   }
               );
 
-            } 
+            }
   }
 
   validateData(){
@@ -77,5 +79,11 @@ export class AccompanimentsComponent implements OnInit {
           );
 
         }
+
+    getDate(){
+      var d = new Date();
+      d.setDate(d.getDate() + 15);
+      return d;
+    }
 
 }
