@@ -17,7 +17,7 @@ export class AccompanimentsComponent implements OnInit {
   redemption_last:any;
   invoice_last:any;
   errors: any = null;
-
+  redemption:any = null;
 
   constructor(private http: HttpClient) {
     this.elements = drupalSettings.kokoriko.kokorikoJS
@@ -73,9 +73,8 @@ export class AccompanimentsComponent implements OnInit {
     this.http.post("https://incentives.demodayscript.com/api/redemptions",{'entity_id':this.incentives.entity.id,'value':this.redemption_value})
           .subscribe(
               data => {
-                  this.incentives = data;
+                  this.redemption = data;
                   this.errors = null;
-                  this.incentives.redeption.status = 200;
                   this.getData();
 
               },

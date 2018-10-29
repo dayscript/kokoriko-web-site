@@ -90,7 +90,7 @@
                                        </div>
                                    </div>
                                </div>
-                               <div *ngIf="incentives?.redemption?.status === 200">
+                               <div *ngIf="redemption?.status === 200">
                                  <span>Has redimido {{redemption_value}} kokoripesos, y se ha enviado una notificación a tu correo electronico </span>
                                </div>
                                <div *ngIf="errors?.status || errors?.status === 0">
