@@ -1,13 +1,14 @@
-.path-restaurantes{
-  ul{
+.path-restaurantes {
+  ul {
     list-style: none;
   }
 }
-.section-menu{
-h4{
-  text-transform: uppercase;
-  font-size: 1.1em;
-}
+
+.section-menu {
+  h4 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+  }
   .field-price {
     font-family: 'BlockBE-Regular';
     font-style: normal;
@@ -24,15 +25,31 @@ h4{
     min-height: 400px;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 0px solid #e3e3e3;
-    .columns{
+    border-bottom: 0px solid #E3E3E3;
+    .columns {
       padding-left: 0.4rem;
       padding-right: 0.4rem;
     }
   }
-  @media screen and (max-width: 600px){
-    .producto{
-      border-bottom: 1px solid #e3e3e3;
+  @media screen and (max-width: 600px) {
+    .producto {
+      border-bottom: 1px solid #E3E3E3;
+    }
+  }
+  .taxonomy-term--type-categoria-de-producto {
+    h3 {
+      color: #EC333B;
+      font-size: 33px;
+      text-transform: uppercase;
+      font-family: 'BlockBE-Condensed';
+      font-style: normal;
+      font-weight: 400;
+    }
+  }
+  .field-taxonomy-term--description{
+    p{
+      text-transform: initial;
+      color: $oil;
     }
   }
 }

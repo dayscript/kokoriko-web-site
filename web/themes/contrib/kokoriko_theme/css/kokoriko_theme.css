@@ -7439,14 +7439,26 @@ ul.sf-menu.sf-style-black li:hover, ul.sf-menu.sf-style-black li.sfHover, ul.sf-
   min-height: 400px;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  border-bottom: 0px solid #e3e3e3; }
+  border-bottom: 0px solid #E3E3E3; }
   .section-menu .producto .columns {
     padding-left: 0.4rem;
     padding-right: 0.4rem; }
 
 @media screen and (max-width: 600px) {
   .section-menu .producto {
-    border-bottom: 1px solid #e3e3e3; } }
+    border-bottom: 1px solid #E3E3E3; } }
+
+.section-menu .taxonomy-term--type-categoria-de-producto h3 {
+  color: #EC333B;
+  font-size: 33px;
+  text-transform: uppercase;
+  font-family: 'BlockBE-Condensed';
+  font-style: normal;
+  font-weight: 400; }
+
+.section-menu .field-taxonomy-term--description p {
+  text-transform: initial;
+  color: #333333; }
 
 #views-exposed-form-restaurantes-page-1 {
   text-align: center; }

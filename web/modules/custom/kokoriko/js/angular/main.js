@@ -75,11 +75,16 @@ var AccompanimentsComponent = /** @class */ (function () {
         this.errors = null;
         this.elements = drupalSettings.kokoriko.kokorikoJS;
         this.elements.validator = true;
-        console.log(this.elements);
     }
     AccompanimentsComponent.prototype.ngOnInit = function () {
         this.validateData();
         this.getData();
+    };
+    AccompanimentsComponent.prototype.validateData = function () {
+        if (this.elements.field_no_identificacion == null) {
+            console.error('property field_no_identificacion not exist!');
+            this.elements.validator = false;
+        }
     };
     AccompanimentsComponent.prototype.getData = function () {
         var _this = this;
@@ -104,20 +109,14 @@ var AccompanimentsComponent = /** @class */ (function () {
             });
         }
     };
-    AccompanimentsComponent.prototype.validateData = function () {
-        if (this.elements.field_no_identificacion == null) {
-            console.log('property field_no_identificacion not exist!');
-            this.elements.validator = false;
-        }
-    };
     AccompanimentsComponent.prototype.redemptionPost = function () {
         var _this = this;
         this.http.post("https://incentives.demodayscript.com/api/redemptions", { 'entity_id': this.incentives.entity.id, 'value': this.redemption_value })
             .subscribe(function (data) {
             _this.incentives = data;
             _this.errors = null;
-            console.log("POST Request is successful ", data);
             _this.getData();
+            _this.incentives.status = 200;
         }, function (error) {
             _this.errors = error;
             console.log("error", _this.errors);
@@ -267,7 +266,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/ariel/projects/web/kokoriko/web/modules/custom/kokoriko/angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/ariel/projects/kokoriko/web/modules/custom/kokoriko/angular/src/main.ts */"./src/main.ts");
 
 
 /***/ })

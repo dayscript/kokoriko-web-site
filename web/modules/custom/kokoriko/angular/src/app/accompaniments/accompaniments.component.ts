@@ -22,7 +22,6 @@ export class AccompanimentsComponent implements OnInit {
   constructor(private http: HttpClient) {
     this.elements = drupalSettings.kokoriko.kokorikoJS
     this.elements.validator = true;
-    console.log(this.elements);
   }
 
   ngOnInit() {
@@ -30,8 +29,14 @@ export class AccompanimentsComponent implements OnInit {
     this.getData();
   }
 
+  private validateData(){
+    if(this.elements.field_no_identificacion == null){
+      console.error('property field_no_identificacion not exist!');
+      this.elements.validator = false;
+    }
+  }
 
-  getData(){
+  public getData(){
     if(this.elements.validator){
         this.http.get("https://incentives.demodayscript.com/api/entities/" + this.elements.field_no_identificacion)
               .subscribe(
@@ -39,6 +44,7 @@ export class AccompanimentsComponent implements OnInit {
                       this.incentives = data;
                       this.redemption_value = this.incentives.points;
                       this.errors = null;
+
                       if(this.incentives.entity.redemptions.length != 0 ){
                         this.redemption_last = this.incentives.entity.redemptions[this.incentives.entity.redemptions.length - 1].created_at;
 
@@ -62,21 +68,15 @@ export class AccompanimentsComponent implements OnInit {
             }
   }
 
-  validateData(){
-    if(this.elements.field_no_identificacion == null){
-      console.log('property field_no_identificacion not exist!');
-      this.elements.validator = false;
-    }
-  }
 
-  redemptionPost(){
+  public redemptionPost(){
     this.http.post("https://incentives.demodayscript.com/api/redemptions",{'entity_id':this.incentives.entity.id,'value':this.redemption_value})
           .subscribe(
               data => {
                   this.incentives = data;
                   this.errors = null;
-                  console.log("POST Request is successful ", data);
                   this.getData();
+                  this.incentives.status = 200;
               },
               error => {
                   this.errors = error;
@@ -86,7 +86,7 @@ export class AccompanimentsComponent implements OnInit {
 
         }
 
-  createEntity(){
+  public createEntity(){
     this.http.post("https://incentives.demodayscript.com/api/entities",{'identification':this.elements.field_no_identificacion,'name':this.elements.field_nombres})
           .subscribe(
               data => {
@@ -100,10 +100,10 @@ export class AccompanimentsComponent implements OnInit {
           );
   }
 
-    getDate(){
-      var d = new Date();
-      d.setDate(d.getDate() + 15);
-      return d;
-    }
+  public getDate(){
+    var d = new Date();
+    d.setDate(d.getDate() + 15);
+    return d;
+  }
 
 }
