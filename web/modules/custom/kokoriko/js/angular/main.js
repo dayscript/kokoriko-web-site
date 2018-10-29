@@ -74,7 +74,7 @@ var AccompanimentsComponent = /** @class */ (function () {
         this.redemption_value = 0;
         this.errors = null;
         this.redemption = null;
-        this.api = 'http://incentives.kokoriko.local:8000/api'; //'https://incentives.demodayscript.com/api';
+        this.api = 'https://incentives.demodayscript.com/api'; //'http://incentives.kokoriko.local:8000/api'; //
         this.elements = drupalSettings.kokoriko.kokorikoJS;
         this.elements.validator = true;
     }
