@@ -18,7 +18,7 @@ export class AccompanimentsComponent implements OnInit {
   invoice_last:any;
   errors: any = null;
   redemption:any = null;
-  api = 'https://incentives.demodayscript.com/api';//'http://incentives.kokoriko.local:8000/api';
+  api = 'http://incentives.kokoriko.local:8000/api'; //'https://incentives.demodayscript.com/api';
   constructor(private http: HttpClient) {
     this.elements = drupalSettings.kokoriko.kokorikoJS
     this.elements.validator = true;
@@ -42,7 +42,6 @@ export class AccompanimentsComponent implements OnInit {
               .subscribe(
                   data => {
                       this.incentives = data;
-                      this.redemption_value = this.incentives.points;
                       this.errors = null;
 
                       if(this.incentives.entity.redemptions.length != 0 ){
