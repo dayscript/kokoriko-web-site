@@ -75,8 +75,9 @@ export class AccompanimentsComponent implements OnInit {
               data => {
                   this.incentives = data;
                   this.errors = null;
+                  this.incentives.redeption.status = 200;
                   this.getData();
-                  this.incentives.status = 200;
+
               },
               error => {
                   this.errors = error;
