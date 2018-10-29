@@ -6848,7 +6848,8 @@ h3 {
   position: relative; }
 
 .path-frontpage .sub-header {
-  position: absolute; }
+  position: absolute;
+  margin-top: -244px; }
 
 .sub-header {
   margin: 20px 0 60px 0; }
@@ -7034,7 +7035,7 @@ h2.block-title {
   position: absolute;
   float: right;
   right: 0;
-  bottom: 6px;
+  top: 73px;
   padding-right: 20px;
   font-size: 4em;
   font-family: 'BlockBE-Condensed'; }

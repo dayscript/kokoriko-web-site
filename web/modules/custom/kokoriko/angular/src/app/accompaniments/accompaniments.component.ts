@@ -18,7 +18,7 @@ export class AccompanimentsComponent implements OnInit {
   invoice_last:any;
   errors: any = null;
   redemption:any = null;
-
+  api = 'https://incentives.demodayscript.com/api';//'http://incentives.kokoriko.local:8000/api';
   constructor(private http: HttpClient) {
     this.elements = drupalSettings.kokoriko.kokorikoJS
     this.elements.validator = true;
@@ -38,7 +38,7 @@ export class AccompanimentsComponent implements OnInit {
 
   public getData(){
     if(this.elements.validator){
-        this.http.get("https://incentives.demodayscript.com/api/entities/" + this.elements.field_no_identificacion)
+        this.http.get( this.api +"/entities/" + this.elements.field_no_identificacion)
               .subscribe(
                   data => {
                       this.incentives = data;
@@ -70,7 +70,7 @@ export class AccompanimentsComponent implements OnInit {
 
 
   public redemptionPost(){
-    this.http.post("https://incentives.demodayscript.com/api/redemptions",{'entity_id':this.incentives.entity.id,'value':this.redemption_value})
+    this.http.post( this.api +"/redemptions",{'entity_id':this.incentives.entity.id,'value':this.redemption_value})
           .subscribe(
               data => {
                   this.redemption = data;
@@ -87,7 +87,7 @@ export class AccompanimentsComponent implements OnInit {
         }
 
   public createEntity(){
-    this.http.post("https://incentives.demodayscript.com/api/entities",{'identification':this.elements.field_no_identificacion,'name':this.elements.field_nombres})
+    this.http.post( this.api +"/entities",{'identification':this.elements.field_no_identificacion,'name':this.elements.field_nombres})
           .subscribe(
               data => {
                   console.log("POST Request is successful ", data);

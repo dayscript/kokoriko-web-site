@@ -74,6 +74,7 @@ var AccompanimentsComponent = /** @class */ (function () {
         this.redemption_value = 0;
         this.errors = null;
         this.redemption = null;
+        this.api = 'https://incentives.demodayscript.com/api'; //'http://incentives.kokoriko.local:8000/api';
         this.elements = drupalSettings.kokoriko.kokorikoJS;
         this.elements.validator = true;
     }
@@ -90,7 +91,7 @@ var AccompanimentsComponent = /** @class */ (function () {
     AccompanimentsComponent.prototype.getData = function () {
         var _this = this;
         if (this.elements.validator) {
-            this.http.get("https://incentives.demodayscript.com/api/entities/" + this.elements.field_no_identificacion)
+            this.http.get(this.api + "/entities/" + this.elements.field_no_identificacion)
                 .subscribe(function (data) {
                 _this.incentives = data;
                 _this.redemption_value = _this.incentives.points;
@@ -112,7 +113,7 @@ var AccompanimentsComponent = /** @class */ (function () {
     };
     AccompanimentsComponent.prototype.redemptionPost = function () {
         var _this = this;
-        this.http.post("https://incentives.demodayscript.com/api/redemptions", { 'entity_id': this.incentives.entity.id, 'value': this.redemption_value })
+        this.http.post(this.api + "/redemptions", { 'entity_id': this.incentives.entity.id, 'value': this.redemption_value })
             .subscribe(function (data) {
             _this.redemption = data;
             _this.errors = null;
@@ -124,7 +125,7 @@ var AccompanimentsComponent = /** @class */ (function () {
     };
     AccompanimentsComponent.prototype.createEntity = function () {
         var _this = this;
-        this.http.post("https://incentives.demodayscript.com/api/entities", { 'identification': this.elements.field_no_identificacion, 'name': this.elements.field_nombres })
+        this.http.post(this.api + "/entities", { 'identification': this.elements.field_no_identificacion, 'name': this.elements.field_nombres })
             .subscribe(function (data) {
             console.log("POST Request is successful ", data);
             _this.getData();
