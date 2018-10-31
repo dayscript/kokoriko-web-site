@@ -289,11 +289,11 @@
   //   font-weight: 600;
   // }
 
-  input[type=checkbox] {
+  input[type=checkbox],input[type=radio] {
 		position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
 	}
 
-	input[type=checkbox] + label {
+	input[type=checkbox] + label,input[type=radio] + label {
 		padding-left:28px;
 		height:17px;
 		display:inline-block;
@@ -306,11 +306,11 @@
 
 	}
 
-		input[type=checkbox]:checked + label {
+		input[type=checkbox]:checked + label,input[type=radio]:checked + label {
 			background-position: 0 -17px;
 		}
 		label {
-      margin: 15px 0;
+      margin: 15px 0; 
       text-transform: uppercase;
       font-family: "Lato", sans-serif;
       font-style: normal;

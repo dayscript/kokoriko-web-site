@@ -7119,7 +7119,7 @@ h2.block-title {
   font-style: normal;
   font-weight: 400; }
 
-#block-formularioexpuestomenupage-1-2 input[type=checkbox] {
+#block-formularioexpuestomenupage-1-2 input[type=checkbox], #block-formularioexpuestomenupage-1-2 input[type=radio] {
   position: absolute;
   z-index: -1000;
   left: -1000px;
@@ -7131,7 +7131,7 @@ h2.block-title {
   padding: 0;
   border: 0; }
 
-#block-formularioexpuestomenupage-1-2 input[type=checkbox] + label {
+#block-formularioexpuestomenupage-1-2 input[type=checkbox] + label, #block-formularioexpuestomenupage-1-2 input[type=radio] + label {
   padding-left: 28px;
   height: 17px;
   display: inline-block;
@@ -7142,7 +7142,7 @@ h2.block-title {
   vertical-align: middle;
   cursor: pointer; }
 
-#block-formularioexpuestomenupage-1-2 input[type=checkbox]:checked + label {
+#block-formularioexpuestomenupage-1-2 input[type=checkbox]:checked + label, #block-formularioexpuestomenupage-1-2 input[type=radio]:checked + label {
   background-position: 0 -17px; }
 
 #block-formularioexpuestomenupage-1-2 label {
