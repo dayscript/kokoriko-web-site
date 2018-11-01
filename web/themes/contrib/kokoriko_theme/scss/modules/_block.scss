@@ -310,7 +310,7 @@
 			background-position: 0 -17px;
 		}
 		label {
-      margin: 15px 0; 
+      margin: 15px 0;
       text-transform: uppercase;
       font-family: "Lato", sans-serif;
       font-style: normal;
@@ -597,7 +597,7 @@ a.create-account-link {
   .botones{
     float: none;
   }
-}
+} 
 
 //Restauramntes
 
@@ -605,3 +605,11 @@ a.create-account-link {
   min-height: 142px;
 }
 
+
+form{
+  .description{
+    a{
+      color:$color-title;
+    }
+  }
+}

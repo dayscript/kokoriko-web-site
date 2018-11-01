@@ -7362,6 +7362,9 @@ a.create-account-link {
 .restaurante {
   min-height: 142px; }
 
+form .description a {
+  color: #ec333b; }
+
 #block-metamenu li {
   list-style: none; }
 
