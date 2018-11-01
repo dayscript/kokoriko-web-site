@@ -6978,6 +6978,10 @@ h3 {
 h2.block-title {
   padding: 0 10%; }
 
+@media screen and (max-width: 600px) {
+  h2.block-title {
+    padding: 0 0%; } }
+
 .views-field-field-image {
   margin-bottom: 16px; }
 
@@ -7091,10 +7095,18 @@ h2.block-title {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex; }
+  #block-contactenos .form-item-acepto-politica-de-tratamiento-de-datos-personales input[type="checkbox"] + label, #block-contactenos .form-item-acepto-politica-de-tratamiento-de-datos-personales input[type="radio"] + label, #block-contactenos .form-item-permito-que-me-suscriban-a-noticias-y-promociones input[type="checkbox"] + label, #block-contactenos .form-item-permito-que-me-suscriban-a-noticias-y-promociones input[type="radio"] + label, #block-contactenos .form-item-acepto-terminos-y-condiciones input[type="checkbox"] + label, #block-contactenos .form-item-acepto-terminos-y-condiciones input[type="radio"] + label {
+    margin-right: 0.25rem;
+    margin-top: 2px; }
 
 #block-logokokorikofooter {
   text-align: center;
   padding: 45px; }
+
+#block-domiciliosmovil {
+  padding-left: 26px;
+  font-size: 0.9em;
+  margin-top: 6px; }
 
 #block-kokoriko-theme-footer {
   padding: 42px 42px 0 42px; }
