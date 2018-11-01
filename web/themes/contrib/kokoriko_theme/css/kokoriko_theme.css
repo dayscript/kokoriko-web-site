@@ -6810,6 +6810,8 @@ h3 {
   .meta-header .columns {
     padding-left: 0.2rem;
     padding-right: 0.2rem; }
+  .meta-header .social-media-links--platforms.horizontal li {
+    padding: .2em 0.6em; }
 
 .header {
   background-color: #000000;
@@ -7104,9 +7106,12 @@ h2.block-title {
   padding: 45px; }
 
 #block-domiciliosmovil {
-  padding-left: 26px;
-  font-size: 0.9em;
-  margin-top: 6px; }
+  padding-left: 40px;
+  margin-top: 2px; }
+  #block-domiciliosmovil a {
+    font-size: 0.8em; }
+  #block-domiciliosmovil p {
+    margin-bottom: 0; }
 
 #block-kokoriko-theme-footer {
   padding: 42px 42px 0 42px; }
