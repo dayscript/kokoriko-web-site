@@ -6898,6 +6898,9 @@ h3 {
   text-align: center;
   padding: 0px 42px 0 42px; }
 
+.block-socialmedialinks-2 {
+  z-index: 100; }
+
 @media screen and (max-width: 600px) {
   .block-socialmedialinks-2 {
     bottom: 0px; } }
@@ -7083,7 +7086,7 @@ h2.block-title {
   #block-contactenos .text-left {
     text-align: center !important; } }
 
-#block-contactenos .form-item-acepto-politica-de-tratamiento-de-datos-personales, #block-contactenos .form-item-permito-que-me-suscriban-a-noticias-y-promociones {
+#block-contactenos .form-item-acepto-politica-de-tratamiento-de-datos-personales, #block-contactenos .form-item-permito-que-me-suscriban-a-noticias-y-promociones, #block-contactenos .form-item-acepto-terminos-y-condiciones {
   padding-left: 0.9em;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

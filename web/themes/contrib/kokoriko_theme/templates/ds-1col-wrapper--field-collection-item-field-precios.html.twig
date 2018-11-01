@@ -1,7 +1,15 @@
 <div class="content row">
+  {% set foo = 0 %}
+  {% for field in content.ds_content %}
+      {% if  field  | length > 2 %}
+          {% set foo = foo + 1 %}
+      {% endif %}
+  {% endfor %}
+
+  
   {% for field in content.ds_content %}
       {% if field[0]['#markup'] %}
-      <div class="small-6 {{ field['#label_display'] == 'hidden' ? 'small-centered' : 'medium-uncentered' }}  columns">
+      <div class="small-6 {{ foo == 1 ? 'small-centered' : 'medium-uncentered' }}  columns">
         <div class ="large-12 medium-12 field">
          <span class="field-price">
            $ {{ field[0]['#markup'] | number_format(0, '.') }}
