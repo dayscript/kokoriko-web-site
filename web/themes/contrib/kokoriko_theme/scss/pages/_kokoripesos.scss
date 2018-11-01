@@ -1,6 +1,6 @@
 .section-kokoripesos{
   .field-name-body{
-    margin: 40px 0;
+    // margin: 40px 0;
   }
 }
 #cuenta{
@@ -14,7 +14,7 @@
       .columns{
         padding-left: 0.9rem;
         padding-right: 0.9rem;
-      }
+      } 
     }
     .photo{
       border-radius: 80px;
@@ -109,7 +109,7 @@
 table thead tr th, table thead tr td {
   color: $white;
   background: $red;
-  font-size: 0.875rem; 
+  font-size: 0.875rem;
   font-weight: bold;
   padding: 0.5rem 0.625rem 0.625rem;
 }
