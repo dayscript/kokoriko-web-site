@@ -111,8 +111,6 @@ class KokorikoSubscriber implements EventSubscriberInterface {
 
     if ($access_token) {
       try {
-        drupal_set_message('$access_token');
-
         $facebook_profile_fields = [
           'name',
           'first_name',
@@ -139,9 +137,12 @@ class KokorikoSubscriber implements EventSubscriberInterface {
   	    // $user->save();
       }
       catch (FacebookRequestException $ex) {
+        drupal_set_message($e->getMessage(), 'error');
         // Add exception handling here for FacebookRequestExceptions.
       }
       catch (FacebookSDKException $ex) {
+        drupal_set_message($e->getMessage(), 'error');
+
         // Add exception handling here for all other exceptions.
       }
     }
