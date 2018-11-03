@@ -68,8 +68,8 @@ class KokorikoSubscriber implements EventSubscriberInterface {
   public function modifyPermissionScope(GenericEvent $event) {
     $scope = $event->getArgument('scope');
     // Add the permission here. In this example we add 'public_profile'.
-    // $scope[] = 'public_profile';
-    $scope[] = 'user_birthday';
+    $scope[] = 'public_profile';
+    
     $event->setArgument('scope', $scope);
   }
 
