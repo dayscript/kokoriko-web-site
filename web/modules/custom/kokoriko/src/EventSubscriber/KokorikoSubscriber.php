@@ -129,7 +129,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
           drupal_set_message($value);
           drupal_set_message($graph_node->getField($value));
         }
-
+        drupal_set_message('OK');
     		// $user->set("field_nombres", $first_name);
     		// $user->set("field_apellidos", $last_name);
         // $user->set("field_gender", $gender);
