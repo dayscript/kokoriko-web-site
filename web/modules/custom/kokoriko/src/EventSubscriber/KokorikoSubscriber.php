@@ -145,8 +145,8 @@ class KokorikoSubscriber implements EventSubscriberInterface {
       }
 
 
-      $user = $response->getGraphUser();
-      dvm($user);
+      dvm($response);
+    
     }
     else {
       drupal_set_message("No FB access token found for current user!");
