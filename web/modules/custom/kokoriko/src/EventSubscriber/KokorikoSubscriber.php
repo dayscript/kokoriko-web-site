@@ -124,10 +124,10 @@ class KokorikoSubscriber implements EventSubscriberInterface {
 
         $graph_node = $this->facebook->get('/me?fields='.implode($facebook_profile_fields,","), $access_token)->getGraphNode();
 
-        foreach ($facebook_profile_fields as $key => $value) {
-          drupal_set_message($value);
-          drupal_set_message($graph_node->getField($value));
-        }
+        // foreach ($facebook_profile_fields as $key => $value) {
+        //   drupal_set_message($value);
+        //   drupal_set_message($graph_node->getField($value));
+        // }
     		// $user->set("field_nombres", $first_name);
     		// $user->set("field_apellidos", $last_name);
         // $user->set("field_gender", $gender);
@@ -141,9 +141,12 @@ class KokorikoSubscriber implements EventSubscriberInterface {
       }
       catch (FacebookSDKException $ex) {
         drupal_set_message($ex->getMessage(), 'error');
-
         // Add exception handling here for all other exceptions.
       }
+
+
+      $user = $response->getGraphUser();
+      dvm($user);
     }
     else {
       drupal_set_message("No FB access token found for current user!");
