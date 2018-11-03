@@ -111,14 +111,24 @@ class KokorikoSubscriber implements EventSubscriberInterface {
 
     if ($access_token) {
       try {
-        $graph_node = $this->facebook->get('/me?fields=name,first_name,last_name,gender,age_range,locale', $access_token)->getGraphNode();
-        $name = $graph_node->getField('name');
-        $first_name = $graph_node->getField('first_name');
-        $last_name = $graph_node->getField('last_name');
-        $gender = $graph_node->getField('gender');
-        $age_range = $graph_node->getField('age_range');
-        $locale = $graph_node->getField('locale');
-        drupal_set_message("We were able to retreive following data from Facebook: " . $name  .'|'. $first_name .'|'. $last_name .'|'. $gender .'|'. $age_range .'|'. $locale );
+        $facebook_profile_fields = [
+          'name',
+          'first_name',
+          'last_name',
+          'gender',
+          'age_range',
+          'locale',
+          'birthday',
+          'email',
+          'phone'
+        ];
+
+        $graph_node = $this->facebook->get('/me?fields='.implode($facebook_profile_fields,","), $access_token)->getGraphNode();
+
+        foreach ($facebook_profile_fields as $key => $value) {
+          dvm($graph_node->getField('$value'));
+        }
+
     		// $user->set("field_nombres", $first_name);
     		// $user->set("field_apellidos", $last_name);
         // $user->set("field_gender", $gender);
