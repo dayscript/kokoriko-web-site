@@ -3,3 +3,10 @@ services:
     class: Drupal\kokoriko\Routing\RouteSubscriber
     tags:
       - { name: event_subscriber }
+
+  kokoriko.subscriber:
+    class: Drupal\kokoriko\EventSubscriber\KokorikoSubscriber
+    arguments:
+      - '@simple_fb_connect.fb_factory'
+    tags:
+      - {name: event_subscriber}

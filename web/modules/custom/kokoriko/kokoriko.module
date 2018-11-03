@@ -114,13 +114,6 @@ function kokoriko_preprocess_image_widget(&$variables) {
 
 function kokoriko_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
 
-    #require field for login facebook module
-    if($form_id == 'user_register_form'){
-      $form['field_no_identificacion']['widget'][0]['value']['#required'] = true;
-      $form['field_no_identificacion']['widget'][0]['#required'] = true;
-      $form['#validate'][] = '_form_validation_field_no_indentification_validate';
-    }
-
     #block field_no_identificacion if yours value is diferent to null
     if($form_id == 'user_form'){
       if($form['field_no_identificacion']['widget'][0]['value']['#default_value']){
@@ -135,6 +128,29 @@ function kokoriko_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
 }
 
 
+/**
+ * Implements hook_form_FORM_ID_alter() for user_register_form.
+ */
+function kokoriko_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  foreach ( _kokoriko_custom_require_fields() as $key => $value) {
+    $form[$key]['widget'][0]['value']['#required'] = $value;
+    $form[$key]['widget'][0]['#required'] = $value;
+  }
+  
+
+  $form['account']['name']['#access'] = FALSE;
+  $random = new \Drupal\Component\Utility\Random();
+  $form['account']['name']['#default_value'] = $random->name();
+
+  $form['#validate'][] = '_form_validation_field_no_indentification_validate';
+
+  array_unshift($form['actions']['submit']['#submit'], 'kokoriko_autofill_username_in_register_form');
+}
+
+/**
+ * Custom validation callback for user_register_form.
+ */
 function _form_validation_field_no_indentification_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
 
   if ($form_state->hasValue('field_no_identificacion')) {
@@ -145,3 +161,25 @@ function _form_validation_field_no_indentification_validate(&$form, \Drupal\Core
       }
     }
 }
+
+/**
+ * Custom submit callback for user_register_form.
+ */
+function kokoriko_autofill_username_in_register_form(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $identification = $form_state->getValue('field_no_identificacion');
+  $form_state->setValue('name', $identification);
+}
+
+/**
+ * Return array with fields to required for user_register_form.
+ */
+
+ function _kokoriko_custom_require_fields(){
+   $fields = [];
+
+   $fields = [
+     'field_no_identificacion' => TRUE,
+   ];
+
+   return $fields;
+ }
