@@ -126,7 +126,8 @@ class KokorikoSubscriber implements EventSubscriberInterface {
         $graph_node = $this->facebook->get('/me?fields='.implode($facebook_profile_fields,","), $access_token)->getGraphNode();
 
         foreach ($facebook_profile_fields as $key => $value) {
-          dvm($graph_node->getField('$value'));
+          drupal_set_message($value);
+          drupal_set_message($graph_node->getField($value));
         }
 
     		// $user->set("field_nombres", $first_name);
