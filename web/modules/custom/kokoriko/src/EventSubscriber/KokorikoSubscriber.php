@@ -137,11 +137,11 @@ class KokorikoSubscriber implements EventSubscriberInterface {
   	    // $user->save();
       }
       catch (FacebookRequestException $ex) {
-        drupal_set_message($e->getMessage(), 'error');
+        drupal_set_message($ex->getMessage(), 'error');
         // Add exception handling here for FacebookRequestExceptions.
       }
       catch (FacebookSDKException $ex) {
-        drupal_set_message($e->getMessage(), 'error');
+        drupal_set_message($ex->getMessage(), 'error');
 
         // Add exception handling here for all other exceptions.
       }
