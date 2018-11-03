@@ -108,10 +108,11 @@ class KokorikoSubscriber implements EventSubscriberInterface {
     // user's Facebook access token, which SimpleFbConnect has stored to session
     // for other modules.
     $access_token = $this->persistentDataHandler->get('access_token');
-    drupal_set_message('OK');
-    
+
     if ($access_token) {
       try {
+        drupal_set_message('$access_token');
+
         $facebook_profile_fields = [
           'name',
           'first_name',
