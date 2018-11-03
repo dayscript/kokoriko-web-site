@@ -70,9 +70,9 @@ class KokorikoSubscriber implements EventSubscriberInterface {
     // Add the permission here. In this example we add 'public_profile'.
     $scope[] = 'public_profile';
     $scope[] = 'age_range';
-    $scope[] = 'birthday';
-    $scope[] = 'gender';
-    $scope[] = 'location';
+    // $scope[] = 'birthday';
+    // $scope[] = 'gender';
+    // $scope[] = 'location';
     $event->setArgument('scope', $scope);
   }
 
