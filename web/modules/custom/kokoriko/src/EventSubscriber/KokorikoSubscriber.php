@@ -82,7 +82,8 @@ class KokorikoSubscriber implements EventSubscriberInterface {
 
     // Enter your own code here. Remember to save the user with $user->save()
     // if you modify the user object.
-    drupal_set_message("Debug: user created. This message is from kokoriko!");
+    $message = t('We give you 50 kokoripesos for activating your account');
+    drupal_set_message($message, 'status');
   }
   /**
    * Reacts to the event when user logs in via Simple FB Connect.
@@ -98,7 +99,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
 
     // Enter your code here. Remember to save the user with $user->save()
     // if you modify the user object.
-    drupal_set_message("Debug: user logged in. This message is from kokoriko!");
+    drupal_set_message('Welcome');
 
     // Let's add a role 'facebook' for the user if she didn't have it already.
     // The role itself must obviously be first created manually.
@@ -124,18 +125,21 @@ class KokorikoSubscriber implements EventSubscriberInterface {
         ];
 
         $graph_node = $this->facebook->get('/me?fields='.implode($facebook_profile_fields,","), $access_token)->getGraphNode();
+        $name = $graph_node->getField('name') ;
+        if( $name ){
+            $name = explode($name,' ');
+            for ($i=0; $i < count($name) - 1  ; $i++) {
+                $field_nombres .= $name[$i];
+            }
+            $field_apellidos = end($name);
+            $user->set("field_nombres", $field_nombres);
+            $user->set("field_apellidos", $field_apellidos);
+        } else {
+          $user->set("field_nombres", $graph_node->getField('first_name') );
+          $user->set("field_apellidos", $graph_node->getField('last_name') );
+        }
 
-        drupal_set_message($graph_node->getField('name'));
-        // foreach ($facebook_profile_fields as $key => $value) {
-        //   drupal_set_message($value);
-        //   drupal_set_message($graph_node->getField($value));
-        // }
-    		// $user->set("field_nombres", $first_name);
-    		// $user->set("field_apellidos", $last_name);
-        // $user->set("field_gender", $gender);
-        // // $user->set("field_birthdate", $age_range);
-        // $user->set("field_locale", $locale);
-  	    // $user->save();
+  	    $user->save();
       }
       catch (FacebookRequestException $ex) {
         drupal_set_message($ex->getMessage(), 'error');
@@ -148,7 +152,8 @@ class KokorikoSubscriber implements EventSubscriberInterface {
 
     }
     else {
-      drupal_set_message("No FB access token found for current user!");
+      $message = 'Sorry, the login is not available at this time';
+      drupal_set_message($message, 'warning');
     }
   }
 
