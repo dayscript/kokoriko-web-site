@@ -69,7 +69,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
     $scope = $event->getArgument('scope');
     // Add the permission here. In this example we add 'public_profile'.
     $scope[] = 'public_profile';
-    
+
     $event->setArgument('scope', $scope);
   }
 
@@ -125,6 +125,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
 
         $graph_node = $this->facebook->get('/me?fields='.implode($facebook_profile_fields,","), $access_token);
 
+        drupal_set_message($graph_node->getField('name'));
         // foreach ($facebook_profile_fields as $key => $value) {
         //   drupal_set_message($value);
         //   drupal_set_message($graph_node->getField($value));
