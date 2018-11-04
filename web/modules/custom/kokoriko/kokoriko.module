@@ -115,7 +115,7 @@ function kokoriko_preprocess_image_widget(&$variables) {
 function kokoriko_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
 
     #block field_no_identificacion if yours value is diferent to null
-    
+
     if($form_id == 'user_form'){
       $form['account']['name']['#access'] = FALSE;
       $form['account']['password']['#access'] = FALSE;
@@ -127,7 +127,7 @@ function kokoriko_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
 
     }
 
-    // dump($form);
+    dpm($form);
 }
 
 
