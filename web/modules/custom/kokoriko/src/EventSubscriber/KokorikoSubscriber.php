@@ -82,7 +82,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
     $user->set("field_nombres", 'null' );
     $user->set("field_apellidos", 'null' );
     $user->set("field_no_identificacion",0);
-    $user->set("field_birthdate",12345678);
+    $user->set("field_birthdate",date('Y-m-d'));
     $user->set("field_gender",'Mr');
     $user->set("user_picture",'');
     $user->set("field_telephone",0);
