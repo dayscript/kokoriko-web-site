@@ -128,6 +128,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
         $name = $graph_node->getField('name') ;
         if( $name ){
             $name = explode($name,' ');
+            dvm($name);
             for ($i=0; $i < count($name) - 1  ; $i++) {
                 $field_nombres .= $name[$i];
             }
