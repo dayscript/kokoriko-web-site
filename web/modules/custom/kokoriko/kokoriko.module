@@ -117,6 +117,8 @@ function kokoriko_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
     #block field_no_identificacion if yours value is diferent to null
 
     if($form_id == 'user_form'){
+      $user = \Drupal::currentUser();
+      $user->hasRole('facebook');
       $form['account']['name']['#access'] = FALSE;
       $form['account']['pass']['#access'] = FALSE;
       if($form['field_no_identificacion']['widget'][0]['value']['#default_value']){
@@ -126,8 +128,6 @@ function kokoriko_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
       }
 
     }
-
-    dpm($form);
 }
 
 
