@@ -132,10 +132,10 @@ class KokorikoSubscriber implements EventSubscriberInterface {
             $name = explode(' ',$name);
 
             for ($i=0; $i < count($name) - 1  ; $i++) {
-                $field_nombres .= $name[$i];
+                $field_nombres[] = $name[$i];
             }
             $field_apellidos = end($name);
-            $user->set("field_nombres", $field_nombres);
+            $user->set("field_nombres", implode( ' ',$field_nombres) );
             $user->set("field_apellidos", $field_apellidos);
         } else {
           $user->set("field_nombres", $graph_node->getField('first_name') );
