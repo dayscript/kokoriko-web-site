@@ -79,7 +79,15 @@ class KokorikoSubscriber implements EventSubscriberInterface {
    */
   public function userCreated(GenericEvent $event) {
     $user = $event->getArgument('account');
+    $user->set("field_nombres", '' );
+    $user->set("field_apellidos", '' );
 
+    $user->set("field_no_identificacion",'');
+    $user->set("field_birthdate",'');
+    $user->set("field_gender",'');
+    $user->set("user_picture",'');
+    $user->set("field_telephone",'');
+    $user->save();
     // Enter your own code here. Remember to save the user with $user->save()
     // if you modify the user object.
     $message = t('Por activar tu cuenta, te hemos obsequiado 50 kokoripesos, actualiza tus datos para disfrutarlos.');
