@@ -555,10 +555,19 @@ li.producto {
 
 .user-register-form, .user-pass, .user-login-form, .user-form{
   padding: 0 20%;
-  .description{
+  .description,{
     font-size: 0.8em;
     color: #999999;
     margin-bottom: 16px;
+  }
+  h4{
+    color: #4d4d4d;
+    cursor: pointer;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.5; 
+    margin-bottom: 0;
   }
 }
 #block-menuactualizardatos, #block-meniactualizardatos{
@@ -616,7 +625,7 @@ a.create-account-link {
   .botones{
     float: none;
   }
-} 
+}
 
 //Restauramntes
 

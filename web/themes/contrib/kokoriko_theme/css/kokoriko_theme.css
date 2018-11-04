@@ -7333,6 +7333,14 @@ li.producto {
     font-size: 0.8em;
     color: #999999;
     margin-bottom: 16px; }
+  .user-register-form h4, .user-pass h4, .user-login-form h4, .user-form h4 {
+    color: #4d4d4d;
+    cursor: pointer;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 0; }
 
 #block-menuactualizardatos, #block-meniactualizardatos {
   padding: 0 14%; }
