@@ -126,9 +126,10 @@ class KokorikoSubscriber implements EventSubscriberInterface {
 
         $graph_node = $this->facebook->get('/me?fields='.implode($facebook_profile_fields,","), $access_token)->getGraphNode();
         $name = $graph_node->getField('name') ;
+        dvm($name);
         if( $name ){
             $name = explode($name,' ');
-            dvm($name);
+
             for ($i=0; $i < count($name) - 1  ; $i++) {
                 $field_nombres .= $name[$i];
             }
