@@ -123,11 +123,11 @@ class KokorikoSubscriber implements EventSubscriberInterface {
           // 'birthday',
           // 'email',
         ];
-        drupal_set_message('asd');
+
         $graph_node = $this->facebook->get('/me?fields='.implode($facebook_profile_fields,","), $access_token)->getGraphNode();
 
         $name = $graph_node->getField('name') ;
-
+        dvm($name);
         if( $name ){
             $name = explode($name,' ');
 
