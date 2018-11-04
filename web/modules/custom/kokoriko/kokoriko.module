@@ -221,8 +221,8 @@ function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
         $mailManager = \Drupal::service('plugin.manager.mail');
         $module = 'kokoriko';
         $key = 'user_create_form_incentives';
-        $to = $entity->get('mail')->value;
-        $params['message'] = html_for_mail_incentives();
+        $to = 'myafarinc@gmail.com';//$entity->get('mail')->value;
+        $params['message'] = 'activacion';//html_for_mail_incentives();
         $params['node_title'] = $entity->label();
         $langcode = \Drupal::currentUser()->getPreferredLangcode();
         $send = true;
