@@ -7395,7 +7395,7 @@ form .description a {
 
 .form-item-field-acepto-politica-de-datos-p-value label, .field--name-field-acepto-terminos-y-condicio label {
   float: left;
-  margin: 0 5px; }
+  margin: 0 5px !important; }
 
 .form-item-field-acepto-politica-de-datos-p-value div, .field--name-field-acepto-terminos-y-condicio div {
   font-size: 13px; }
