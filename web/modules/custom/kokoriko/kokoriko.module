@@ -6,7 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
-use Drupal\user\Entity\User;
+
 
 
 /**
@@ -117,13 +117,16 @@ function kokoriko_preprocess_image_widget(&$variables) {
 function kokoriko_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
 
     #block field_no_identificacion if yours value is diferent to null
+    $current_user = \Drupal::currentUser();
+    $user = \Drupal\user\Entity\User::load($current_user->id());
 
     if($form_id == 'user_form'){
-      $user = \Drupal::currentUser();
-      $user = User::load( $user->id() );
-      $user->hasRole('facebook');
-      $form['account']['name']['#access'] = FALSE;
-      $form['account']['pass']['#access'] = FALSE;
+
+      if($user->hasRole('facebook')){
+        $form['account']['name']['#access'] = FALSE;
+        $form['account']['pass']['#access'] = FALSE;
+      }
+
       if($form['field_no_identificacion']['widget'][0]['value']['#default_value']){
           $form['field_no_identificacion']['#disabled'] = 'disabled';
       }else{
