@@ -205,7 +205,7 @@ function kokoriko_mail($key, &$message, $params) {
   switch ($key) {
     case 'user_create_form_incentives':
       $message['from'] = \Drupal::config('system.site')->get('mail');
-      $message['subject'] = t('Article created: @title', array('@title' => $params['node_title']), $options);
+      $message['subject'] = t('Activa tu cuenta de kokoripesos', array('@title' => $params['node_title']), $options);
       $message['body'][] = $params['message'];
     break;
   }
@@ -216,19 +216,44 @@ function kokoriko_mail($key, &$message, $params) {
 */
 function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
   if ( $entity->getEntityTypeId() === 'user' ) {
-    $mailManager = \Drupal::service('plugin.manager.mail');
-    $module = 'kokoriko';
-    $key = 'user_create_form_incentives';
-    $to = 'myafarinc@gmail.com';//\Drupal::currentUser()->getEmail();
-    $params['message'] = $entity->get('mail')->value;
-    $params['node_title'] = $entity->label();
-    $langcode = \Drupal::currentUser()->getPreferredLangcode();
-    $send = true;
-    $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
-    if ($result['result'] !== true) {
-     drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
-    } else {
-     drupal_set_message(t('Your message has been sent.'));
+
+    if ( $entity->hasRole('incentives') ) {
+        $mailManager = \Drupal::service('plugin.manager.mail');
+        $module = 'kokoriko';
+        $key = 'user_create_form_incentives';
+        $to = $entity->get('mail')->value;
+        $params['message'] = html_for_mail_incentives();
+        $params['node_title'] = $entity->label();
+        $langcode = \Drupal::currentUser()->getPreferredLangcode();
+        $send = true;
+        $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+
+        if ($result['result'] !== true) {
+        drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
+        } else {
+        drupal_set_message(t('Your message has been sent.'));
+        }
+
+      }
+
     }
-  }
+}
+
+function html_for_mail_incentives(){
+  return '
+    [user:display-name],
+
+    Un administrador del sitio en [site:name] ha creado una cuenta para usted. Puede ahora iniciar sesión haciendo clic en este enlace o copiando y pegándolo en su navegador:
+
+    [user:one-time-login-url]
+
+    Este enlace solo puede ser usado una vez para iniciar sesión y le conducirá a la página donde podrá establecer su contraseña.
+
+    Después de establecer su contraseña, será capaz de iniciar sesión en [site:login-url] en el futuro usando:
+
+    Nombre de usuario: [user:name]
+    Contraseña: Su contraseña
+
+    --  Equipo de [site:name]
+  ';
 }
