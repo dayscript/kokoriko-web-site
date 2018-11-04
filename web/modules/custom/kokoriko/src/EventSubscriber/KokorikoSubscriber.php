@@ -79,14 +79,13 @@ class KokorikoSubscriber implements EventSubscriberInterface {
    */
   public function userCreated(GenericEvent $event) {
     $user = $event->getArgument('account');
-    $user->set("field_nombres", 'asd' );
-    $user->set("field_apellidos", 'asd' );
-
-    $user->set("field_no_identificacion",12323);
-    $user->set("field_birthdate",13123);
+    $user->set("field_nombres", 'null' );
+    $user->set("field_apellidos", 'null' );
+    $user->set("field_no_identificacion",0);
+    $user->set("field_birthdate",0);
     $user->set("field_gender",'Mr');
     $user->set("user_picture",'');
-    $user->set("field_telephone",000);
+    $user->set("field_telephone",0);
     $user->save();
     // Enter your own code here. Remember to save the user with $user->save()
     // if you modify the user object.
