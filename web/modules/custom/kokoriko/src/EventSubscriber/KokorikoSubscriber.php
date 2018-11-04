@@ -82,7 +82,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
 
     // Enter your own code here. Remember to save the user with $user->save()
     // if you modify the user object.
-    $message = t('We give you 50 kokoripesos for activating your account');
+    $message = t('Por activar tu cuenta, te hemos obsequiado 50 kokoripesos, actualiza tus datos para disfrutarlos.');
     drupal_set_message($message, 'status');
   }
   /**
@@ -99,7 +99,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
 
     // Enter your code here. Remember to save the user with $user->save()
     // if you modify the user object.
-    $message = t('welcome');
+    $message = t('Bienvenido');
     drupal_set_message($message);
 
     // Let's add a role 'facebook' for the user if she didn't have it already.
@@ -154,7 +154,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
 
     }
     else {
-      $message = t('Sorry, the login is not available at this time');
+      $message = t('Lo sentimos, en estos momentos el sistema no esta disponible.');
       drupal_set_message($message, 'warning');
     }
   }
