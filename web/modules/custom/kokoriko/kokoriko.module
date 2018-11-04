@@ -118,6 +118,10 @@ function kokoriko_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
     if($form_id == 'user_form'){
       if($form['field_no_identificacion']['widget'][0]['value']['#default_value']){
           $form['field_no_identificacion']['#disabled'] = 'disabled';
+          $form['account']['name']['#access'] = FALSE;
+          $form['account']['password']['#access'] = FALSE;
+
+          
       }else{
         $form['#validate'][] = '_form_validation_field_no_indentification_validate';
       }
@@ -137,9 +141,10 @@ function kokoriko_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormSt
     $form[$key]['widget'][0]['value']['#required'] = $value;
     $form[$key]['widget'][0]['#required'] = $value;
   }
-  
+
 
   $form['account']['name']['#access'] = FALSE;
+
   $random = new \Drupal\Component\Utility\Random();
   $form['account']['name']['#default_value'] = $random->name();
 
