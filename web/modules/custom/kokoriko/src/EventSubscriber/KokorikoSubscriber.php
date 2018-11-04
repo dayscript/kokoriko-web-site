@@ -90,7 +90,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
     // Enter your own code here. Remember to save the user with $user->save()
     // if you modify the user object.
     $message = t('Por activar tu cuenta, te hemos obsequiado 50 kokoripesos, actualiza tus datos para disfrutarlos.');
-    drupal_set_message($message, 'status');
+    drupal_set_message($message);
   }
   /**
    * Reacts to the event when user logs in via Simple FB Connect.
