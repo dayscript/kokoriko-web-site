@@ -110,7 +110,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
     // user's Facebook access token, which SimpleFbConnect has stored to session
     // for other modules.
     $access_token = $this->persistentDataHandler->get('access_token');
-    dvm($access_token);
+
     if ($access_token) {
       try {
         $facebook_profile_fields = [
@@ -123,7 +123,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
           // 'birthday',
           // 'email',
         ];
-
+        drupal_set_message('asd');
         $graph_node = $this->facebook->get('/me?fields='.implode($facebook_profile_fields,","), $access_token)->getGraphNode();
 
         $name = $graph_node->getField('name') ;
