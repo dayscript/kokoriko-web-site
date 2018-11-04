@@ -28,11 +28,6 @@ class RouteSubscriber implements EventSubscriberInterface {
 
   }
 
-  public function servicesApiCreate(GetResponseEvent $event){
-    dpm($event->name);
-  }
-
-
   public function checkAuthStatus(GetResponseEvent $event) {
 
     if( $this->dashboard_path ){
@@ -53,8 +48,6 @@ class RouteSubscriber implements EventSubscriberInterface {
 
   public static function getSubscribedEvents() {
     $events[KernelEvents::REQUEST][] = ['checkAuthStatus', 100];
-    $events[KernelEvents::REQUEST][] = ['servicesApiCreate', 101];
-
     return $events;
   }
 
