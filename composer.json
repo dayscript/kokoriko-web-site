@@ -8,6 +8,7 @@
         "drupal/backup_migrate": "^4.0",
         "drupal/better_exposed_filters": "^3.0@alpha",
         "drupal/block_class": "^1.0",
+        "drupal/business_rules": "^1.0@beta",
         "drupal/console": "^1.0.2",
         "drupal/contentimport": "^4.1",
         "drupal/core": "^8.5",
