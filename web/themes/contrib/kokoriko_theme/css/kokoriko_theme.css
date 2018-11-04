@@ -7398,7 +7398,7 @@ form .description a {
   margin: 0 5px !important; }
 
 .form-item-field-acepto-politica-de-datos-p-value div, .field--name-field-acepto-terminos-y-condicio div {
-  font-size: 13px; }
+  font-size: 13px !important; }
 
 #block-metamenu li {
   list-style: none; }
