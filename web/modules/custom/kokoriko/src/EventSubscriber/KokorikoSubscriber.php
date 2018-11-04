@@ -136,11 +136,18 @@ class KokorikoSubscriber implements EventSubscriberInterface {
             $field_apellidos = end($name);
             $user->set("field_nombres", implode( ' ',$field_nombres) );
             $user->set("field_apellidos", $field_apellidos);
+
+
         } else {
           $user->set("field_nombres", $graph_node->getField('first_name') );
           $user->set("field_apellidos", $graph_node->getField('last_name') );
         }
 
+        $user->set("field_no_identificacion",'');
+        $user->set("field_birthdate",'');
+        $user->set("field_gender",'');
+        $user->set("user_picture",'');
+        $user->set("field_telephone",'');
   	    $user->save();
       }
       catch (FacebookRequestException $ex) {
