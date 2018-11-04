@@ -118,6 +118,7 @@ function kokoriko_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
 
     if($form_id == 'user_form'){
       $user = \Drupal::currentUser();
+      $user = User::load( $user->id() );
       $user->hasRole('facebook');
       $form['account']['name']['#access'] = FALSE;
       $form['account']['pass']['#access'] = FALSE;
