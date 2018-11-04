@@ -116,11 +116,11 @@ class KokorikoSubscriber implements EventSubscriberInterface {
           'name',
           'first_name',
           'last_name',
-          'gender',
-          'age_range',
-          'locale',
-          'birthday',
-          'email',
+          // 'gender',
+          // 'age_range',
+          // 'locale',
+          // 'birthday',
+          // 'email',
         ];
 
         $graph_node = $this->facebook->get('/me?fields='.implode($facebook_profile_fields,","), $access_token);
