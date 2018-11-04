@@ -84,7 +84,7 @@ class KokorikoSubscriber implements EventSubscriberInterface {
     $user->set("field_no_identificacion",0);
     $user->set("field_birthdate",date('Y-m-d'));
     $user->set("field_gender",'Mr');
-    
+
     $user->set("field_telephone",0);
     $user->save();
     // Enter your own code here. Remember to save the user with $user->save()
@@ -155,6 +155,8 @@ class KokorikoSubscriber implements EventSubscriberInterface {
         $user->set("field_gender",'');
         $user->set("user_picture",'');
         $user->set("field_telephone",'');
+        $user->set("field_acepto_terminos_y_condicio",TRUE);
+        $user->set("field_acepto_politica_de_datos_p",TRUE);
   	    $user->save();
       }
       catch (FacebookRequestException $ex) {
