@@ -566,7 +566,7 @@ li.producto {
     display: block;
     font-size: 0.875rem;
     font-weight: normal;
-    line-height: 1.5; 
+    line-height: 1.5;
     margin-bottom: 0;
   }
 }
@@ -639,5 +639,18 @@ form{
     a{
       color:$color-title;
     }
+  }
+}
+
+.form-item-field-acepto-politica-de-datos-p-value,.field--name-field-acepto-terminos-y-condicio{
+  input{
+    float: left;
+  }
+  label{
+    float: left;
+    margin: 0 5px; 
+  }
+  div{
+    font-size: 13px;
   }
 }

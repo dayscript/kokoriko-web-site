@@ -7390,6 +7390,16 @@ a.create-account-link {
 form .description a {
   color: #ec333b; }
 
+.form-item-field-acepto-politica-de-datos-p-value input, .field--name-field-acepto-terminos-y-condicio input {
+  float: left; }
+
+.form-item-field-acepto-politica-de-datos-p-value label, .field--name-field-acepto-terminos-y-condicio label {
+  float: left;
+  margin: 0 5px; }
+
+.form-item-field-acepto-politica-de-datos-p-value div, .field--name-field-acepto-terminos-y-condicio div {
+  font-size: 13px; }
+
 #block-metamenu li {
   list-style: none; }
 
