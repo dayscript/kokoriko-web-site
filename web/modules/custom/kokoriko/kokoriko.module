@@ -270,5 +270,5 @@ Después de establecer su contraseña, será capaz de iniciar sesión en @site_l
 Nombre de usuario: @name
 Contraseña: Su contraseña
 
---  Equipo de [site:name]';
+--  Equipo de @site_name';
 }
