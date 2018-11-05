@@ -215,7 +215,9 @@ function kokoriko_mail($key, &$message, $params) {
 * Implements hook_user_insert().
 */
 function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
+  dvm($entity);
   if ( $entity->getEntityTypeId() === 'user' ) {
+
     $user = \Drupal\user\Entity\User::load($entity->id());
     if ( $user->hasRole('incentives') ) {
         $mailManager = \Drupal::service('plugin.manager.mail');
