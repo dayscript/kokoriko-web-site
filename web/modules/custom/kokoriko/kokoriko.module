@@ -142,11 +142,6 @@ function kokoriko_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
  */
 function kokoriko_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 
-  foreach ( _kokoriko_custom_require_fields() as $key => $value) {
-    $form[$key]['widget'][0]['value']['#required'] = $value;
-    $form[$key]['widget'][0]['#required'] = $value;
-  }
-
 
   $form['account']['name']['#access'] = FALSE;
 
@@ -180,23 +175,10 @@ function kokoriko_autofill_username_in_register_form(array &$form, \Drupal\Core\
   $form_state->setValue('name', $identification);
 }
 
-/**
- * Return array with fields to required for user_register_form.
- */
-
- function _kokoriko_custom_require_fields(){
-   $fields = [];
-
-   $fields = [
-     'field_no_identificacion' => TRUE,
-   ];
-
-   return $fields;
- }
 
 
 /**
-* Implements hook_user_insert().
+* Implements hook_entity_insert().
 */
 function kokoriko_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
 
