@@ -225,13 +225,22 @@ function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
         $module = 'kokoriko';
         $key = 'user_create_form_incentives';
         $to = $user->get('mail')->value;
-        $params['message'] = html_for_mail_incentives();
-        $params['user_name'] = $user->get('field_nombres')->value.' '.$user->get('field_apellidos')->value;
-        $params['name'] = $user->get('name')->value;
-        $params['password'] = 'YuSx128Xos9doc';
-        $params['site_name'] = 'Kokoriko';
-        $params['site_url'] = 'http://www.kokoriko.com.co/kokoripesos';
 
+        $data['user_name'] = $user->get('field_nombres')->value.' '.$user->get('field_apellidos')->value;
+        $data['name'] = $user->get('name')->value;
+        $data['password'] = 'YuSx128Xos9doc';
+        $data['site_name'] = 'Kokoriko';
+        $data['site_url'] = 'http://www.kokoriko.com.co/kokoripesos';
+
+        $params['message'] = t(html_for_mail_incentives(),
+                              array(
+                                '@user_name' => $data['user_name'],
+                                '@name' => $data['name'],
+                                '@password' => $data['password'],
+                                '@site_name' => $data['site_name'],
+                                '@site_url' => $data['site_url'],
+                                )
+                              );
         $langcode = \Drupal::currentUser()->getPreferredLangcode();
         $send = true;
         $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
