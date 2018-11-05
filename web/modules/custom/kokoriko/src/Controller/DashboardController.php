@@ -25,7 +25,7 @@ class DashboardController extends ControllerBase {
 
      $this->account     = Drupal::currentUser();
      $this->user        = User::load( $this->account ->id() );
-     $this->user_fields = ['field_nombres','field_apellidos','field_no_identificacion','field_nombres'];
+     $this->user_fields = ['uid','field_nombres','field_apellidos','field_no_identificacion','field_telephone','field_gender','field_birthdate','mail'];
      $this->output      = [];
    }
 
@@ -34,24 +34,12 @@ class DashboardController extends ControllerBase {
     foreach ($this->user_fields as $key => $value) {
       $this->output[$value] = $this->user->get($value)->value;
     }
-
-
-    $this->output['id'] = $this->account->id();
-    $this->output['user_picture'] = '/themes/contrib/kokoriko_theme/images/default-user.jpg';
-
-    if( $this->user->get('user_picture')->entity && $this->user->get('user_picture')->entity->getFileUri() ){
-        $this->output['user_picture'] = str_replace('public://','/sites/default/files/', $this->user->get('user_picture')->entity->getFileUri());
-    }
-
-    if( $this->account->getDisplayName() ){
-      $this->output['field_nombres'] = $this->user->get('field_nombres')->value;
-      $this->output['field_apellidos'] = $this->user->get('field_apellidos')->value;
-    }
-
-    if( $this->account->getLastAccessedTime() ){
-      $this->output['last_access'] = $this->account->getLastAccessedTime();
-
-    }
+    $this->output['identification'] = $this->output['field_no_identificacion'] ;
+    $this->output['name'] = $this->output['field_nombres'].' '.$this->output['field_apellidos'];
+    $this->output['roles'] = $this->user->getRoles();
+    $this->output['asesor'] = 'kokoriko.com.co';
+    $this->output['cedula_del_asesor'] = '0';
+    $this->output['fecha_de_registro'] = str_replace(' ','T',date('Y-m-d H:m:s').'-05:00');;
 
 
     $return = [

@@ -11,17 +11,18 @@ declare var drupalSettings: any;
 })
 export class AccompanimentsComponent implements OnInit {
 
-  elements: any;
+  user: any;
   incentives: any;
   redemption_value:any = 0;
   redemption_last:any;
   invoice_last:any;
   errors: any = null;
   redemption:any = null;
-  api = 'https://incentives.demodayscript.com/api';//'http://incentives.kokoriko.local:8000/api'; //
+  api = 'http://incentives.kokoriko.local:8000/api'; //'https://incentives.demodayscript.com/api';//
+
   constructor(private http: HttpClient) {
-    this.elements = drupalSettings.kokoriko.kokorikoJS
-    this.elements.validator = true;
+    this.user = drupalSettings.kokoriko.kokorikoJS
+    this.user.validator = true;
   }
 
   ngOnInit() {
@@ -30,15 +31,15 @@ export class AccompanimentsComponent implements OnInit {
   }
 
   private validateData(){
-    if(this.elements.field_no_identificacion == null){
+    if(this.user.field_no_identificacion == null){
       console.error('property field_no_identificacion not exist!');
-      this.elements.validator = false;
+      this.user.validator = false;
     }
   }
 
   public getData(){
-    if(this.elements.validator){
-        this.http.get( this.api +"/entities/" + this.elements.field_no_identificacion)
+    if(this.user.validator){
+        this.http.get( this.api +"/entities/" + this.user.field_no_identificacion)
               .subscribe(
                   data => {
                       this.incentives = data;
@@ -86,7 +87,7 @@ export class AccompanimentsComponent implements OnInit {
         }
 
   public createEntity(){
-    this.http.post( this.api +"/entities",{'identification':this.elements.field_no_identificacion,'name':this.elements.field_nombres})
+    this.http.post( this.api +"/entities",this.user)
           .subscribe(
               data => {
                   console.log("POST Request is successful ", data);
