@@ -106,8 +106,6 @@ class KokorikoSubscriber implements EventSubscriberInterface {
 
     // Enter your code here. Remember to save the user with $user->save()
     // if you modify the user object.
-    $message = t('Bienvenido');
-    drupal_set_message($message);
 
     // Let's add a role 'facebook' for the user if she didn't have it already.
     // The role itself must obviously be first created manually.
