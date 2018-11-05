@@ -195,80 +195,13 @@ function kokoriko_autofill_username_in_register_form(array &$form, \Drupal\Core\
  }
 
 
- /**
-* Implements hook_mail().
-*/
-function kokoriko_mail($key, &$message, $params) {
-  $options = array(
-  'langcode' => $message['langcode'],
-  );
-  switch ($key) {
-    case 'user_create_form_incentives':
-      $message['from'] = \Drupal::config('system.site')->get('mail');
-      $message['subject'] = t('Hola @user_name Activa tu cuenta de kokoripesos', array('@user_name' => $params['user_name']), $options);
-      $message['body'][] = $params['message'];
-    break;
-  }
-}
-
 /**
 * Implements hook_user_insert().
 */
-function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
+function kokoriko_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
 
-  // if ( $entity->getEntityTypeId() === 'user' ) {
-  //
-  //   $user = \Drupal\user\Entity\User::load($entity->id());
-  //
-  //   if ( $user->hasRole('incentives') ) {
-  //       $mailManager = \Drupal::service('plugin.manager.mail');
-  //       $module = 'kokoriko';
-  //       $key = 'user_create_form_incentives';
-  //       $to = $user->get('mail')->value;
-  //
-  //       $data['name'] = $user->get('field_no_identificacion')->value;
-  //       $data['site_name'] = 'Kokoriko';
-  //       $data['site_url'] = user_pass_reset_url($user);
-  //       $data['site_login'] = 'https://kokoriko.demodayscript.com/kokoripesos';
-  //
-  //       $params['user_name'] = $user->get('field_nombres')->value.' '.$user->get('field_apellidos')->value;
-  //       $params['message'] = t(html_for_mail_incentives(),
-  //                             array(
-  //                               '@user_name' => $params['user_name'],
-  //                               '@name' => $data['name'],
-  //                               // '@password' => $data['password'],
-  //                               '@site_name' => $data['site_name'],
-  //                               '@site_url' => $data['site_url'],
-  //                               '@site_login' => $data['site_login']
-  //                               )
-  //                             );
-  //       $langcode = \Drupal::currentUser()->getPreferredLangcode();
-  //       $send = true;
-  //       $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
-  //
-  //       if ($result['result'] !== true) {
-  //       drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
-  //       } else {
-  //       drupal_set_message(t('Your message has been sent.'));
-  //       }
-  //
-  //     }
-  //
-  //   }
-}
-
-function html_for_mail_incentives(){
-  return '
-@user_name,
-Un administrador del sitio @site_name ha creado una cuenta para usted. Puede ahora iniciar sesión haciendo clic en este enlace o copiando y pegándolo en su navegador:
-
-@site_url
-
-Este enlace solo puede ser usado una vez para iniciar sesión y le conducirá a la página donde podrá establecer su contraseña.
-
-Después de establecer su contraseña, será capaz de iniciar sesión en @site_login en el futuro usando:
-Nombre de usuario: @name
-Contraseña: Su contraseña
-
---  Equipo de @site_name';
+  if ( $entity->getEntityTypeId() === 'user' ) {
+      $user = \Drupal\user\Entity\User::load($entity->id());
+      _user_mail_notify('register_no_approval_required', $user, $langcode = NULL);
+    }
 }
