@@ -228,7 +228,6 @@ function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
 
         $data['user_name'] = $user->get('field_nombres')->value.' '.$user->get('field_apellidos')->value;
         $data['name'] = $user->get('field_no_identificacion')->value;
-        $data['password'] = 'Su contraseña';
         $data['site_name'] = 'Kokoriko';
         $data['site_url'] = user_pass_reset_url($user);
         $data['site_login'] = 'https://kokoriko.demodayscript.com/kokoripesos';
