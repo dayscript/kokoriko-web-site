@@ -228,9 +228,11 @@ function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
 
         $data['user_name'] = $user->get('field_nombres')->value.' '.$user->get('field_apellidos')->value;
         $data['name'] = $user->get('field_no_identificacion')->value;
-        $data['password'] = 'YuSx128Xos9doc';
+        $data['password'] = 'Su contraseña';
         $data['site_name'] = 'Kokoriko';
-        $data['site_url'] = 'http://www.kokoriko.com.co/kokoripesos';
+        $data['site_url'] = user_pass_reset_url($user);
+        $data['site_login'] = 'https://kokoriko.demodayscript.com/kokoripesos';
+
 
         $params['message'] = t(html_for_mail_incentives(),
                               array(
@@ -260,15 +262,17 @@ function html_for_mail_incentives(){
   return '
     @user_name,
 
-    Un administrador del sitio en @site_name ha creado una cuenta para usted. Puede ahora iniciar sesión haciendo clic en este enlace o copiando y pegándolo en su navegador:
+    Un administrador del sitio @site_name ha creado una cuenta para usted. Puede ahora iniciar sesión haciendo clic en este enlace o copiando y pegándolo en su navegador:
 
-    Ahora capaz de iniciar sesión en @site_url en el futuro usando:
+    @site_url
+
+    Este enlace solo puede ser usado una vez para iniciar sesión y le conducirá a la página donde podrá establecer su contraseña.
+
+    Después de establecer su contraseña, será capaz de iniciar sesión en @site_login en el futuro usando:
 
     Nombre de usuario: @name
-    Contraseña: @password
+    Contraseña: Su contraseña
 
-    La contraseña generada caducara en 24 horas, le recomendamos actualizar su contraseña lo antes posible.
-
-    --  Equipo de @site_anme
+    --  Equipo de [site:name]
   ';
 }
