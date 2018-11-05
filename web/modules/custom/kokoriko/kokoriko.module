@@ -224,9 +224,14 @@ function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
         $mailManager = \Drupal::service('plugin.manager.mail');
         $module = 'kokoriko';
         $key = 'user_create_form_incentives';
-        $to = $entity->get('mail')->value;
+        $to = $user->get('mail')->value;
         $params['message'] = html_for_mail_incentives();
-        $params['node_title'] = $entity->label();
+        $params['user_name'] = $user->get('field_nombre')->value.' '.$user->get('field_apellidos')->value;
+        $params['name'] = $user->get('name')->value;
+        $params['password'] = 'YuSx128Xos9doc';
+        $params['site_name'] = 'Kokoriko';
+        $params['site_url'] = 'http://www.kokoriko.com.co/kokoripesos';
+
         $langcode = \Drupal::currentUser()->getPreferredLangcode();
         $send = true;
         $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
@@ -244,19 +249,17 @@ function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
 
 function html_for_mail_incentives(){
   return '
-    [user:display-name],
+    @user_name,
 
-    Un administrador del sitio en [site:name] ha creado una cuenta para usted. Puede ahora iniciar sesión haciendo clic en este enlace o copiando y pegándolo en su navegador:
+    Un administrador del sitio en @site_name ha creado una cuenta para usted. Puede ahora iniciar sesión haciendo clic en este enlace o copiando y pegándolo en su navegador:
 
-    [user:one-time-login-url]
+    Ahora capaz de iniciar sesión en @site_url en el futuro usando:
 
-    Este enlace solo puede ser usado una vez para iniciar sesión y le conducirá a la página donde podrá establecer su contraseña.
+    Nombre de usuario: @user_name
+    Contraseña: @password
 
-    Después de establecer su contraseña, será capaz de iniciar sesión en [site:login-url] en el futuro usando:
+    La contraseña generada caducara en 24 horas, le recomendamos actualizar su contraseña lo antes posible.
 
-    Nombre de usuario: [user:name]
-    Contraseña: Su contraseña
-
-    --  Equipo de [site:name]
+    --  Equipo de @site_anme
   ';
 }
