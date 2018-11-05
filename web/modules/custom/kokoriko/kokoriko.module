@@ -214,30 +214,30 @@ function kokoriko_mail($key, &$message, $params) {
 /**
 * Implements hook_user_insert().
 */
-function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
-  if ( $entity->getEntityTypeId() === 'user' ) {
-
-    // if ( $entity->hasRole('incentives') ) {
-    //     $mailManager = \Drupal::service('plugin.manager.mail');
-    //     $module = 'kokoriko';
-    //     $key = 'user_create_form_incentives';
-    //     $to = 'myafarinc@gmail.com';//$entity->get('mail')->value;
-    //     $params['message'] = 'activacion';//html_for_mail_incentives();
-    //     $params['node_title'] = $entity->label();
-    //     $langcode = \Drupal::currentUser()->getPreferredLangcode();
-    //     $send = true;
-    //     $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
-    //
-    //     if ($result['result'] !== true) {
-    //     drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
-    //     } else {
-    //     drupal_set_message(t('Your message has been sent.'));
-    //     }
-    //
-    //   }
-
-    }
-}
+// function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
+//   if ( $entity->getEntityTypeId() === 'user' ) {
+//
+//     // if ( $entity->hasRole('incentives') ) {
+//     //     $mailManager = \Drupal::service('plugin.manager.mail');
+//     //     $module = 'kokoriko';
+//     //     $key = 'user_create_form_incentives';
+//     //     $to = 'myafarinc@gmail.com';//$entity->get('mail')->value;
+//     //     $params['message'] = 'activacion';//html_for_mail_incentives();
+//     //     $params['node_title'] = $entity->label();
+//     //     $langcode = \Drupal::currentUser()->getPreferredLangcode();
+//     //     $send = true;
+//     //     $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+//     //
+//     //     if ($result['result'] !== true) {
+//     //     drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
+//     //     } else {
+//     //     drupal_set_message(t('Your message has been sent.'));
+//     //     }
+//     //
+//     //   }
+//
+//     }
+// }
 
 function html_for_mail_incentives(){
   return '
