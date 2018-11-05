@@ -74,11 +74,18 @@ var AccompanimentsComponent = /** @class */ (function () {
         this.redemption_value = 0;
         this.errors = null;
         this.redemption = null;
-        this.api = 'https://incentives.demodayscript.com/api'; //'http://incentives.kokoriko.local:8000/api'; //
+        this.api = 'https://incentives.demodayscript.com/api'; // 'http://incentives.kokoriko.local:8000/api'; //
         this.user = drupalSettings.kokoriko.kokorikoJS;
         this.user.validator = true;
     }
     AccompanimentsComponent.prototype.ngOnInit = function () {
+        var header = {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Methods': 'GET, PUT, PATCH, DELETE, OPTIONS',
+            'Access-Control-Allow-Origin': '*'
+        };
+        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"](header);
         this.validateData();
         this.getData();
     };
@@ -91,7 +98,7 @@ var AccompanimentsComponent = /** @class */ (function () {
     AccompanimentsComponent.prototype.getData = function () {
         var _this = this;
         if (this.user.validator) {
-            this.http.get(this.api + "/entities/" + this.user.field_no_identificacion)
+            this.http.get(this.api + "/entities/" + this.user.field_no_identificacion, this.headers)
                 .subscribe(function (data) {
                 _this.incentives = data;
                 _this.errors = null;
@@ -112,7 +119,7 @@ var AccompanimentsComponent = /** @class */ (function () {
     };
     AccompanimentsComponent.prototype.redemptionPost = function () {
         var _this = this;
-        this.http.post(this.api + "/redemptions", { 'entity_id': this.incentives.entity.id, 'value': this.redemption_value })
+        this.http.post(this.api + "/redemptions", { 'entity_id': this.incentives.entity.id, 'value': this.redemption_value }, this.headers)
             .subscribe(function (data) {
             _this.redemption = data;
             _this.errors = null;
@@ -124,7 +131,7 @@ var AccompanimentsComponent = /** @class */ (function () {
     };
     AccompanimentsComponent.prototype.createEntity = function () {
         var _this = this;
-        this.http.post(this.api + "/entities", this.user)
+        this.http.post(this.api + "/entities", this.user, this.headers)
             .subscribe(function (data) {
             console.log("POST Request is successful ", data);
             _this.getData();

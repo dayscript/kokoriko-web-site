@@ -18,14 +18,24 @@ export class AccompanimentsComponent implements OnInit {
   invoice_last:any;
   errors: any = null;
   redemption:any = null;
-  api = 'https://incentives.demodayscript.com/api';//'http://incentives.kokoriko.local:8000/api'; //
+  api = 'https://incentives.demodayscript.com/api';// 'http://incentives.kokoriko.local:8000/api'; //
+  headers:any;
 
   constructor(private http: HttpClient) {
     this.user = drupalSettings.kokoriko.kokorikoJS
     this.user.validator = true;
+
   }
 
   ngOnInit() {
+    const header = {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'GET, PUT, PATCH, DELETE, OPTIONS',
+    'Access-Control-Allow-Origin': '*'
+    };
+
+    this.headers = new HttpHeaders(header);
     this.validateData();
     this.getData();
   }
@@ -39,7 +49,7 @@ export class AccompanimentsComponent implements OnInit {
 
   public getData(){
     if(this.user.validator){
-        this.http.get( this.api +"/entities/" + this.user.field_no_identificacion)
+        this.http.get( this.api +"/entities/" + this.user.field_no_identificacion,this.headers)
               .subscribe(
                   data => {
                       this.incentives = data;
@@ -70,7 +80,7 @@ export class AccompanimentsComponent implements OnInit {
 
 
   public redemptionPost(){
-    this.http.post( this.api +"/redemptions",{'entity_id':this.incentives.entity.id,'value':this.redemption_value})
+    this.http.post( this.api +"/redemptions",{'entity_id':this.incentives.entity.id,'value':this.redemption_value},this.headers)
           .subscribe(
               data => {
                   this.redemption = data;
@@ -87,7 +97,7 @@ export class AccompanimentsComponent implements OnInit {
         }
 
   public createEntity(){
-    this.http.post( this.api +"/entities",this.user)
+    this.http.post( this.api +"/entities",this.user,this.headers)
           .subscribe(
               data => {
                   console.log("POST Request is successful ", data);
