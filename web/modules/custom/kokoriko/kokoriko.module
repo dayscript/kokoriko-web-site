@@ -226,7 +226,7 @@ function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
         $key = 'user_create_form_incentives';
         $to = $user->get('mail')->value;
         $params['message'] = html_for_mail_incentives();
-        $params['user_name'] = $user->get('field_nombre')->value.' '.$user->get('field_apellidos')->value;
+        $params['user_name'] = $user->get('field_nombres')->value.' '.$user->get('field_apellidos')->value;
         $params['name'] = $user->get('name')->value;
         $params['password'] = 'YuSx128Xos9doc';
         $params['site_name'] = 'Kokoriko';
