@@ -267,7 +267,6 @@ Un administrador del sitio @site_name ha creado una cuenta para usted. Puede aho
 Este enlace solo puede ser usado una vez para iniciar sesión y le conducirá a la página donde podrá establecer su contraseña.
 
 Después de establecer su contraseña, será capaz de iniciar sesión en @site_login en el futuro usando:
-
 Nombre de usuario: @name
 Contraseña: Su contraseña
 
