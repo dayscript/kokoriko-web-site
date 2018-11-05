@@ -239,6 +239,7 @@ function kokoriko_user_insert(Drupal\Core\Entity\EntityInterface $entity) {
                                 '@password' => $data['password'],
                                 '@site_name' => $data['site_name'],
                                 '@site_url' => $data['site_url'],
+                                '@site_login' => $data['site_login']
                                 )
                               );
         $langcode = \Drupal::currentUser()->getPreferredLangcode();
