@@ -18,7 +18,7 @@ export class AccompanimentsComponent implements OnInit {
   invoice_last:any;
   errors: any = null;
   redemption:any = null;
-  api = 'http://incentives.kokoriko.local:8000/api'; //'https://incentives.demodayscript.com/api';//
+  api = 'https://incentives.demodayscript.com/api';//'http://incentives.kokoriko.local:8000/api'; //
 
   constructor(private http: HttpClient) {
     this.user = drupalSettings.kokoriko.kokorikoJS
