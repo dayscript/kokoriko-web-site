@@ -264,7 +264,7 @@ function html_for_mail_incentives(){
 
     Ahora capaz de iniciar sesión en @site_url en el futuro usando:
 
-    Nombre de usuario: @user_name
+    Nombre de usuario: @name
     Contraseña: @password
 
     La contraseña generada caducara en 24 horas, le recomendamos actualizar su contraseña lo antes posible.
