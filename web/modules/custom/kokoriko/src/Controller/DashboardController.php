@@ -44,8 +44,8 @@ class DashboardController extends ControllerBase {
     }
 
     if( $this->account->getDisplayName() ){
-      $this->output['field_nombres'] = $this->user->get('field_nombres');
-      $this->output['field_apellidos'] = $this->user->get('field_apellidos');
+      $this->output['field_nombres'] = $this->user->get('field_nombres')->value;
+      $this->output['field_apellidos'] = $this->user->get('field_apellidos')->value;
     }
 
     if( $this->account->getLastAccessedTime() ){
