@@ -7704,3 +7704,6 @@ app-addresses, #block-domicilios-block {
     position: relative; }
   app-addresses .field-name-body, #block-domicilios-block .field-name-body {
     margin: 0; }
+
+.Eliminar ul {
+  display: none; }
