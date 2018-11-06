@@ -18,7 +18,7 @@ export class AccompanimentsComponent implements OnInit {
   invoice_last:any;
   errors: any = null;
   redemption:any = null;
-  api = 'https://incentives.demodayscript.com/api';// 'http://incentives.kokoriko.local:8000/api'; //
+  api = 'https://incentives.demodayscript.com/api'; //'http://incentives.kokoriko.local:8000/api'; 
   headers:any;
 
   constructor(private http: HttpClient) {
