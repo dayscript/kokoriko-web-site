@@ -49,6 +49,7 @@
         "drupal/tawkto": "^1.1",
         "drupal/telephone_validation": "^2.1",
         "drupal/twig_vardumper": "^1.1",
+        "drupal/views_php": "1.x-dev",
         "drupal/webform": "^5.0@RC",
         "drupal/zurb_foundation": "^5.0@beta",
         "drush/drush": "~8.0|^9.0.0-beta8",
