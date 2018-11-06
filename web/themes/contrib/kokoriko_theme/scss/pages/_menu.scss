@@ -35,7 +35,7 @@
     .producto {
       border-bottom: 1px solid #E3E3E3;
     }
-  }
+  } 
   .taxonomy-term--type-categoria-de-producto {
     h3 {
       color: #EC333B;
@@ -50,6 +50,12 @@
     p{
       text-transform: initial;
       color: $oil;
+    }
+  }
+  .field-name-field-legal-combo{
+    .field-item{
+    font-size: 10px;
+    line-height: 12px;
     }
   }
 }

@@ -7502,6 +7502,10 @@ ul.sf-menu.sf-style-black li:hover, ul.sf-menu.sf-style-black li.sfHover, ul.sf-
   text-transform: initial;
   color: #333333; }
 
+.section-menu .field-name-field-legal-combo .field-item {
+  font-size: 10px;
+  line-height: 12px; }
+
 #views-exposed-form-restaurantes-page-1 {
   text-align: center; }
   #views-exposed-form-restaurantes-page-1 select {
