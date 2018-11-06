@@ -26,7 +26,7 @@
   .header{
     background-image: url(/themes/contrib/kokoriko_theme/images/header-pages.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: bottom; 
     background-color: $white;
     &:after{
       background-image: none;
@@ -49,6 +49,7 @@
 
 .path-frontpage .sub-header{
   position: absolute;
+  top: 0;
 
 }
 

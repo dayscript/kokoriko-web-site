@@ -6850,7 +6850,8 @@ h3 {
   position: relative; }
 
 .path-frontpage .sub-header {
-  position: absolute; }
+  position: absolute;
+  top: 0; }
 
 .sub-header {
   margin: 20px 0 60px 0; }
