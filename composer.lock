@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "596f5103b99cae7a2654d4fe957a0fa2",
+    "content-hash": "d65ee2e8eea4855d120cf7461a8d1757",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3317,6 +3317,57 @@
             "homepage": "https://www.drupal.org/project/field_collection",
             "support": {
                 "source": "http://cgit.drupalcode.org/field_collection"
+            }
+        },
+        {
+            "name": "drupal/field_validation",
+            "version": "1.0.0-alpha6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/field_validation",
+                "reference": "8.x-1.0-alpha6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_validation-8.x-1.0-alpha6.zip",
+                "reference": "8.x-1.0-alpha6",
+                "shasum": "6b1ec37c21f17028f45ad912563741c4fd327165"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha6",
+                    "datestamp": "1504775344",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "aegirone",
+                    "homepage": "https://www.drupal.org/user/2720511"
+                },
+                {
+                    "name": "g089h515r806",
+                    "homepage": "https://www.drupal.org/user/174740"
+                }
+            ],
+            "description": "Field validation.",
+            "homepage": "https://www.drupal.org/project/field_validation",
+            "support": {
+                "source": "http://cgit.drupalcode.org/field_validation"
             }
         },
         {
@@ -10402,6 +10453,7 @@
         "drupal/business_rules": 10,
         "drupal/empty_front_page": 20,
         "drupal/field_collection": 15,
+        "drupal/field_validation": 15,
         "drupal/file_entity": 10,
         "drupal/front": 10,
         "drupal/mimemail": 15,

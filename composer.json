@@ -19,6 +19,7 @@
         "drupal/empty_front_page": "1.x-dev",
         "drupal/entity_reference_revisions": "^1.5",
         "drupal/field_collection": "^1.0@alpha",
+        "drupal/field_validation": "^1.0@alpha",
         "drupal/file_entity": "^2.0@beta",
         "drupal/fontyourface": "^3.2",
         "drupal/form_placeholder": "^1.0",
