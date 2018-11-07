@@ -24,13 +24,13 @@ class RouteSubscriber implements EventSubscriberInterface {
     $this->account = \Drupal::currentUser();
     // $this->current_path = (\Drupal::service('path.current')->getPath() == '/kokoripesos');
     // $this->dashboard_path = (\Drupal::service('path.current')->getPath() == '/user/dashboard');
-    // $this->user_profile_path = (\Drupal::service('path.current')->getPath() == '/user');
+    $this->user_profile_path = (\Drupal::service('path.current')->getPath() == '/user');
 
   }
 
   public function checkAuthStatus(GetResponseEvent $event) {
 
-    if( $this->dashboard_path ){
+    if( $this->user_profile_path ){
       if( !User::load( $this->account ->id() )->get('field_no_identificacion')->value ){
         drupal_set_message(t('Por favor actualiza tus datos.'));
         $response = new RedirectResponse('/user/' . $this->account ->id() . '/edit', 301);
