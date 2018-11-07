@@ -38,7 +38,9 @@ class DashboardController extends ControllerBase {
     $this->output['name'] = $this->output['field_nombres'].' '.$this->output['field_apellidos'];
     $this->output['roles'] = $this->user->getRoles();
     $this->output['asesor'] = 'kokoriko.com.co';
-    $this->output['cedula_del_asesor'] = '0';
+    $this->output['cedula_del_asesor'] = null;
+    $this->output['nombre_asesor'] = null;
+
     $this->output['fecha_de_registro'] = str_replace(' ','T',date('Y-m-d H:m:s').'-05:00');;
 
 
