@@ -654,3 +654,31 @@ form{
     font-size: 13px!important;
   }
 }
+
+.reveal-modal{
+  with: 500px;
+  background-color: none;
+  border: solid 0px;
+  box-shadow: none;
+}
+.reveal-modal > :first-child {
+  margin-top: 22px;
+}
+.alert-box.success {
+  background-color: #ffffff;
+  border-color: #d2141c;
+  color: #444343;
+  text-align: center;
+}
+.alert-box{
+  font-size: 1rem;
+  padding: 2rem;
+  border-width: 3px;
+}
+
+
+.field-name-field-incluye-2-acompanamientos-{
+  .field-item { 
+    font-size: 0.7em;
+  }
+}
