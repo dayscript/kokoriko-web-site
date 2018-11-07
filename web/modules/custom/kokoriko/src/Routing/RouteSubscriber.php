@@ -22,9 +22,9 @@ class RouteSubscriber implements EventSubscriberInterface {
 
   public function __construct() {
     $this->account = \Drupal::currentUser();
-    $this->current_path = (\Drupal::service('path.current')->getPath() == '/kokoripesos');
-    $this->dashboard_path = (\Drupal::service('path.current')->getPath() == '/user/dashboard');
-    $this->user_profile_path = (\Drupal::service('path.current')->getPath() == '/user');
+    // $this->current_path = (\Drupal::service('path.current')->getPath() == '/kokoripesos');
+    // $this->dashboard_path = (\Drupal::service('path.current')->getPath() == '/user/dashboard');
+    // $this->user_profile_path = (\Drupal::service('path.current')->getPath() == '/user');
 
   }
 
@@ -39,10 +39,10 @@ class RouteSubscriber implements EventSubscriberInterface {
     }
 
 
-    if ( !$this->account->isAnonymous() && ( $this->current_path || $this->user_profile_path ) ) {
-      $response = new RedirectResponse('/user/dashboard', 301);
-      $event->setResponse($response);
-    }
+    // if ( !$this->account->isAnonymous() && ( $this->current_path ) ) {
+    //   $response = new RedirectResponse('/user/dashboard', 301);
+    //   $event->setResponse($response);
+    // }
     return;
   }
 
