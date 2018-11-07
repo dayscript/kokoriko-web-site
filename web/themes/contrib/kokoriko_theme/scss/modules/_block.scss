@@ -666,13 +666,19 @@ form{
 }
 .alert-box.success {
   background-color: #ffffff;
+  border-color: #74a500;
+  color: #444343;
+  text-align: center;
+}
+.alert-box.error {
+  background-color: #ffffff;
   border-color: #d2141c;
   color: #444343;
   text-align: center;
 }
-.alert-box{ 
+.alert-box{
   font-size: 1rem;
-  padding: 2rem;
+  padding: 2rem; 
   border-width: 3px;
 }
 
