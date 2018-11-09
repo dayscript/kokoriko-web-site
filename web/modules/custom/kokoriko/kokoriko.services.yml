@@ -10,3 +10,6 @@ services:
       - '@simple_fb_connect.fb_factory'
     tags:
       - {name: event_subscriber}
+  kokoriko.incentives:
+    class: Drupal\kokoriko\IncentivesService\IncentivesApi
+    

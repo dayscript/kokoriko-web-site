@@ -44,14 +44,19 @@
                 <div class="fecha"></div>
                 <div>Tienes disponibles</div>
 
-                <div class="kokoripesos">{{incentives?.entity?.totalpoints}}</div>
+                <div *ngIf="getTotalPoints() else elseKokoripesos" [innerHTML]=getTotalPoints() class="kokoripesos"> </div>
+                <ng-template #elseKokoripesos>Cargando...</ng-template>
                 <img src="/themes/contrib/kokoriko_theme/images/kokoripesos-red.png" alt="" class="text-center">
+
                 <hr>
-                <div class="vencidos"><span>{{incentives?.entity?.points_overcome}} Kokoripesos </span> por vencer</div>
+                <div *ngIf="getPointsOvercome() else elseOvercome" [innerHTML]=getPointsOvercome() class="kokoripesos"> </div>
+                <ng-template #elseOvercome>--</ng-template>
+
+                <div class="vencidos"><span>{{getPointsOvercome()}} Kokoripesos </span> por vencer</div>
                 <div class="fecha"> {{getDate() | date: 'mediumDate'}}</div>
                 <hr>
-                <div class="recent">Ultima redención: <span>{{redemption_last | date}}</span></div>
-                <div class="recent">Ultima acumulación: <span>{{invoice_last | date}}</span></div>
+                <div class="recent">Ultima redención:   <span>{{ getRedemptionLast() | date}}</span></div>
+                <div class="recent">Ultima acumulación: <span>{{ getInvoiceLast()    | date}}</span></div>
             </div>
         </div>
         <!--Navegador izquierda-->
@@ -116,15 +121,15 @@
                             <th>KOKORIPESOS</th>
                         </tr>
                         </thead>
-                        <tbody *ngIf="incentives?.entity?.invoices">
-                        <tr *ngFor="let invoice of incentives?.entity?.invoices">
+                        <tbody *ngIf="incentives?.invoices">
+                        <tr *ngFor="let invoice of incentives?.invoices">
                             <td>{{invoice.invoice_date_up}}</td>
                             <td>{{invoice.invoice_code}}</td>
                             <td>{{invoice.restaurant_code}}</td>
                             <td>$ {{invoice.value}}</td>
                             <td>102</td>
                         </tr>
-                        <div *ngIf="!incentives?.entity?.invoices">
+                        <div *ngIf="!incentives?.invoices">
                            No se han encontrado datos.
                         </div>
 
@@ -140,13 +145,13 @@
                             <th>VALOR</th>
                         </tr>
                       </thead>
-                      <tbody *ngIf="incentives?.entity?.redemptions">
-                        <tr *ngFor="let redemption of incentives?.entity?.redemptions">
+                      <tbody *ngIf="incentives?.redemptions">
+                        <tr *ngFor="let redemption of incentives?.redemptions">
                             <td>{{redemption.created_at}}</td>
                             <td>{{redemption.token}}</td>
                             <td>$ {{redemption.value}}</td>
                         </tr>
-                        <div *ngIf="!incentives?.entity?.invoices">
+                        <div *ngIf="!incentives?.invoices">
                            No se han encontrado datos.
                         </div>
                       </tbody>

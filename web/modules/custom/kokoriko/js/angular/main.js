@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"cuenta\">\n    <!--Hola + Botones de usuario-->\n    <div class=\"row user-container\">\n\n        <div class=\"medium-4 columns\">\n            <div class=\"row\">\n                <!--<div class=\"small-4 columns\">\n                    <img src=\"{{user.user_picture}}\" alt=\"\" class=\"photo\">\n                </div>-->\n\n                <div class=\"small-12 columns text-align-left\">\n                    <div class=\"hi\">HOLA</div>\n                    <div class=\"user\">{{user.field_nombres}} {{user.field_apellidos}}</div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"columns medium-7\">\n            <div class=\"botones\">\n                <a href=\"#block-comofunciona\" id=\"menu-como\" class=\"button account\">¿Cómo funciona?</a>\n                <a href=\"/user/{{user.uid}}/edit\" class=\"button account\">Actualizar datos</a>\n                <a href=\"/user/logout\" class=\"button account\">Cerrar sesión</a>\n            </div>\n        </div>\n    </div>\n    <!--Hola + Botones de usuario-->\n\n\n    <!--Banner central-->\n    <div class=\"row hide-for-small-only\">\n        <div class=\"columns medium-12\">\n            <img src=\"/themes/contrib/kokoriko_theme/images/banner-kkp.jpg\" alt=\"\" class=\"banner\">\n        </div>\n    </div>\n    <!--Banner central-->\n\n    <!--Estado de cuenta-->\n    <div class=\"row\">\n        <!--Navegador izquierda-->\n        <div class=\"columns medium-4\">\n            <div class=\"container-cuenta\">\n                <h3>Estado de cuenta</h3>\n                <hr>\n                <div class=\"fecha\"></div>\n                <div>Tienes disponibles</div>\n\n                <div class=\"kokoripesos\">{{incentives?.entity?.totalpoints}}</div>\n                <img src=\"/themes/contrib/kokoriko_theme/images/kokoripesos-red.png\" alt=\"\" class=\"text-center\">\n                <hr>\n                <div class=\"vencidos\"><span>{{incentives?.entity?.points_overcome}} Kokoripesos </span> por vencer</div>\n                <div class=\"fecha\"> {{getDate() | date: 'mediumDate'}}</div>\n                <hr>\n                <div class=\"recent\">Ultima redención: <span>{{redemption_last | date}}</span></div>\n                <div class=\"recent\">Ultima acumulación: <span>{{invoice_last | date}}</span></div>\n            </div>\n        </div>\n        <!--Navegador izquierda-->\n\n        <!--Tabla derecha-->\n        <div class=\"columns medium-8\">\n\n            <ul class=\"tabs hide-for-small-only\" data-tab>\n                <li class=\"tab-title active\"><a href=\"#panel1\">Redime tus Kokoripesos</a></li>\n                <li class=\"tab-title\"><a href=\"#panel2\">Kokoripesos acumulados</a></li>\n                <li class=\"tab-title\"><a href=\"#panel3\">Listado de mis redenciones</a></li>\n            </ul>\n            <div class=\"menu-cuenta show-for-small-only\">\n                <select>\n                    <option value=\"\">Redime tus Kokoripesos</option>\n                    <option value=\"\">Kokoripesos acumulados</option>\n                    <option value=\"\">Listado de mis redenciones</option>\n                </select>\n            </div>\n            <div class=\"tabs-content\">\n                <div class=\"content active\" id=\"panel1\">\n                    <div class=\"row text-center\">\n                       <div class=\"container-redimir\">\n                           <div class=\"medium-12 columns\">\n                               <div class=\"redimir\">Ingresa el valor que deseas redimir</div>\n\n                               <div class=\"row\">\n                                   <div class=\"medium-12 columns\">\n                                       <div class=\"row collapse\">\n                                           <div class=\"small-8 medium-10 columns\">\n                                               <input  [(ngModel)]=\"redemption_value\" type=\"text\" placeholder=\"Ingrese el monto a redimir\">\n                                           </div>\n                                           <div class=\"small-4 medium-2 columns\">\n                                               <a (click)=\"redemptionPost($event)\" class=\"button postfix\">Redimir</a>\n                                           </div>\n                                       </div>\n                                   </div>\n                               </div>\n                               <div *ngIf=\"redemption?.status === 200\">\n                                 <span>Has redimido {{redemption_value}} kokoripesos, y se ha enviado una notificación a tu correo electronico </span>\n                               </div>\n                               <div *ngIf=\"errors?.status || errors?.status === 0\">\n                                 <div [ngSwitch]=\"errors.status\" class=\"errors\">\n                                   <span *ngSwitchCase=\"422\">El valor a redimir solo puede contener numeros</span>\n                                   <span *ngSwitchCase=\"401\">El numero de kokoripesos a redimir debe ser menor o igual al numero de kokoripesos disponibles.</span>\n                                   <span *ngSwitchDefault >No es posible redimir en estos momentos, por favor intentelo mas tarde.</span>\n                                 </div>\n                               </div>\n                               <div class=\"note\">El cupón con el valor redimido será enviado a su correo electrónico</div>\n                           </div>\n                       </div>\n                    </div>\n                </div>\n                <div class=\"content\" id=\"panel2\">\n                    <table border=\"1\" width=\"100%\">\n                        <thead>\n                        <tr>\n                            <th>FECHA FACTURA</th>\n                            <th>N° FACTURA</th>\n                            <th>RESTAURANTE</th>\n                            <th>VR. FACTURA</th>\n                            <th>KOKORIPESOS</th>\n                        </tr>\n                        </thead>\n                        <tbody *ngIf=\"incentives?.entity?.invoices\">\n                        <tr *ngFor=\"let invoice of incentives?.entity?.invoices\">\n                            <td>{{invoice.invoice_date_up}}</td>\n                            <td>{{invoice.invoice_code}}</td>\n                            <td>{{invoice.restaurant_code}}</td>\n                            <td>$ {{invoice.value}}</td>\n                            <td>102</td>\n                        </tr>\n                        <div *ngIf=\"!incentives?.entity?.invoices\">\n                           No se han encontrado datos.\n                        </div>\n\n                        </tbody>\n                    </table>\n                </div>\n                <div class=\"content\" id=\"panel3\">\n                  <table border=\"1\" width=\"100%\">\n                      <thead>\n                        <tr>\n                            <th>FECHA DE REDENCIÓN</th>\n                            <th>CÓDIGO</th>\n                            <th>VALOR</th>\n                        </tr>\n                      </thead>\n                      <tbody *ngIf=\"incentives?.entity?.redemptions\">\n                        <tr *ngFor=\"let redemption of incentives?.entity?.redemptions\">\n                            <td>{{redemption.created_at}}</td>\n                            <td>{{redemption.token}}</td>\n                            <td>$ {{redemption.value}}</td>\n                        </tr>\n                        <div *ngIf=\"!incentives?.entity?.invoices\">\n                           No se han encontrado datos.\n                        </div>\n                      </tbody>\n                  </table>\n                </div>\n            </div>\n\n\n        </div>\n        <!--Tabla derecha-->\n    </div>\n    <!--Estado de cuenta-->\n\n\n</div>\n"
+module.exports = "<div id=\"cuenta\">\n    <!--Hola + Botones de usuario-->\n    <div class=\"row user-container\">\n\n        <div class=\"medium-4 columns\">\n            <div class=\"row\">\n                <!--<div class=\"small-4 columns\">\n                    <img src=\"{{user.user_picture}}\" alt=\"\" class=\"photo\">\n                </div>-->\n\n                <div class=\"small-12 columns text-align-left\">\n                    <div class=\"hi\">HOLA</div>\n                    <div class=\"user\">{{user.field_nombres}} {{user.field_apellidos}}</div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"columns medium-7\">\n            <div class=\"botones\">\n                <a href=\"#block-comofunciona\" id=\"menu-como\" class=\"button account\">¿Cómo funciona?</a>\n                <a href=\"/user/{{user.uid}}/edit\" class=\"button account\">Actualizar datos</a>\n                <a href=\"/user/logout\" class=\"button account\">Cerrar sesión</a>\n            </div>\n        </div>\n    </div>\n    <!--Hola + Botones de usuario-->\n\n\n    <!--Banner central-->\n    <div class=\"row hide-for-small-only\">\n        <div class=\"columns medium-12\">\n            <img src=\"/themes/contrib/kokoriko_theme/images/banner-kkp.jpg\" alt=\"\" class=\"banner\">\n        </div>\n    </div>\n    <!--Banner central-->\n\n    <!--Estado de cuenta-->\n    <div class=\"row\">\n        <!--Navegador izquierda-->\n        <div class=\"columns medium-4\">\n            <div class=\"container-cuenta\">\n                <h3>Estado de cuenta</h3>\n                <hr>\n                <div class=\"fecha\"></div>\n                <div>Tienes disponibles</div>\n\n                <div *ngIf=\"getTotalPoints() else elseKokoripesos\" [innerHTML]=getTotalPoints() class=\"kokoripesos\"> </div>\n                <ng-template #elseKokoripesos>Cargando...</ng-template>\n                <img src=\"/themes/contrib/kokoriko_theme/images/kokoripesos-red.png\" alt=\"\" class=\"text-center\">\n\n                <hr>\n                <div *ngIf=\"getPointsOvercome() else elseOvercome\" [innerHTML]=getPointsOvercome() class=\"kokoripesos\"> </div>\n                <ng-template #elseOvercome>--</ng-template>\n\n                <div class=\"vencidos\"><span>{{getPointsOvercome()}} Kokoripesos </span> por vencer</div>\n                <div class=\"fecha\"> {{getDate() | date: 'mediumDate'}}</div>\n                <hr>\n                <div class=\"recent\">Ultima redención:   <span>{{ getRedemptionLast() | date}}</span></div>\n                <div class=\"recent\">Ultima acumulación: <span>{{ getInvoiceLast()    | date}}</span></div>\n            </div>\n        </div>\n        <!--Navegador izquierda-->\n\n        <!--Tabla derecha-->\n        <div class=\"columns medium-8\">\n\n            <ul class=\"tabs hide-for-small-only\" data-tab>\n                <li class=\"tab-title active\"><a href=\"#panel1\">Redime tus Kokoripesos</a></li>\n                <li class=\"tab-title\"><a href=\"#panel2\">Kokoripesos acumulados</a></li>\n                <li class=\"tab-title\"><a href=\"#panel3\">Listado de mis redenciones</a></li>\n            </ul>\n            <div class=\"menu-cuenta show-for-small-only\">\n                <select>\n                    <option value=\"\">Redime tus Kokoripesos</option>\n                    <option value=\"\">Kokoripesos acumulados</option>\n                    <option value=\"\">Listado de mis redenciones</option>\n                </select>\n            </div>\n            <div class=\"tabs-content\">\n                <div class=\"content active\" id=\"panel1\">\n                    <div class=\"row text-center\">\n                       <div class=\"container-redimir\">\n                           <div class=\"medium-12 columns\">\n                               <div class=\"redimir\">Ingresa el valor que deseas redimir</div>\n\n                               <div class=\"row\">\n                                   <div class=\"medium-12 columns\">\n                                       <div class=\"row collapse\">\n                                           <div class=\"small-8 medium-10 columns\">\n                                               <input  [(ngModel)]=\"redemption_value\" type=\"text\" placeholder=\"Ingrese el monto a redimir\">\n                                           </div>\n                                           <div class=\"small-4 medium-2 columns\">\n                                               <a (click)=\"redemptionPost($event)\" class=\"button postfix\">Redimir</a>\n                                           </div>\n                                       </div>\n                                   </div>\n                               </div>\n                               <div *ngIf=\"redemption?.status === 200\">\n                                 <span>Has redimido {{redemption_value}} kokoripesos, y se ha enviado una notificación a tu correo electronico </span>\n                               </div>\n                               <div *ngIf=\"errors?.status || errors?.status === 0\">\n                                 <div [ngSwitch]=\"errors.status\" class=\"errors\">\n                                   <span *ngSwitchCase=\"422\">El valor a redimir solo puede contener numeros</span>\n                                   <span *ngSwitchCase=\"401\">El numero de kokoripesos a redimir debe ser menor o igual al numero de kokoripesos disponibles.</span>\n                                   <span *ngSwitchDefault >No es posible redimir en estos momentos, por favor intentelo mas tarde.</span>\n                                 </div>\n                               </div>\n                               <div class=\"note\">El cupón con el valor redimido será enviado a su correo electrónico</div>\n                           </div>\n                       </div>\n                    </div>\n                </div>\n                <div class=\"content\" id=\"panel2\">\n                    <table border=\"1\" width=\"100%\">\n                        <thead>\n                        <tr>\n                            <th>FECHA FACTURA</th>\n                            <th>N° FACTURA</th>\n                            <th>RESTAURANTE</th>\n                            <th>VR. FACTURA</th>\n                            <th>KOKORIPESOS</th>\n                        </tr>\n                        </thead>\n                        <tbody *ngIf=\"incentives?.invoices\">\n                        <tr *ngFor=\"let invoice of incentives?.invoices\">\n                            <td>{{invoice.invoice_date_up}}</td>\n                            <td>{{invoice.invoice_code}}</td>\n                            <td>{{invoice.restaurant_code}}</td>\n                            <td>$ {{invoice.value}}</td>\n                            <td>102</td>\n                        </tr>\n                        <div *ngIf=\"!incentives?.invoices\">\n                           No se han encontrado datos.\n                        </div>\n\n                        </tbody>\n                    </table>\n                </div>\n                <div class=\"content\" id=\"panel3\">\n                  <table border=\"1\" width=\"100%\">\n                      <thead>\n                        <tr>\n                            <th>FECHA DE REDENCIÓN</th>\n                            <th>CÓDIGO</th>\n                            <th>VALOR</th>\n                        </tr>\n                      </thead>\n                      <tbody *ngIf=\"incentives?.redemptions\">\n                        <tr *ngFor=\"let redemption of incentives?.redemptions\">\n                            <td>{{redemption.created_at}}</td>\n                            <td>{{redemption.token}}</td>\n                            <td>$ {{redemption.value}}</td>\n                        </tr>\n                        <div *ngIf=\"!incentives?.invoices\">\n                           No se han encontrado datos.\n                        </div>\n                      </tbody>\n                  </table>\n                </div>\n            </div>\n\n\n        </div>\n        <!--Tabla derecha-->\n    </div>\n    <!--Estado de cuenta-->\n\n\n</div>\n"
 
 /***/ }),
 
@@ -71,71 +71,147 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var AccompanimentsComponent = /** @class */ (function () {
     function AccompanimentsComponent(http) {
         this.http = http;
-        this.redemption_value = 0;
+        this.user = drupalSettings.kokoriko.kokorikoJS;
+        if (this.user) {
+            this.setUserValidator(true);
+        }
+        this.api = 'http://incentives.kokoriko.local:8000/api'; // 'https://incentives.demodayscript.com/api'; //
         this.errors = null;
         this.redemption = null;
-        this.api = 'https://incentives.demodayscript.com/api'; //'http://incentives.kokoriko.local:8000/api';
-        this.user = drupalSettings.kokoriko.kokorikoJS;
-        this.user.validator = true;
+        this.redemption_value = 0;
     }
-    AccompanimentsComponent.prototype.ngOnInit = function () {
+    AccompanimentsComponent.prototype.setUser = function (user) {
+        this.user = user;
+    };
+    AccompanimentsComponent.prototype.getUser = function () {
+        return this.user;
+    };
+    AccompanimentsComponent.prototype.setUserValidator = function (value) {
+        this.user.validator = value;
+    };
+    AccompanimentsComponent.prototype.getUserValidation = function () {
+        return this.user.validator;
+    };
+    AccompanimentsComponent.prototype.setRedemptionLast = function (data) {
+        this.redemption_last = data;
+    };
+    AccompanimentsComponent.prototype.getRedemptionLast = function () {
+        return this.redemption_last;
+    };
+    AccompanimentsComponent.prototype.setRedemptionValue = function (data) {
+        this.redemption_value = data;
+    };
+    AccompanimentsComponent.prototype.getRedemptionValue = function () {
+        return this.redemption_value;
+    };
+    AccompanimentsComponent.prototype.setInvoiceLast = function (data) {
+        this.invoice_last = data;
+    };
+    AccompanimentsComponent.prototype.getInvoiceLast = function () {
+        return this.invoice_last;
+    };
+    AccompanimentsComponent.prototype.setIncentivesApi = function (data) {
+        this.api = data;
+    };
+    AccompanimentsComponent.prototype.getIncentivesApi = function () {
+        return this.api;
+    };
+    AccompanimentsComponent.prototype.setIncentives = function (data) {
+        if (typeof data.entity !== 'undefined') {
+            this.incentives = data.entity;
+        }
+        else {
+            this.incentives = null;
+        }
+    };
+    AccompanimentsComponent.prototype.getIncentives = function () {
+        return this.incentives;
+    };
+    AccompanimentsComponent.prototype.getTotalPoints = function () {
+        if (typeof this.incentives !== 'undefined') {
+            return this.incentives.totalpoints;
+        }
+        return false;
+    };
+    AccompanimentsComponent.prototype.setTotalPoints = function (value) {
+        this.incentives.totalpoints = value;
+    };
+    AccompanimentsComponent.prototype.getPointsOvercome = function () {
+        if (typeof this.incentives !== 'undefined') {
+            return this.incentives.points_overcome.toString();
+        }
+        else {
+            return false;
+        }
+    };
+    AccompanimentsComponent.prototype.setPointsOvercome = function (value) {
+        this.incentives.points_overcome = value;
+    };
+    AccompanimentsComponent.prototype.setHeaders = function () {
         var header = {
-            'Content-Type': 'application/json',
+            // 'Content-Type': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded',
             'Access-Control-Allow-Headers': 'Content-Type',
             'Access-Control-Allow-Methods': 'GET, PUT, PATCH, DELETE, OPTIONS',
             'Access-Control-Allow-Origin': '*'
         };
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"](header);
-        this.validateData();
-        this.getData();
     };
-    AccompanimentsComponent.prototype.validateData = function () {
-        if (this.user.field_no_identificacion == null) {
-            console.error('property field_no_identificacion not exist!');
-            this.user.validator = false;
-        }
+    AccompanimentsComponent.prototype.getHeaders = function () {
+        return this.headers;
     };
-    AccompanimentsComponent.prototype.getData = function () {
+    AccompanimentsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        if (this.user.validator) {
+        this.setHeaders();
+        setTimeout(function () {
+            _this.run();
+        }, 500);
+    };
+    AccompanimentsComponent.prototype.run = function () {
+        var _this = this;
+        if (this.getUserValidation()) {
             this.http.get(this.api + "/entities/" + this.user.field_no_identificacion, this.headers)
                 .subscribe(function (data) {
                 _this.incentives = data;
-                _this.errors = null;
-                if (_this.incentives.entity.redemptions.length != 0) {
-                    _this.redemption_last = _this.incentives.entity.redemptions[_this.incentives.entity.redemptions.length - 1].created_at;
-                }
-                if (_this.incentives.entity.invoices.length != 0) {
-                    _this.invoice_last = _this.incentives.entity.invoices[_this.incentives.entity.invoices.length - 1].created_at;
-                }
-                _this.incentives.entity.points = (_this.incentives.entity.points <= 0) ? 0 : _this.incentives.entity.points;
-                console.log("GET Request is successful ", _this.incentives.entity);
             }, function (error) {
-                _this.createEntity();
                 _this.errors = error;
                 console.log("error", _this.errors);
+            }, function () {
+                _this.errors = null;
+                if (_this.incentives.redemptions.length != 0) {
+                    _this.redemption_last = _this.incentives.redemptions[_this.incentives.redemptions.length - 1].created_at;
+                }
+                if (_this.incentives.invoices.length != 0) {
+                    _this.invoice_last = _this.incentives.invoices[_this.incentives.invoices.length - 1].created_at;
+                }
+                _this.incentives.points = (_this.incentives.points <= 0) ? 0 : _this.incentives.points;
+                _this.updateEntity();
             });
+        }
+        else {
+            console.error('User data not is valid!', this.user);
         }
     };
     AccompanimentsComponent.prototype.redemptionPost = function () {
         var _this = this;
         console.log(this.incentives);
-        this.http.post(this.api + "/redemptions", { 'entity_id': this.incentives.entity.id, 'value': this.redemption_value }, this.headers)
+        this.http.post(this.api + "/redemptions", { 'entity_id': this.incentives.id, 'value': this.redemption_value }, this.headers)
             .subscribe(function (data) {
             _this.redemption = data;
             _this.errors = null;
-            _this.getData();
+            _this.run();
         }, function (error) {
             _this.errors = error;
             console.log("error", _this.errors);
         });
     };
-    AccompanimentsComponent.prototype.createEntity = function () {
+    AccompanimentsComponent.prototype.updateEntity = function () {
         var _this = this;
-        this.http.post(this.api + "/entities", this.user, this.headers)
+        this.user.zoho_lead_to_contact = 1;
+        this.http.put(this.api + "/entities/" + this.incentives.id, this.user, this.headers)
             .subscribe(function (data) {
-            console.log("POST Request is successful ", data);
-            _this.getData();
+            console.log("PATCH Request is successful ", data);
+            _this.run();
         }, function (error) {
             _this.errors = error;
             console.log("error", _this.errors);

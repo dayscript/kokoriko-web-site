@@ -1,9 +1,0 @@
-drupal_angular.app_form:
-  path: '/user/dashboard'
-  defaults:
-    _controller: '\Drupal\kokoriko\Controller\DashboardController::Overview'
-    _title: 'Kokoripe$os'
-  requirements:
-    _permission: 'access content'
-  options:
-    no_cache: 'TRUE'
