@@ -7415,13 +7415,15 @@ form .description a {
   background-color: #ffffff;
   border-color: #74a500;
   color: #444343;
-  text-align: center; }
+  text-align: center;
+  font-size: 22px; }
 
 .alert-box.error {
   background-color: #ffffff;
   border-color: #d2141c;
   color: #444343;
-  text-align: center; }
+  text-align: center;
+  font-size: 22px; }
 
 .alert-box {
   font-size: 1rem;
