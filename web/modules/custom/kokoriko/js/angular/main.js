@@ -75,7 +75,7 @@ var AccompanimentsComponent = /** @class */ (function () {
         if (this.user) {
             this.setUserValidator(true);
         }
-        this.api = 'http://incentives.kokoriko.local:8000/api'; // 'https://incentives.demodayscript.com/api'; //
+        this.api = 'https://incentives.demodayscript.com/api'; //'http://incentives.kokoriko.local:8000/api';// 
         this.errors = null;
         this.redemption = null;
         this.redemption_value = 0;
