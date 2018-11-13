@@ -186,28 +186,30 @@ function kokoriko_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
       $user = \Drupal\user\Entity\User::load($entity->id());
       _user_mail_notify('register_no_approval_required', $user, $langcode = NULL);
 
-      $user_fields = ['uid','field_nombres','field_apellidos','field_no_identificacion','field_telephone','field_gender','field_birthdate','mail'];
-      $post      = [];
+      if(!$user->hasRole('incentives')){
+        $user_fields = ['uid','field_nombres','field_apellidos','field_no_identificacion','field_telephone','field_gender','field_birthdate','mail'];
+        $post      = [];
 
-      foreach ($user_fields as $key => $value) {
-        $post[$value] = $user->get($value)->value;
-      }
+        foreach ($user_fields as $key => $value) {
+          $post[$value] = $user->get($value)->value;
+        }
 
-      $post['identification'] = $post['field_no_identificacion'] ;
-      $post['name'] = $post['field_nombres'].' '.$post['field_apellidos'];
-      $post['roles'] = $user->getRoles();
-      $post['nombre_asesor'] = 'kokoriko.com.co';
-      $post['cedula_del_asesor'] = '000000000';
-      $post['fecha_de_registro'] = str_replace(' ','T',date('Y-m-d H:m:s').'-05:00');
+        $post['identification'] = $post['field_no_identificacion'] ;
+        $post['name'] = $post['field_nombres'].' '.$post['field_apellidos'];
+        $post['roles'] = $user->getRoles();
+        $post['nombre_asesor'] = 'kokoriko.com.co';
+        $post['cedula_del_asesor'] = '000000000';
+        $post['fecha_de_registro'] = str_replace(' ','T',date('Y-m-d H:m:s').'-05:00');
 
-      $incentives = \Drupal::service('kokoriko.incentives');
-      $incentives->setMethod('api/entities');
-      $incentives->setBody($post);
-      try{
-        $response = $incentives->post();
-        \Drupal::logger('kokoriko')->notice('User insert success: '.$post['identification'].' response '. $response);
-      }catch(Exception $e){
-        \Drupal::logger('kokoriko')->error('User insert error: '.$post['identification'] .' '. $e->getMessage());
+        $incentives = \Drupal::service('kokoriko.incentives');
+        $incentives->setMethod('api/entities');
+        $incentives->setBody($post);
+        try{
+          $response = $incentives->post();
+          \Drupal::logger('kokoriko')->notice('User insert success: '.$post['identification'].' response '. $response);
+        }catch(Exception $e){
+          \Drupal::logger('kokoriko')->error('User insert error: '.$post['identification'] .' '. $e->getMessage());
+        }
       }
     }
 }

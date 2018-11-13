@@ -27,7 +27,7 @@ export class AccompanimentsComponent implements OnInit {
       this.setUserValidator(true);
     }
 
-    this.api = 'https://incentives.demodayscript.com/api'; //'http://incentives.kokoriko.local:8000/api';// 
+    this.api = 'https://incentives.demodayscript.com/api'; //'http://incentives.kokoriko.local:8000/api';//
     this.errors = null;
     this.redemption = null;
     this.redemption_value = 0
@@ -181,7 +181,6 @@ export class AccompanimentsComponent implements OnInit {
 
 
   public redemptionPost(){
-    console.log(this.incentives);
     this.http.post( this.api +"/redemptions",{'entity_id':this.incentives.id,'value':this.redemption_value},this.headers)
           .subscribe(
               data => {

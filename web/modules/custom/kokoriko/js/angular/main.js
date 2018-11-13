@@ -75,7 +75,7 @@ var AccompanimentsComponent = /** @class */ (function () {
         if (this.user) {
             this.setUserValidator(true);
         }
-        this.api = 'https://incentives.demodayscript.com/api'; //'http://incentives.kokoriko.local:8000/api';// 
+        this.api = 'https://incentives.demodayscript.com/api'; //'http://incentives.kokoriko.local:8000/api';//
         this.errors = null;
         this.redemption = null;
         this.redemption_value = 0;
@@ -194,7 +194,6 @@ var AccompanimentsComponent = /** @class */ (function () {
     };
     AccompanimentsComponent.prototype.redemptionPost = function () {
         var _this = this;
-        console.log(this.incentives);
         this.http.post(this.api + "/redemptions", { 'entity_id': this.incentives.id, 'value': this.redemption_value }, this.headers)
             .subscribe(function (data) {
             _this.redemption = data;
