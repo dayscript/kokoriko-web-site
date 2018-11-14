@@ -7737,6 +7737,9 @@ app-addresses, #block-domicilios-block {
   app-addresses .field-name-body, #block-domicilios-block .field-name-body {
     margin: 0; }
 
+.redemption-submit {
+  padding: 11px; }
+
 .Eliminar ul {
   display: none; }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpClientModule,HttpHeaders  } from "@angular/common/http";
+import {  FormGroup,FormControl,Validators,FormBuilder } from '@angular/forms';
 import * as $ from 'jquery';
 declare var Drupal: any;
 declare var drupalSettings: any;
@@ -20,8 +21,10 @@ export class AccompanimentsComponent implements OnInit {
   redemption        : any;
   api               : any;
   headers           : any;
+  update_entity     = true;
+  profileForm       : any;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private fb: FormBuilder) {
     this.user = drupalSettings.kokoriko.kokorikoJS
     if(this.user){
       this.setUserValidator(true);
@@ -31,6 +34,8 @@ export class AccompanimentsComponent implements OnInit {
     this.errors = null;
     this.redemption = null;
     this.redemption_value = 0
+
+
   }
 
   public setUser ( user ) {
@@ -118,11 +123,12 @@ export class AccompanimentsComponent implements OnInit {
 
   public setHeaders(){
     const header = {
-        // 'Content-Type': 'application/json',
+        'Accept': 'application/json',
         'Content-Type': 'application/x-www-form-urlencoded',
         'Access-Control-Allow-Headers': 'Content-Type',
         'Access-Control-Allow-Methods': 'GET, PUT, PATCH, DELETE, OPTIONS',
         'Access-Control-Allow-Origin': '*'
+
       };
 
     this.headers = new HttpHeaders(header);
@@ -137,7 +143,9 @@ export class AccompanimentsComponent implements OnInit {
     this.setHeaders();
     setTimeout( ()=> {
       this.run();
+
     }, 500)
+
 
 
 
@@ -145,7 +153,7 @@ export class AccompanimentsComponent implements OnInit {
 
 
   public run(){
-
+    this.setRedemptionValue(0);
     if( this.getUserValidation() ){
         this.http.get( this.api + "/entities/" + this.user.field_no_identificacion,this.headers)
               .subscribe(
@@ -170,6 +178,7 @@ export class AccompanimentsComponent implements OnInit {
                     this.incentives.points  = (this.incentives.points <= 0) ? 0:this.incentives.points;
 
                     this.updateEntity();
+                    this.buidForm();
 
                   }
               );
@@ -179,43 +188,62 @@ export class AccompanimentsComponent implements OnInit {
       }
   }
 
-
-  public redemptionPost(){
-    this.http.post( this.api +"/redemptions",{'entity_id':this.incentives.id,'value':this.redemption_value},this.headers)
-          .subscribe(
-              data => {
-                  this.redemption = data;
-                  this.errors = null;
-                  this.run();
-
-              },
-              error => {
-                  this.errors = error;
-                  console.log("error", this.errors);
-              }
-          );
-
-        }
-
   public updateEntity(){
-    this.user.zoho_lead_to_contact = 1;
-    this.http.put( this.api +"/entities/"+this.incentives.id,this.user,this.headers)
-          .subscribe(
-              data => {
-                  console.log("PATCH Request is successful ", data);
+    if(this.update_entity){
+      this.user.zoho_lead_to_contact = 1;
+      this.http.put( this.api +"/entities/"+this.incentives.id,this.user,this.headers)
+            .subscribe(
+                data => {
+                    console.log("PATCH Request is successful ", data);
+                },
+                error => {
+                    this.errors = error;
+                    console.log("error", this.errors);
+                },
+                () => {
                   this.run();
-              },
-              error => {
-                  this.errors = error;
-                  console.log("error", this.errors);
-              }
-          );
+                }
+            );
+      }
+      this.update_entity = false;
   }
+
+  public onSubmit(){
+    console.log('request: ',this.profileForm.value)
+    this.http.post( this.api +"/redemptions",this.profileForm.value,this.headers)
+         .subscribe(
+             data => {
+                 this.redemption = data;
+                 this.errors = null;
+                 },
+             error => {
+                 this.errors = error.error;
+                 console.log("error", this.errors);
+             },
+             ()=>{
+                console.log('response:', this.redemption)
+                 this.run();
+             }
+         );
+    }
 
   public getDate(){
     var d = new Date();
     d.setDate(d.getDate() + 15);
     return d;
   }
+
+  public buidForm(){
+
+    this.profileForm = this.fb.group({
+      entity_id:[this.incentives.id
+      ],
+      value: [
+        null,
+        Validators.required,
+      ],
+    });
+  }
+
 
 }

@@ -27,7 +27,7 @@ app-addresses, #block-domicilios-block{
     transform: rotate(-90deg);
     white-space: nowrap;
     a{
-      font-family: 'BlockBE-Condensed'; 
+      font-family: 'BlockBE-Condensed';
       font-style: normal;
       font-weight: 400;
       font-size: 22px;
@@ -38,6 +38,10 @@ app-addresses, #block-domicilios-block{
       position: relative;
     }
   .field-name-body{
-    margin:0;
+    margin:0; 
   }
+  }
+
+  .redemption-submit{
+    padding:11px;
   }

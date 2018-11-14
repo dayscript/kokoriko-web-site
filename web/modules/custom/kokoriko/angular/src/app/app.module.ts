@@ -6,6 +6,8 @@ import { AddressesComponent } from './addresses/addresses.component';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [HttpClient, HttpClientModule],
   bootstrap: [

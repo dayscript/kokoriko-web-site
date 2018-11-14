@@ -81,29 +81,25 @@
                     <div class="row text-center">
                        <div class="container-redimir">
                            <div class="medium-12 columns">
-                               <div class="redimir">Ingresa el valor que deseas redimir</div>
+                               <div class="redimir">Ingresa el monto que deseas redimir</div>
 
                                <div class="row">
                                    <div class="medium-12 columns">
-                                       <div class="row collapse">
-                                           <div class="small-8 medium-10 columns">
-                                               <input  [(ngModel)]="redemption_value" type="text" placeholder="Ingrese el monto a redimir">
-                                           </div>
-                                           <div class="small-4 medium-2 columns">
-                                               <a (click)="redemptionPost($event)" class="button postfix">Redimir</a>
-                                           </div>
+                                       <div class="row collapse" *ngIf="getTotalPoints()">
+                                            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                                              <div class="small-8 medium-10 columns">
+                                                <input type="hidden" formControlName="entity_id">
+                                                <input type="text" formControlName="value" required placeholder="Ingrese el monto a redimir">
+                                              </div>
+                                              <div class="small-4 medium-2 columns">
+                                                <button type="submit" class="redemption-submit" [disabled]="!profileForm.valid">Redimir</button>
+                                              </div>
+                                            </form>
                                        </div>
                                    </div>
                                </div>
-                               <div *ngIf="redemption?.status === 200">
-                                 <span>Has redimido {{redemption_value}} kokoripesos, y se ha enviado una notificación a tu correo electronico </span>
-                               </div>
-                               <div *ngIf="errors?.status || errors?.status === 0">
-                                 <div [ngSwitch]="errors.status" class="errors">
-                                   <span *ngSwitchCase="422">El valor a redimir solo puede contener numeros</span>
-                                   <span *ngSwitchCase="401">El numero de kokoripesos a redimir debe ser menor o igual al numero de kokoripesos disponibles.</span>
-                                   <span *ngSwitchDefault >No es posible redimir en estos momentos, por favor intentelo mas tarde.</span>
-                                 </div>
+                               <div *ngIf="errors">
+                                     <span class="error" *ngFor="let error of errors.value"[innerHTML]="error"></span>
                                </div>
                                <div class="note">El cupón con el valor redimido será enviado a su correo electrónico</div>
                            </div>
