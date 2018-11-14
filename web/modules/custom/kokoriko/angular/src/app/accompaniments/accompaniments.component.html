@@ -98,8 +98,8 @@
                                        </div>
                                    </div>
                                </div>
-                               <div *ngIf="incentives?.message">
-                                     <span class="message" [innerHTML]="incentives?.message"></span>
+                               <div *ngIf="redemption?.message">
+                                     <span class="message" [innerHTML]="redemption?.message"></span>
                                </div>
                                <div *ngIf="errors">
                                      <span class="error" *ngFor="let error of errors.value"[innerHTML]="error"></span>
