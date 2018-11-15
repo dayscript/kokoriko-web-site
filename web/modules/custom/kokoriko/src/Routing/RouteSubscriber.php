@@ -31,7 +31,7 @@ class RouteSubscriber implements EventSubscriberInterface {
   public function checkAuthStatus(GetResponseEvent $event) {
 
     if( $this->user_profile_path ){
-      if( !User::load( $this->account ->id() )->get('field_no_identificacion')->value ){
+      if( !$this->account->isAnonymous() && !User::load( $this->account ->id() )->get('field_no_identificacion')->value ){
         drupal_set_message(t('Por favor actualiza tus datos.'));
         $response = new RedirectResponse('/user/' . $this->account ->id() . '/edit', 301);
         $event->setResponse($response);
