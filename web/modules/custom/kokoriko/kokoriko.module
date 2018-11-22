@@ -186,7 +186,7 @@ function kokoriko_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
       $user = \Drupal\user\Entity\User::load($entity->id());
 
       if($user->hasRole('incentives')){
-        _user_mail_notify('register_no_approval_required', $user, $langcode = NULL);
+       // _user_mail_notify('register_no_approval_required', $user, $langcode = NULL);
       }
 
       if(!$user->hasRole('incentives')){
