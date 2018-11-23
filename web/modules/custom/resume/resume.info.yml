@@ -1,0 +1,6 @@
+name: Resume
+description: Generate tokens for entity (Users).
+core: 8.x
+package: Dayscript
+type: module
+configure: resume.form

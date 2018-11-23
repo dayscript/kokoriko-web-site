@@ -1,0 +1,27 @@
+<?php
+/*
+ * @file
+ * code for resume module
+*/
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+
+/**
+ * Implements hook_help().
+ */
+function resume_help($route_name, RouteMatchInterface $route_match) {
+  $host = \Drupal::request()->getHost();	
+  switch ($route_name) {
+    case 'help.page.resume':
+	  $url = Url::fromRoute('resume.form');
+	  $internal_link = \Drupal::l(t('Generate tokens'), $url);
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Generate Tokens For Users Entity ') . $internal_link . '</p>';
+      return $output;
+    default:
+  }
+}
+?>

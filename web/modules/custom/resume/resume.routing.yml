@@ -1,0 +1,7 @@
+resume.form:
+ path: '/resume/generate-tokens'
+ defaults:
+   _title: 'Generate Tokens for Uid(s) Users'
+   _form: '\Drupal\resume\Form\ResumeForm'
+ requirements:
+   _permission: 'access content'
