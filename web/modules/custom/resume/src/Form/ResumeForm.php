@@ -92,3 +92,4 @@ class ResumeForm extends FormBase {
           drupal_set_message(t("!Success Generate Tokens"), 'status', TRUE);
       }    
   }
+}  
