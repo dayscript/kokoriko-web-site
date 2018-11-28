@@ -83,11 +83,12 @@ class ResumeForm extends FormBase {
       if ($form_state->getValue('state_generate') == 'on') {
           for ($i = $form_state->getValue('star_uid'); $i <= $form_state->getValue('end_uid'); $i++) {
                 $user = User::load($i);;
-                if (isset($user) && reset($user->getRoles(TRUE)) == 'incentives') {
-                    user_delete($i);
+                if (isset($user)) {
+                  \Drupal::moduleHandler()->load('user');
+                  $user->set('field_token', user_pass_reset_url($user));
+                  $user->save();
                 }
           }
-        drupal_set_message(t("!Success Delete Uids"), 'status', TRUE);
-      }
-   }
-}
+          drupal_set_message(t("!Success Generate Tokens"), 'status', TRUE);
+      }    
+  }
