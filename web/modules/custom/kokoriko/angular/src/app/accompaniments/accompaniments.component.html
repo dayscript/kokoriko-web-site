@@ -89,7 +89,7 @@
                                             <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
                                               <div class="small-8 medium-10 columns">
                                                 <input type="hidden" formControlName="entity_id">
-                                                <input type="text" formControlName="value" required placeholder="Ingresa los kokoripesos a redimir ">
+                                                <input type="text" formControlName="value" required placeholder="Ingresa los kokoripesos a redimir">
                                               </div>
                                               <div class="small-4 medium-2 columns">
                                                 <button type="submit" class="redemption-submit" [disabled]="!profileForm.valid">Redimir</button>
