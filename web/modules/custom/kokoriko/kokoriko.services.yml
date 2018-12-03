@@ -7,9 +7,8 @@ services:
   kokoriko.subscriber:
     class: Drupal\kokoriko\EventSubscriber\KokorikoSubscriber
     arguments:
-      - '@simple_fb_connect.fb_factory'
+      # - '@simple_fb_connect.fb_factory'
     tags:
       - {name: event_subscriber}
   kokoriko.incentives:
     class: Drupal\kokoriko\IncentivesService\IncentivesApi
-    
