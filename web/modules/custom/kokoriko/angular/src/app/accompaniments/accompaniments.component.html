@@ -47,6 +47,7 @@
                 <div *ngIf="getTotalPoints() else elseKokoripesos" [innerHTML]=getTotalPoints() class="kokoripesos"> </div>
                 <ng-template #elseKokoripesos>Cargando...</ng-template>
                 <img src="/themes/contrib/kokoriko_theme/images/kokoripesos-red.png" alt="" class="text-center">
+                <p class="legal">*Estimado cliente, estamos trabajando por ti es por esto que tus puntos están siendo validados  y serán sujetos a ajustes de acuerdo a las compras registradas con tu numero de cedula, sin embargo no dudes en comunicarte con nosotros ante cualquier novedad al siguiente correo servicioalcliente@grupoiga.co.</p>
 
                 <hr>
                 <div *ngIf="getPointsOvercome() else elseOvercome" [innerHTML]=getPointsOvercome() class="kokoripesos"> </div>
@@ -81,7 +82,7 @@
                     <div class="row text-center">
                        <div class="container-redimir">
                            <div class="medium-12 columns">
-                               <div class="redimir">Ingresa los kokoripesos a redimir!!</div>
+                               <div class="redimir">Ingresa el numero de kokoripesos que deseas redimir</div>
 
                                <div class="row">
                                    <div class="medium-12 columns">
@@ -89,7 +90,7 @@
                                             <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
                                               <div class="small-8 medium-10 columns">
                                                 <input type="hidden" formControlName="entity_id">
-                                                <input type="text" formControlName="value" required placeholder="Ingresa los kokoripesos a redimir">
+                                                <input type="text" formControlName="value" required placeholder="Ingresa los kokoripesos a redimir ">
                                               </div>
                                               <div class="small-4 medium-2 columns">
                                                 <button type="submit" class="redemption-submit" [disabled]="!profileForm.valid">Redimir</button>
@@ -105,6 +106,7 @@
                                      <span class="error" *ngFor="let error of errors.value"[innerHTML]="error"></span>
                                </div>
                                <div class="note">El cupón con el valor redimido será enviado a su correo electrónico</div>
+                               <div class="note">Este código es válido para su redención dentro de los 30 días calendario siguientes a la fecha de su expedición, y te permitirá pagar todo o parte de cualquiera de los productos que estén vigentes en la carta menú del restaurante donde pretendas adquirir el producto, o de los disponibles por el canal domicilios. El producto se encontrará sujeto a la disponibilidad del restaurante. Para reclamar este beneficio a través del canal de domicilios, el cliente deberá realizar una compra de mínimo $15.000 pesos y asumir el recargo por domicilio. Es necesario informar o entregar el código de canje, en físico o enseñarlo en algún dispositivo electrónico, al cajero del restaurante Kokoriko. En el caso que el canje se realice a través del canal de domicilios, se deberá suministrar el código de redención al asesor telefónico al momento de efectuar el pedido. Este código no es válido para redención a través de las plataformas digitales de domicilios y las compras que se realicen por este medio no acumularán Kokoripesos. Compañía Comercial e Industrial de la Sabana Avesco S.A.S. y Avinco S.A.S. Consulte los términos y condiciones del Programa en www.kokoriko.com.co/kokoripesos</div>
                            </div>
                        </div>
                     </div>
@@ -141,7 +143,7 @@
                         <tr>
                             <th>FECHA DE REDENCIÓN</th>
                             <th>CÓDIGO</th>
-                            <th>VALOR</th>
+                            <th>KOKORIPESOS REDIMIDOS</th>
                         </tr>
                       </thead>
                       <tbody *ngIf="incentives?.redemptions">

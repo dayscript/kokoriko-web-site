@@ -89,7 +89,7 @@ class ResumeForm extends FormBase {
                   $user->save();
                 }
           }
-        drupal_set_message(t("!Success Generate Tokens"), 'status', TRUE);
-      }
-   }
-}
+          drupal_set_message(t("!Success Generate Tokens"), 'status', TRUE);
+      }    
+  }
+}  
