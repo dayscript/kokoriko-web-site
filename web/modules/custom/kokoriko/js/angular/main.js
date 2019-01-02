@@ -246,15 +246,15 @@ var AccompanimentsComponent = /** @class */ (function () {
     };
     AccompanimentsComponent.prototype.getInformationPoints = function () {
         var points = [];
-        var data = {
-            date: '',
-            value: 0,
-            points: 0,
-            invoice_code: '',
-            restaurant_code: '',
-            description: '',
-        };
         this.incentives.entity.forEach(function (item, key) {
+            var data = {
+                date: '',
+                value: 0,
+                points: 0,
+                invoice_code: '',
+                restaurant_code: '',
+                description: '',
+            };
             item.entity_information.forEach(function (element, key) {
                 data.value += parseInt(element.value);
                 data.date = element.invoice_date_up;
@@ -266,6 +266,14 @@ var AccompanimentsComponent = /** @class */ (function () {
             points.push(data);
         });
         this.incentives.point_values.forEach(function (item, key) {
+            var data = {
+                date: '',
+                value: 0,
+                points: 0,
+                invoice_code: '',
+                restaurant_code: '',
+                description: '',
+            };
             data.date = item.created_at;
             data.value = item.value;
             data.points = item.points;

@@ -248,17 +248,18 @@ export class AccompanimentsComponent implements OnInit {
 
   public getInformationPoints(){
     let points = [];
-    let data = {
-      date : '',
-      value: 0,
-      points: 0,
-      invoice_code: '',
-      restaurant_code: '',
-      description: '',
-    }
+
 
     this.incentives.entity.forEach(
       (item,key) => {
+        let data = {
+          date : '',
+          value: 0,
+          points: 0,
+          invoice_code: '',
+          restaurant_code: '',
+          description: '',
+        }
         item.entity_information.forEach( (element,key) => {
             data.value += parseInt(element.value);
             data.date  = element.invoice_date_up;
@@ -273,6 +274,14 @@ export class AccompanimentsComponent implements OnInit {
 
     this.incentives.point_values.forEach(
       (item,key) => {
+        let data = {
+          date : '',
+          value: 0,
+          points: 0,
+          invoice_code: '',
+          restaurant_code: '',
+          description: '',
+        }
         data.date            = item.created_at;
         data.value           = item.value;
         data.points          = item.points;
