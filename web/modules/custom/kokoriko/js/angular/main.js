@@ -255,6 +255,7 @@ var AccompanimentsComponent = /** @class */ (function () {
                 restaurant_code: '',
                 description: '',
             };
+            console.log(item);
             item.entity_information.forEach(function (element, key) {
                 data.value += parseInt(element.value);
                 data.date = element.invoice_date_up;
@@ -262,7 +263,7 @@ var AccompanimentsComponent = /** @class */ (function () {
             });
             data.points = data.value / 1000;
             data.description = 'Acomulacion por compras';
-            data.invoice_code = item.identificacion;
+            data.invoice_code = item.identification;
             points.push(data);
         });
         this.incentives.point_values.forEach(function (item, key) {
