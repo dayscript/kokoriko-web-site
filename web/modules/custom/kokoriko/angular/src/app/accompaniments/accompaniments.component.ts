@@ -282,7 +282,7 @@ export class AccompanimentsComponent implements OnInit {
         points.push(data);
       }
     );
-
+    console.log(points);
     return points;
   }
 
