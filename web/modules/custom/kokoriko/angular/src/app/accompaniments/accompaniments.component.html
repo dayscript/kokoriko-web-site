@@ -130,7 +130,7 @@
                             <td>{{invoice.invoice_code}}</td>
                             <td>{{invoice.restaurant_code}}</td>
                             <!-- <td>{{invoice.value}}</td> -->
-                            <td>{{invoice.points}}</td>
+                            <td>{{invoice.points | number: '1.0' }}</td>
                             <td>{{invoice.description}}</td>
                         </tr>
                         <div *ngIf="!incentives?.invoices">
