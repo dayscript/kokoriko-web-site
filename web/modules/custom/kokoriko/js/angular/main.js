@@ -254,7 +254,7 @@ var AccompanimentsComponent = /** @class */ (function () {
             restaurant_code: '',
             description: '',
         };
-        this.incentives.entity.forEach(function (key, item) {
+        this.incentives.entity.forEach(function (item, key) {
             item.entity_information.forEach(function (element, key) {
                 data.value += parseInt(element.value);
                 data.date = element.invoice_date_up;

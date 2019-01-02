@@ -258,7 +258,7 @@ export class AccompanimentsComponent implements OnInit {
     }
 
     this.incentives.entity.forEach(
-      (key,item) => {
+      (item,key) => {
         item.entity_information.forEach( (element,key) => {
             data.value += parseInt(element.value);
             data.date  = element.invoice_date_up;
