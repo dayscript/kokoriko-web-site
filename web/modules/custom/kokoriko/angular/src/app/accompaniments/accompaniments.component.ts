@@ -260,7 +260,7 @@ export class AccompanimentsComponent implements OnInit {
           restaurant_code: '',
           description: '',
         }
-        
+
         item.entity_information.forEach( (element,key) => {
             data.value += parseInt(element.value);
             data.date  = element.invoice_date_up;
@@ -292,7 +292,7 @@ export class AccompanimentsComponent implements OnInit {
         points.push(data);
       }
     );
-    console.log(points);
+    
     return points;
   }
 

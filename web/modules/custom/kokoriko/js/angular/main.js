@@ -282,7 +282,6 @@ var AccompanimentsComponent = /** @class */ (function () {
             data.restaurant_code = null;
             points.push(data);
         });
-        console.log(points);
         return points;
     };
     AccompanimentsComponent = __decorate([
