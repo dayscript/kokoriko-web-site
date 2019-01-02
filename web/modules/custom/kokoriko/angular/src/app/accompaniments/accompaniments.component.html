@@ -115,20 +115,23 @@
                     <table border="1" width="100%">
                         <thead>
                         <tr>
-                            <th>FECHA FACTURA</th>
+                            <th>FECHA</th>
                             <th>N° FACTURA</th>
                             <th>RESTAURANTE</th>
-                            <th>VR. FACTURA</th>
+                            <!-- <th>VR. FACTURA</th> -->
                             <th>KOKORIPESOS</th>
+                            <th>DESCRIPCIÓN</th>
                         </tr>
                         </thead>
-                        <tbody *ngIf="incentives?.invoices">
-                        <tr *ngFor="let invoice of incentives?.invoices">
-                            <td>{{invoice.invoice_date_up}}</td>
+                        <tbody *ngIf="incentives">
+                        <!-- <tbody> -->
+                        <tr *ngFor="let invoice of getInformationPoints()">
+                            <td>{{invoice.date | date:'y-m-d'}}</td>
                             <td>{{invoice.invoice_code}}</td>
                             <td>{{invoice.restaurant_code}}</td>
-                            <td>$ {{invoice.value}}</td>
-                            <td>102</td>
+                            <!-- <td>{{invoice.value}}</td> -->
+                            <td>{{invoice.points}}</td>
+                            <td>{{invoice.description}}</td>
                         </tr>
                         <div *ngIf="!incentives?.invoices">
                            No se han encontrado datos.

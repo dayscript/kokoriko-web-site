@@ -246,4 +246,45 @@ export class AccompanimentsComponent implements OnInit {
   }
 
 
+  public getInformationPoints(){
+    let points = [];
+    let data = {
+      date : '',
+      value: 0,
+      points: 0,
+      invoice_code: '',
+      restaurant_code: '',
+      description: '',
+    }
+
+    this.incentives.entity.forEach(
+      (key,item) => {
+        item.entity_information.forEach( (element,key) => {
+            data.value += parseInt(element.value);
+            data.date  = element.invoice_date_up;
+            data.restaurant_code = element.restaurant_code;
+        });
+        data.points          = data.value / 1000;
+        data.description     = 'Acomulacion por compras';
+        data.invoice_code    = item.identificacion;
+        points.push(data);
+      }
+    );
+
+    this.incentives.point_values.forEach(
+      (item,key) => {
+        data.date            = item.created_at;
+        data.value           = item.value;
+        data.points          = item.points;
+        data.description     = item.description;
+        data.invoice_code    = null;
+        data.restaurant_code = null;
+        points.push(data);
+      }
+    );
+
+    return points;
+  }
+
+
 }
