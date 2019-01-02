@@ -315,6 +315,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _accompaniments_accompaniments_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./accompaniments/accompaniments.component */ "./src/app/accompaniments/accompaniments.component.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_common_locales_es__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/locales/es */ "./node_modules/@angular/common/locales/es.js");
+/* harmony import */ var _angular_common_locales_es__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_angular_common_locales_es__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _angular_common_locales_extra_es__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/locales/extra/es */ "./node_modules/@angular/common/locales/extra/es.js");
+/* harmony import */ var _angular_common_locales_extra_es__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_angular_common_locales_extra_es__WEBPACK_IMPORTED_MODULE_7__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -327,6 +332,10 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
+Object(_angular_common__WEBPACK_IMPORTED_MODULE_5__["registerLocaleData"])(_angular_common_locales_es__WEBPACK_IMPORTED_MODULE_6___default.a, 'es-CO', _angular_common_locales_extra_es__WEBPACK_IMPORTED_MODULE_7___default.a);
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -341,7 +350,7 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"]
             ],
-            providers: [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]],
+            providers: [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], { provide: _angular_core__WEBPACK_IMPORTED_MODULE_1__["LOCALE_ID"], useValue: "es-CO" }],
             bootstrap: [
                 _accompaniments_accompaniments_component__WEBPACK_IMPORTED_MODULE_2__["AccompanimentsComponent"],
             ]
