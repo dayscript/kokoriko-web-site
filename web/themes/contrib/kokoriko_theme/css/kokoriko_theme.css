@@ -7751,6 +7751,9 @@ span.success {
   background: #1dd00c;
   color: #FFFFFF; }
 
+.legal {
+  font-size: 13px; }
+
 .Eliminar ul {
   display: none; }
 
@@ -7758,3 +7761,7 @@ span.success {
   font-size: 10px;
   text-transform: none;
   margin-bottom: 60px; }
+
+@media screen and (max-width: 600px) {
+  #webform-submission-califica-tu-experiencia-add-form #qrcode {
+    text-align: center; } }
