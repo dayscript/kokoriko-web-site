@@ -48,9 +48,8 @@ class DashBoardBlock extends BlockBase {
     $this->output['asesor'] = 'kokoriko.com.co';
     $this->output['cedula_del_asesor'] = null;
     $this->output['nombre_asesor'] = null;
-
     $this->output['fecha_de_registro'] = str_replace(' ','T',date('Y-m-d H:m:s').'-05:00');;
-
+    $this->output['user_login'] = $this->account->id();
 
     $return = [
       '#type' => 'html_tag',
