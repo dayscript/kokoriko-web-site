@@ -7768,3 +7768,6 @@ span.success {
 @media screen and (max-width: 600px) {
   #webform-submission-califica-tu-experiencia-add-form #qrcode {
     text-align: center; } }
+
+#edit-link-politica a {
+  color: #ec333b !important; }
