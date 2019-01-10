@@ -7762,15 +7762,12 @@ span.success {
   text-transform: none;
   margin-bottom: 60px; }
 
-#webform-submission-califica-tu-experiencia-add-form .edit-link-politica a {
-  color: #ec333b; }
-
 @media screen and (max-width: 600px) {
   #webform-submission-califica-tu-experiencia-add-form #qrcode {
     text-align: center; } }
 
 #edit-link-politica a {
-  color: #ec333b; }
+  color: #ec333b !important; }
 
 #edit-link-politica a:hover {
-  color: #b41a22; }
+  color: #b41a22 !important; }
