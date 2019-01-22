@@ -20,7 +20,7 @@
  * - Theme: Specific customizations for your subtheme.
  * For more information about this new Drupal css file standard, please review
  * the following:
- * - https://drupal.org/node/1887922
+ * - https://drupal.org/node/1887922 
  * - http://smacss.com/
  */
 
@@ -120,7 +120,7 @@
 @import "modules/_views";
 
 //Pages
-@import "pages/_form"; 
+@import "pages/_form";
 
 
 // States
@@ -132,4 +132,3 @@
 // Older IE support
 // @import "vendor/ie";
 //
-

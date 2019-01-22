@@ -20,7 +20,7 @@
  * - Theme: Specific customizations for your subtheme.
  * For more information about this new Drupal css file standard, please review
  * the following:
- * - https://drupal.org/node/1887922
+ * - https://drupal.org/node/1887922 
  * - http://smacss.com/
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -7133,6 +7133,14 @@ h2.block-title {
         display: none; } }
 
 #block-formularioexpuestomenupage-1-2 .fieldset-legend {
+  color: #ec333b;
+  font-size: 33px;
+  text-transform: uppercase;
+  font-family: 'BlockBE-Condensed';
+  font-style: normal;
+  font-weight: 400; }
+
+#block-formularioexpuestomenupage-1-2 #block-formularioexpuestomenupage-1 .fieldset-legend {
   color: #ec333b;
   font-size: 33px;
   text-transform: uppercase;
