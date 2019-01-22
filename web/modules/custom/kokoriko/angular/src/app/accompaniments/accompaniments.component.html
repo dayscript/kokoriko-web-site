@@ -122,8 +122,8 @@
                             <th>KOKORIPESOS</th>
                         </tr>
                         </thead>
-                        <tbody *ngIf="incentives?.invoices">
-                        <tr *ngFor="let invoice of incentives?.invoices">
+                        <tbody *ngIf="getAcomulationItems()">
+                        <tr *ngFor="let invoice of getAcomulationItems()">
                             <td>{{invoice.invoice_date_up}}</td>
                             <td>{{invoice.invoice_code}}</td>
                             <td>{{invoice.restaurant_code}}</td>

@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/chris/public_html/kokoriko-web-site/web/modules/custom/kokoriko/angular/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /home/ariel/projects/kokoriko/web/modules/custom/kokoriko/angular/src/styles.css */"./src/styles.css");
 
 
 /***/ })

@@ -11,7 +11,7 @@
  *
  * Theme styles are categorized using SMACSS standards. They utilize
  * categorization of styles into various categories. Those categories are the
- * following:
+ * following: 
  *
  * - Base: CSS reset/normalize plus HTML element styling.
  * - Layout: Macro arrangement of a web page, including any grid sys tems.
@@ -7750,6 +7750,9 @@ span.success {
   padding: 0.375rem 0.5625rem 0.5625rem;
   background: #1dd00c;
   color: #FFFFFF; }
+
+.legal {
+  font-size: 13px; }
 
 .Eliminar ul {
   display: none; }

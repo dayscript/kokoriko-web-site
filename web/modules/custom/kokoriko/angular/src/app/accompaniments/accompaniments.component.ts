@@ -34,8 +34,6 @@ export class AccompanimentsComponent implements OnInit {
     this.errors = null;
     this.redemption = null;
     this.redemption_value = 0
-
-
   }
 
   public setUser ( user ) {
@@ -209,7 +207,7 @@ export class AccompanimentsComponent implements OnInit {
   }
 
   public onSubmit(){
-    console.log('request: ',this.profileForm.value)
+
     this.http.post( this.api +"/redemptions",this.profileForm.value,this.headers)
          .subscribe(
              data => {
@@ -243,6 +241,16 @@ export class AccompanimentsComponent implements OnInit {
         Validators.required,
       ],
     });
+  }
+
+
+  public getAcomulationItems(){
+      if(typeof this.incentives !== 'undefined' && this.incentives.entity !== 'undefined'){
+
+          console.log(this.incentives.entity);
+
+        return []
+      }
   }
 
 
