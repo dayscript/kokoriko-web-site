@@ -7140,14 +7140,6 @@ h2.block-title {
   font-style: normal;
   font-weight: 400; }
 
-#block-formularioexpuestomenupage-1-2 #block-formularioexpuestomenupage-1 .fieldset-legend {
-  color: #ec333b;
-  font-size: 33px;
-  text-transform: uppercase;
-  font-family: 'BlockBE-Condensed';
-  font-style: normal;
-  font-weight: 400; }
-
 #block-formularioexpuestomenupage-1-2 input[type=checkbox], #block-formularioexpuestomenupage-1-2 input[type=radio] {
   position: absolute;
   z-index: -1000;
@@ -7175,6 +7167,53 @@ h2.block-title {
   background-position: 0 -17px; }
 
 #block-formularioexpuestomenupage-1-2 label {
+  margin: 15px 0;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  background-image: url(/themes/contrib/kokoriko_theme/images/checkbox.png);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+#block-formularioexpuestomenupage-1 .fieldset-legend {
+  color: #ec333b;
+  font-size: 33px;
+  text-transform: uppercase;
+  font-family: 'BlockBE-Condensed';
+  font-style: normal;
+  font-weight: 400; }
+
+#block-formularioexpuestomenupage-1 input[type=checkbox], #block-formularioexpuestomenupage-1 input[type=radio] {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+#block-formularioexpuestomenupage-1 input[type=checkbox] + label, #block-formularioexpuestomenupage-1 input[type=radio] + label {
+  padding-left: 28px;
+  height: 17px;
+  display: inline-block;
+  line-height: 17px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer; }
+
+#block-formularioexpuestomenupage-1 input[type=checkbox]:checked + label, #block-formularioexpuestomenupage-1 input[type=radio]:checked + label {
+  background-position: 0 -17px; }
+
+#block-formularioexpuestomenupage-1 label {
   margin: 15px 0;
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
