@@ -119,7 +119,7 @@ export class AccompanimentsComponent implements OnInit {
   public setPointsOvercome( value ){
     this.incentives.points_overcome = value;
   }
-
+ 
 
   public setHeaders(){
     const header = {
@@ -292,7 +292,7 @@ export class AccompanimentsComponent implements OnInit {
         points.push(data);
       }
     );
-    
+
     return points;
   }
 
