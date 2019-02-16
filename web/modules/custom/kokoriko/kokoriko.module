@@ -213,6 +213,9 @@ function kokoriko_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
           \Drupal::logger('kokoriko')->notice('User insert success: '.$post['identification'].' response '. $response);
         }catch(Exception $e){
           \Drupal::logger('kokoriko')->error('User insert error: '.$post['identification'] .' '. $e->getMessage());
+          $user->set('field_error_incentives',1);
+          $user->set('field_debug','User insert error: '.$post['identification'] .' '. $e->getMessage());
+          $user->save();
         }
       }
     }
