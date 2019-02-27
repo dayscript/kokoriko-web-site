@@ -66,9 +66,9 @@
         <div class="columns medium-8">
 
             <ul class="tabs medium-12" data-tab>
-                <li class="tab-title medium-4 small-12 active" ><a href="#panel1">Redime tus Kokoripesos</a></li>
-                <li class="tab-title medium-4 small-12 " ><a href="#panel2">Kokoripesos acumulados</a></li>
-                <li class="tab-title medium-4 small-12 " ><a href="#panel3">Listado de mis redenciones</a></li>
+                <li class="tab-title medium-4 small-12 active" style="text-aling:center"><a href="#panel1">Redime tus Kokoripesos</a></li>
+                <li class="tab-title medium-4 small-12 " style="text-aling:center"><a href="#panel2">Kokoripesos acumulados</a></li>
+                <li class="tab-title medium-4 small-12 " style="text-aling:center"><a href="#panel3">Listado de mis redenciones</a></li>
             </ul>
             <!-- <div class="menu-cuenta show-for-small-only">
                 <select>
@@ -112,12 +112,12 @@
                     </div>
                 </div>
                 <div class="content" id="panel2">
-                    <table border="1" class="large-12 medium-12 small-12">
+                    <table border="1" width="100%">
                         <thead>
                         <tr>
                             <th>FECHA</th>
                             <th>N° FACTURA</th>
-                            <th>RESTAURANTE</th>
+                            <th class="hide-for-small-only">RESTAURANTE</th>
                             <!-- <th>VR. FACTURA</th> -->
                             <th>KOKORIPESOS</th>
                             <th>DESCRIPCIÓN</th>
@@ -128,7 +128,7 @@
                         <tr *ngFor="let invoice of getInformationPoints()">
                             <td>{{invoice.date | date}}</td>
                             <td>{{invoice.invoice_code}}</td>
-                            <td>{{invoice.restaurant_code}}</td>
+                            <td class="hide-for-small-only">{{invoice.restaurant_code}}</td>
                             <!-- <td>{{invoice.value}}</td> -->
                             <td>{{invoice.points | number: '1.0-0'}}</td>
                             <td>{{invoice.description}}</td>
