@@ -117,10 +117,10 @@
                         <tr>
                             <th>FECHA</th>
                             <th>N° FACTURA</th>
-                            <th class="hide-for-small-only">RESTAURANTE</th>
+                            <th class="">RESTAURANTE</th>
                             <!-- <th>VR. FACTURA</th> -->
                             <th>KOKORIPESOS</th>
-                            <th>DESCRIPCIÓN</th>
+                            <th class="hide-for-small-only">DESCRIPCIÓN</th>
                         </tr>
                         </thead>
                         <tbody *ngIf="incentives">
@@ -128,10 +128,10 @@
                         <tr *ngFor="let invoice of getInformationPoints()">
                             <td>{{invoice.date | date}}</td>
                             <td>{{invoice.invoice_code}}</td>
-                            <td class="hide-for-small-only">{{invoice.restaurant_code}}</td>
+                            <td >{{invoice.restaurant_code}}</td>
                             <!-- <td>{{invoice.value}}</td> -->
                             <td>{{invoice.points | number: '1.0-0'}}</td>
-                            <td>{{invoice.description}}</td>
+                            <td class="hide-for-small-only">{{invoice.description}}</td>
                         </tr>
                         <div *ngIf="!incentives?.invoices">
                            No se han encontrado datos.
@@ -143,10 +143,11 @@
                 <div class="content" id="panel3">
                   <table border="1" width="100%">
                       <thead>
-                        <tr>
+                        <tr> 
                             <th>FECHA DE REDENCIÓN</th>
                             <th>CÓDIGO</th>
                             <th>KOKORIPESOS REDIMIDOS</th>
+                            <th>VALOR DEL CÓDIGO</th>
                         </tr>
                       </thead>
                       <tbody *ngIf="incentives?.redemptions">
@@ -154,6 +155,7 @@
                             <td>{{redemption.created_at}}</td>
                             <td>{{redemption.token}}</td>
                             <td>$ {{redemption.value}}</td>
+                            <td>$ {{redemption.value * 50 }}</td>
                         </tr>
                         <div *ngIf="!incentives?.invoices">
                            No se han encontrado datos.
