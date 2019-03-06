@@ -144,17 +144,17 @@
                   <table border="1" width="100%">
                       <thead>
                         <tr> 
-                            <th>FECHA DE REDENCIÓN</th>
+                            <th>FECHA</th>
                             <th>CÓDIGO</th>
-                            <th>KOKORIPESOS REDIMIDOS</th>
-                            <th>VALOR DEL CÓDIGO</th>
+                            <th>KOKORIPESOS</th>
+                            <th>VALOR CÓDIGO</th>
                         </tr>
                       </thead>
                       <tbody *ngIf="incentives?.redemptions">
                         <tr *ngFor="let redemption of incentives?.redemptions">
                             <td>{{redemption.created_at}}</td>
                             <td>{{redemption.token}}</td>
-                            <td>$ {{redemption.value}}</td>
+                            <td>{{redemption.value}}</td>
                             <td>$ {{redemption.value * 50 }}</td>
                         </tr>
                         <div *ngIf="!incentives?.invoices">
