@@ -117,7 +117,7 @@
                         <tr>
                             <th>FECHA</th>
                             <th>N° FACTURA</th>
-                            <th class="">RESTAURANTE</th>
+                            <th class="hide-for-small-only">RESTAURANTE</th>
                             <!-- <th>VR. FACTURA</th> -->
                             <th>KOKORIPESOS</th>
                             <th class="hide-for-small-only">DESCRIPCIÓN</th>
@@ -128,7 +128,7 @@
                         <tr *ngFor="let invoice of getInformationPoints()">
                             <td>{{invoice.date | date}}</td>
                             <td>{{invoice.invoice_code}}</td>
-                            <td >{{invoice.restaurant_code}}</td>
+                            <td class="hide-for-small-only">{{invoice.restaurant_code}}</td>
                             <!-- <td>{{invoice.value}}</td> -->
                             <td>{{invoice.points | number: '1.0-0'}}</td>
                             <td class="hide-for-small-only">{{invoice.description}}</td>
