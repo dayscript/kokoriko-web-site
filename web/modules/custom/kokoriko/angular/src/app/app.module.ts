@@ -1,14 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AccompanimentsComponent } from './accompaniments/accompaniments.component';
-import { AddressesComponent } from './addresses/addresses.component';
+//import { AddressesComponent } from './addresses/addresses.component';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/es';
+import localeFrExtra from '@angular/common/locales/extra/es';
 
+registerLocaleData(localeFr, 'es-CO', localeFrExtra);
 
 @NgModule({
   declarations: [
@@ -21,7 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [HttpClient, HttpClientModule],
+  providers: [HttpClient, HttpClientModule, {provide: LOCALE_ID, useValue: "es-CO" }],
   bootstrap: [
     AccompanimentsComponent,
     // AddressesComponent

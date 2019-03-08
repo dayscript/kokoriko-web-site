@@ -11,7 +11,7 @@
   Drupal.behaviors.exampleBehavior = {
     attach: function (context, settings) {
       //alert("I'm alive!");
-      console.log('Js kokoriko ready nuevo push');
+      // console.log('Js kokoriko ready nuevo push');
     }
   };
 

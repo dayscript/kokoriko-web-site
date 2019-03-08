@@ -46,3 +46,7 @@ features:
   - favicon
   - comment_user_picture
   - node_user_picture
+
+libraries-override:
+  # Replace an entire library.
+  core/jquery: kokoriko_theme/jquery-custom

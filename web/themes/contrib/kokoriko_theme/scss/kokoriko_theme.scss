@@ -119,6 +119,9 @@
 @import "angular/_block";
 @import "modules/_views";
 
+//Pages
+@import "pages/_form"; 
+
 
 // States
 // @import "states/collapse";
@@ -129,3 +132,4 @@
 // Older IE support
 // @import "vendor/ie";
 //
+

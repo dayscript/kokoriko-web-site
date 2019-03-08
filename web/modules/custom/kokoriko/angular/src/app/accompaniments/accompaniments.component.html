@@ -18,7 +18,7 @@
         <div class="columns medium-7">
             <div class="botones">
                 <a href="#block-comofunciona" id="menu-como" class="button account">¿Cómo funciona?</a>
-                <a href="/user/{{user.uid}}/edit" class="button account">Actualizar datos</a>
+                <a *ngIf="user.uid ==  user.user_login" href="/user/{{user.uid}}/edit" class="button account">Actualizar datos</a>
                 <a href="/user/logout" class="button account">Cerrar sesión</a>
             </div>
         </div>
@@ -44,7 +44,7 @@
                 <div class="fecha"></div>
                 <div>Tienes disponibles</div>
 
-                <div *ngIf="getTotalPoints() else elseKokoripesos" [innerHTML]=getTotalPoints() class="kokoripesos"> </div>
+                <div *ngIf="getTotalPoints() !== false else elseKokoripesos" [innerHTML]=getTotalPoints() class="kokoripesos"> </div>
                 <ng-template #elseKokoripesos>Cargando...</ng-template>
                 <img src="/themes/contrib/kokoriko_theme/images/kokoripesos-red.png" alt="" class="text-center">
                 <p class="legal">*Estimado cliente, estamos trabajando por ti es por esto que tus puntos están siendo validados  y serán sujetos a ajustes de acuerdo a las compras registradas con tu numero de cedula, sin embargo no dudes en comunicarte con nosotros ante cualquier novedad al siguiente correo servicioalcliente@grupoiga.co.</p>
@@ -115,20 +115,23 @@
                     <table border="1" width="100%">
                         <thead>
                         <tr>
-                            <th>FECHA FACTURA</th>
+                            <th>FECHA</th>
                             <th>N° FACTURA</th>
                             <th>RESTAURANTE</th>
-                            <th>VR. FACTURA</th>
+                            <!-- <th>VR. FACTURA</th> -->
                             <th>KOKORIPESOS</th>
+                            <th>DESCRIPCIÓN</th>
                         </tr>
                         </thead>
-                        <tbody *ngIf="getAcomulationItems()">
-                        <tr *ngFor="let invoice of getAcomulationItems()">
-                            <td>{{invoice.invoice_date_up}}</td>
+                        <tbody *ngIf="incentives">
+                        <!-- <tbody> -->
+                        <tr *ngFor="let invoice of getInformationPoints()">
+                            <td>{{invoice.date | date}}</td>
                             <td>{{invoice.invoice_code}}</td>
                             <td>{{invoice.restaurant_code}}</td>
-                            <td>$ {{invoice.value}}</td>
-                            <td>102</td>
+                            <!-- <td>{{invoice.value}}</td> -->
+                            <td>{{invoice.points | number: '1.0-0'}}</td>
+                            <td>{{invoice.description}}</td>
                         </tr>
                         <div *ngIf="!incentives?.invoices">
                            No se han encontrado datos.

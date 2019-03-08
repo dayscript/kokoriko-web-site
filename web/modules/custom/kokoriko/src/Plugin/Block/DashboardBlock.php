@@ -3,6 +3,8 @@
 namespace Drupal\kokoriko\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Url;
+
 use Drupal\user\Entity\User;
 use Symfony\Component\Routing\RouteCollection;
 use Drupal;
@@ -20,10 +22,16 @@ class DashBoardBlock extends BlockBase {
 
   public function __construct() {
 
+    $path = Drupal::request()->getRequestUri();
+    $params = Url::fromUri("internal:" . $path)->getRouteParameters();
+    $entity_type = key($params);
+    $entity = Drupal::entityTypeManager()->getStorage($entity_type)->load($params[$entity_type]);
+
     $this->account     = Drupal::currentUser();
-    $this->user        = User::load( $this->account ->id() );
+    $this->user        = User::load( $entity->id() );
     $this->user_fields = ['uid','field_nombres','field_apellidos','field_no_identificacion','field_telephone','field_gender','field_birthdate','mail'];
     $this->output      = [];
+
   }
 
   /**
@@ -40,9 +48,8 @@ class DashBoardBlock extends BlockBase {
     $this->output['asesor'] = 'kokoriko.com.co';
     $this->output['cedula_del_asesor'] = null;
     $this->output['nombre_asesor'] = null;
-
     $this->output['fecha_de_registro'] = str_replace(' ','T',date('Y-m-d H:m:s').'-05:00');;
-
+    $this->output['user_login'] = $this->account->id();
 
     $return = [
       '#type' => 'html_tag',
