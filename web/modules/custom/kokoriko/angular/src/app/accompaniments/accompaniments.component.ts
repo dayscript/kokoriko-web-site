@@ -265,7 +265,7 @@ export class AccompanimentsComponent implements OnInit {
             data.restaurant_code = element.restaurant_code;
         });
         data.points          = data.value / 1000;
-        data.description     = 'Acomulacion por compras';
+        data.description     = 'Acomulación por compras';
         data.invoice_code    = item.identification;
         points.push(data);
       }

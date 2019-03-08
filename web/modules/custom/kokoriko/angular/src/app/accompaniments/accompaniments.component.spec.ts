@@ -22,4 +22,4 @@ describe('AccompanimentsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+}); 
