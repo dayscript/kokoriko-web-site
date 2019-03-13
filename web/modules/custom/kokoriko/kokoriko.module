@@ -199,7 +199,7 @@ function kokoriko_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
         }
 
         $post['identification'] = $post['field_no_identificacion'] ;
-        $post['name'] = $post['field_nombres'].' '.$post['field_apellidos'];
+        $post['name'] = trim($post['field_nombres']).' '.trim($post['field_apellidos']);
         $post['roles'] = $user->getRoles();
         $post['nombre_asesor'] = 'kokoriko.com.co';
         $post['cedula_del_asesor'] = '000000000';
