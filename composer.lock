@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee7d2fa28e028415762f246641bf3e1a",
+    "content-hash": "0b454a9fd0536a9795aa1019c83d7ba5",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2405,10 +2405,6 @@
             ],
             "authors": [
                 {
-                    "name": "Etroid",
-                    "homepage": "https://www.drupal.org/user/3048985"
-                },
-                {
                     "name": "chr.fritsch",
                     "homepage": "https://www.drupal.org/user/2103716"
                 },
@@ -2421,6 +2417,10 @@
                     "homepage": "https://www.drupal.org/user/192273"
                 },
                 {
+                    "name": "mortona2k",
+                    "homepage": "https://www.drupal.org/user/1029484"
+                },
+                {
                     "name": "rlhawk",
                     "homepage": "https://www.drupal.org/user/352283"
                 }
@@ -2428,7 +2428,7 @@
             "description": "Provides advanced options (such as links, checkboxes, or jQueryUI widgets) for exposed Views elements.",
             "homepage": "https://www.drupal.org/project/better_exposed_filters",
             "support": {
-                "source": "https://git.drupalcode.org/project/better_exposed_filters"
+                "source": "http://cgit.drupalcode.org/better_exposed_filters"
             }
         },
         {
@@ -2529,6 +2529,65 @@
                 "source": "https://cgit.drupalcode.org/block_class",
                 "issues": "https://www.drupal.org/project/issues/block_class",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/blockgroup",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/blockgroup.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/blockgroup-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "c5a8424db376b10909290a601c682de2d460723c"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1537911480",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "axel.rutz",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "kiss.jozsef",
+                    "homepage": "https://www.drupal.org/user/2848443"
+                },
+                {
+                    "name": "leymannx",
+                    "homepage": "https://www.drupal.org/user/2482808"
+                },
+                {
+                    "name": "znerol",
+                    "homepage": "https://www.drupal.org/user/63999"
+                }
+            ],
+            "description": "Add block groups to block configuration page",
+            "homepage": "https://www.drupal.org/project/blockgroup",
+            "support": {
+                "source": "https://git.drupalcode.org/project/blockgroup"
             }
         },
         {
@@ -4817,26 +4876,18 @@
                     "homepage": "https://www.drupal.org/user/380104"
                 },
                 {
-                    "name": "aburrows",
-                    "homepage": "https://www.drupal.org/user/577844"
-                },
-                {
                     "name": "ipwa",
                     "homepage": "https://www.drupal.org/user/130909"
                 },
                 {
                     "name": "swim",
                     "homepage": "https://www.drupal.org/user/1968266"
-                },
-                {
-                    "name": "thomas.frobieter",
-                    "homepage": "https://www.drupal.org/user/409335"
                 }
             ],
             "description": "Drupal integration for Owl Carousel",
             "homepage": "https://www.drupal.org/project/owlcarousel",
             "support": {
-                "source": "https://git.drupalcode.org/project/owlcarousel",
+                "source": "http://cgit.drupalcode.org/owlcarousel",
                 "issues": "https://www.drupal.org/project/owlcarousel"
             }
         },
@@ -5624,6 +5675,53 @@
             }
         },
         {
+            "name": "drupal/sticky",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/sticky.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/sticky-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "98735598ba94c5ef2c0ae2ee77717174994724a4"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1491909243",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "f0ns",
+                    "homepage": "https://www.drupal.org/user/723426"
+                }
+            ],
+            "description": "Sticky is a module that gives you the ability to make any element on your website to always stay visible.",
+            "homepage": "https://www.drupal.org/project/sticky",
+            "support": {
+                "source": "https://git.drupalcode.org/project/sticky"
+            }
+        },
+        {
             "name": "drupal/superfish",
             "version": "1.3.0",
             "source": {
@@ -5765,7 +5863,7 @@
             "description": "Use 3rd party library to validate telephone field.",
             "homepage": "http://drupal.org/project/telephone_validation",
             "support": {
-                "source": "https://git.drupalcode.org/project/telephone_validation",
+                "source": "http://cgit.drupalcode.org/telephone_validation",
                 "issues": "http://drupal.org/project/issues/telephone_validation"
             }
         },

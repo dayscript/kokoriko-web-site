@@ -110,8 +110,12 @@
 
         {% if page.header %}
           <div class="row sub-wrapper">
-            <div class="large-12 columns sub-header">
-            {{ page.header }}
+            <div data-sticky-container>
+              <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1" data-btm-anchor="content:bottom">
+                <div class="large-12 columns sub-header">
+                {{ page.header }}
+                </div>
+              </div>
             </div>
           </div>
         {% endif %}

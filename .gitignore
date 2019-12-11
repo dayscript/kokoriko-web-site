@@ -3,8 +3,8 @@
 /vendor/
 /web/core/
 /web/modules/contrib/
-/web/themes/contrib/
-/web/profiles/contrib/
+/web/themes/contrib/adminimal_theme/
+/web/themes/contrib/zurb_foundation/
 /web/libraries/
 
 # Ignore sensitive information

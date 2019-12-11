@@ -48,12 +48,12 @@ gulp.task('scripts', function() {
  * Clear all caches
  */
 gulp.task('clearcache', function(done) {
-  return cp.spawn('drush9', ['cache-rebuild'], {stdio: 'inherit'})
+  return cp.spawn('drush', ['cache-rebuild'], {stdio: 'inherit'})
   .on('close', done);
 });
 
 /**
- * @task reload
+ * @task reload 
  * Refresh the page after clearing cache
  */
 gulp.task('reload', ['clearcache'], function () {

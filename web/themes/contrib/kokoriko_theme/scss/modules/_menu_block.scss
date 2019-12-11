@@ -16,7 +16,7 @@
 //     }
 // }
 
-#block-kokoriko-theme-main-menu{
+#block-kokoriko-theme-main-menu, #block-navegacionprincipal-2{
   display: inline-block;
   padding: 13px 0;
   ul{
@@ -24,7 +24,7 @@
       float: left;
       list-style: none;
       a{
-        text-transform: uppercase;
+        text-transform: uppercase; 
         font-weight: 700;
         padding: 10px 10px;
         margin-left: 25px;
@@ -70,4 +70,19 @@ ul.sf-menu.sf-style-black li:hover, ul.sf-menu.sf-style-black li.sfHover, ul.sf-
 
 .no-background{
   background: none!important;
+}
+
+
+.is-sticky {
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  #block-headergroupmenu {
+    padding-top: 10px;
+    background-color: #0000008c;
+    left: 0;
+    right: 0;
+    width: 100%!important;
+    margin: 0 0 60px 0;
+  }
 }

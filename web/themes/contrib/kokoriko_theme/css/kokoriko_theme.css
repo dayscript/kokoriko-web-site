@@ -17,7 +17,7 @@
  * - Layout: Macro arrangement of a web page, including any grid sys tems.
  * - Modules: Dictate minor layout modules or reusable elements.
  * - States: Describe the appearance of a module in various states.
- * - Theme: Specific customizations for your subtheme.
+ * - Theme: Specific customizations for your subtheme.b
  * For more information about this new Drupal css file standard, please review
  * the following:
  * - https://drupal.org/node/1887922 
@@ -7499,20 +7499,20 @@ form .description a {
   #block-metamenu a {
     float: left; } }
 
-#block-kokoriko-theme-main-menu {
+#block-kokoriko-theme-main-menu, #block-navegacionprincipal-2 {
   display: inline-block;
   padding: 13px 0; }
-  #block-kokoriko-theme-main-menu ul li {
+  #block-kokoriko-theme-main-menu ul li, #block-navegacionprincipal-2 ul li {
     float: left;
     list-style: none; }
-    #block-kokoriko-theme-main-menu ul li a {
+    #block-kokoriko-theme-main-menu ul li a, #block-navegacionprincipal-2 ul li a {
       text-transform: uppercase;
       font-weight: 700;
       padding: 10px 10px;
       margin-left: 25px;
       font-size: 1em;
       letter-spacing: 1px; }
-    #block-kokoriko-theme-main-menu ul li a.is-active {
+    #block-kokoriko-theme-main-menu ul li a.is-active, #block-navegacionprincipal-2 ul li a.is-active {
       background: #EC333B; }
 
 ul.menu.nav-bar {
@@ -7542,6 +7542,18 @@ ul.sf-menu.sf-style-black li:hover, ul.sf-menu.sf-style-black li.sfHover, ul.sf-
 
 .no-background {
   background: none !important; }
+
+.is-sticky {
+  z-index: 10;
+  position: relative;
+  width: 100%; }
+  .is-sticky #block-headergroupmenu {
+    padding-top: 10px;
+    background-color: #0000008c;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    margin: 0 0 60px 0; }
 
 .path-restaurantes ul {
   list-style: none; }
