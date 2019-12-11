@@ -6823,7 +6823,11 @@ h3 {
     height: 100px;
     background-image: url(/themes/contrib/kokoriko_theme/images/brush-slide.png);
     background-repeat: repeat-x;
-    bottom: 0; }
+    bottom: 0;
+    display: block; }
+    @media screen and (max-width: 600px) {
+      .header:after {
+        display: none; } }
   .header .banner {
     margin-top: 0px; }
   @media screen and (max-width: 600px) {
@@ -7126,8 +7130,10 @@ h2.block-title {
     text-align: center; }
     .block-kokoriko-theme-footer ul li {
       display: inline-block;
-      padding: 0px 30px;
+      padding: 0px 20px;
       text-transform: uppercase; }
+      .block-kokoriko-theme-footer ul li a {
+        font-size: 0.8rem; }
     @media screen and (max-width: 600px) {
       .block-kokoriko-theme-footer ul li {
         display: none; } }
@@ -7265,7 +7271,7 @@ h2.block-title {
   margin-bottom: 0rem; }
 
 ul.social-media-links--platforms.platforms.inline.horizontal {
-  margin-bottom: 0rem; }
+  margin-bottom: 2rem; }
 
 .social-media-links--platforms.horizontal li {
   padding: .2em 1em; }

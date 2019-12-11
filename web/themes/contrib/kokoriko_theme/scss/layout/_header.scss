@@ -11,6 +11,10 @@
     background-image: url(/themes/contrib/kokoriko_theme/images/brush-slide.png);
     background-repeat: repeat-x;
     bottom: 0;
+    display: block; 
+    @media screen and (max-width: 600px){
+      display: none;
+    }
   }
   .banner{
     margin-top: 0px;
