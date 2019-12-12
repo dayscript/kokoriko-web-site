@@ -7897,3 +7897,6 @@ span.success {
   font-size: 30px;
   color: #EC333B;
   line-height: 1em; }
+
+.field-node--field-teminos-legales p {
+  font-size: 10px; }
