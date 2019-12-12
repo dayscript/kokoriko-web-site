@@ -7898,5 +7898,12 @@ span.success {
   color: #EC333B;
   line-height: 1em; }
 
+.field-node--field-precios .field-label {
+  font-size: 30px;
+  font-family: 'BlockBE-Condensed';
+  font-style: normal;
+  font-weight: 400;
+  color: #ec333b; }
+
 .field-node--field-teminos-legales p {
   font-size: 10px; }
