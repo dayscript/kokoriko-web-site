@@ -7523,8 +7523,11 @@ form .description a {
     text-align: left;
     font-size: 30px; }
 
+#block-apps .field-block-content--body {
+  text-align: center; }
+
 #block-apps img {
-  max-width: 29%;
+  max-width: 100%;
   max-height: 30px; }
 
 #block-metamenu li {
