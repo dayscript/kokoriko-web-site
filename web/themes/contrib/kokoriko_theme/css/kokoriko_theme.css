@@ -7604,11 +7604,11 @@ ul.sf-menu.sf-style-black li:hover, ul.sf-menu.sf-style-black li.sfHover, ul.sf-
 .path-restaurantes ul {
   list-style: none; }
 
-.section-menu h4 {
+.section-menu h4, .section-promociones h4 {
   text-transform: uppercase;
   font-size: 1.1em; }
 
-.section-menu .field-price {
+.section-menu .field-price, .section-promociones .field-price {
   font-family: 'BlockBE-Regular';
   font-style: normal;
   font-weight: 400;
@@ -7616,24 +7616,24 @@ ul.sf-menu.sf-style-black li:hover, ul.sf-menu.sf-style-black li.sfHover, ul.sf-
   font-size: 1.2em;
   line-height: 12px; }
 
-.section-menu .field-label {
+.section-menu .field-label, .section-promociones .field-label {
   text-transform: uppercase;
   font-size: 0.75em; }
 
-.section-menu .producto {
+.section-menu .producto, .section-promociones .producto {
   min-height: 400px;
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 0px solid #E3E3E3; }
-  .section-menu .producto .columns {
+  .section-menu .producto .columns, .section-promociones .producto .columns {
     padding-left: 0.4rem;
     padding-right: 0.4rem; }
 
 @media screen and (max-width: 600px) {
-  .section-menu .producto {
+  .section-menu .producto, .section-promociones .producto {
     border-bottom: 1px solid #E3E3E3; } }
 
-.section-menu .taxonomy-term--type-categoria-de-producto h3 {
+.section-menu .taxonomy-term--type-categoria-de-producto h3, .section-promociones .taxonomy-term--type-categoria-de-producto h3 {
   color: #EC333B;
   font-size: 33px;
   text-transform: uppercase;
@@ -7641,11 +7641,11 @@ ul.sf-menu.sf-style-black li:hover, ul.sf-menu.sf-style-black li.sfHover, ul.sf-
   font-style: normal;
   font-weight: 400; }
 
-.section-menu .field-taxonomy-term--description p {
+.section-menu .field-taxonomy-term--description p, .section-promociones .field-taxonomy-term--description p {
   text-transform: initial;
   color: #333333; }
 
-.section-menu .field-name-field-legal-combo .field-item {
+.section-menu .field-name-field-legal-combo .field-item, .section-promociones .field-name-field-legal-combo .field-item {
   font-size: 10px;
   line-height: 12px; }
 
