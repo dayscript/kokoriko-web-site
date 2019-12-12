@@ -7533,7 +7533,7 @@ form .description a {
     max-height: 40px; }
 
 .social-media-links--platforms {
-  margin: 0; }
+  margin: 0 !important; }
 
 #block-metamenu li {
   list-style: none; }
