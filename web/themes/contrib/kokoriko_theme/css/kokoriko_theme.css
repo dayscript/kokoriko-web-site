@@ -7073,6 +7073,9 @@ h2.block-title {
   #block-contactenos .mailtohover {
     color: #ec333b; }
 
+#block-contactenos #edit-processed-text p a {
+  color: #000; }
+
 #block-contactenos input, #block-contactenos textarea {
   background: #f6f6f6;
   border: solid 1px #e2e2e2; }
@@ -7485,6 +7488,37 @@ form .description a {
 
 .field-name-field-incluye-2-acompanamientos- .field-item {
   font-size: 0.7em; }
+
+.vertical-brush-red-right {
+  color: white;
+  background-image: url(/themes/contrib/kokoriko_theme/images/left-brush.png), url(/themes/contrib/kokoriko_theme/images/right-brush.png);
+  padding: 0 36px;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: left, right;
+  display: inline-block;
+  margin-bottom: 40px; }
+  .vertical-brush-red-right div {
+    padding-top: 60px;
+    background-color: #ed1c24;
+    padding-left: 80px;
+    padding-bottom: 37px;
+    position: relative; }
+    .vertical-brush-red-right div ol li a {
+      color: #fff !important; }
+    .vertical-brush-red-right div:after {
+      border-left: solid 2px #fff;
+      height: 125px;
+      content: "";
+      position: absolute;
+      top: 99px;
+      left: 55px; }
+  .vertical-brush-red-right h3 {
+    margin-top: 30px;
+    color: #FFFFFF;
+    width: 130px;
+    text-align: left;
+    font-size: 30px; }
 
 #block-metamenu li {
   list-style: none; }
