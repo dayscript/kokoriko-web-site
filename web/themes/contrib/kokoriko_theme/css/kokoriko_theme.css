@@ -7608,6 +7608,9 @@ ul.sf-menu.sf-style-black li:hover, ul.sf-menu.sf-style-black li.sfHover, ul.sf-
   text-transform: uppercase;
   font-size: 1.1em; }
 
+.section-menu .content--to-llink, .section-promociones .content--to-llink {
+  color: #000; }
+
 .section-menu .field-price, .section-promociones .field-price {
   font-family: 'BlockBE-Regular';
   font-style: normal;
