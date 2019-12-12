@@ -7911,7 +7911,8 @@ span.success {
   color: #ec333b; }
 
 .field-node--field-teminos-legales p {
-  font-size: 10px; }
+  font-size: 10px;
+  margin: 0; }
 
 .field-node--field-teminos-legales {
   margin-top: 30px; }
