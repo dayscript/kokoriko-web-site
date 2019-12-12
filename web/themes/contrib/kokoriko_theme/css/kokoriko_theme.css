@@ -7192,7 +7192,7 @@ h2.block-title {
   -ms-user-select: none;
   user-select: none; }
 
-#block-formularioexpuestomenupage-1 .fieldset-legend {
+#block-formularioexpuestomenupage-1 .fieldset-legend, #block-formularioexpuestopromocionespage-1 .fieldset-legend {
   color: #ec333b;
   font-size: 33px;
   text-transform: uppercase;
@@ -7200,7 +7200,7 @@ h2.block-title {
   font-style: normal;
   font-weight: 400; }
 
-#block-formularioexpuestomenupage-1 input[type=checkbox], #block-formularioexpuestomenupage-1 input[type=radio] {
+#block-formularioexpuestomenupage-1 input[type=checkbox], #block-formularioexpuestomenupage-1 input[type=radio], #block-formularioexpuestopromocionespage-1 input[type=checkbox], #block-formularioexpuestopromocionespage-1 input[type=radio] {
   position: absolute;
   z-index: -1000;
   left: -1000px;
@@ -7212,7 +7212,7 @@ h2.block-title {
   padding: 0;
   border: 0; }
 
-#block-formularioexpuestomenupage-1 input[type=checkbox] + label, #block-formularioexpuestomenupage-1 input[type=radio] + label {
+#block-formularioexpuestomenupage-1 input[type=checkbox] + label, #block-formularioexpuestomenupage-1 input[type=radio] + label, #block-formularioexpuestopromocionespage-1 input[type=checkbox] + label, #block-formularioexpuestopromocionespage-1 input[type=radio] + label {
   padding-left: 28px;
   height: 17px;
   display: inline-block;
@@ -7223,10 +7223,10 @@ h2.block-title {
   vertical-align: middle;
   cursor: pointer; }
 
-#block-formularioexpuestomenupage-1 input[type=checkbox]:checked + label, #block-formularioexpuestomenupage-1 input[type=radio]:checked + label {
+#block-formularioexpuestomenupage-1 input[type=checkbox]:checked + label, #block-formularioexpuestomenupage-1 input[type=radio]:checked + label, #block-formularioexpuestopromocionespage-1 input[type=checkbox]:checked + label, #block-formularioexpuestopromocionespage-1 input[type=radio]:checked + label {
   background-position: 0 -17px; }
 
-#block-formularioexpuestomenupage-1 label {
+#block-formularioexpuestomenupage-1 label, #block-formularioexpuestopromocionespage-1 label {
   margin: 15px 0;
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
