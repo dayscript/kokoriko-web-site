@@ -803,8 +803,9 @@ form{
 }
 
 #block-apps {
+  text-align: center;
   .field-block-content--body{
-    text-align: center;
+    display: inline-block;
   }
   img {
     max-width: 100%;
