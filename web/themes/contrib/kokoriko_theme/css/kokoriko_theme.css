@@ -7532,6 +7532,9 @@ form .description a {
     max-width: 100%;
     max-height: 40px; }
 
+.social-media-links--platforms {
+  margin: 0; }
+
 #block-metamenu li {
   list-style: none; }
 
