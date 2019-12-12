@@ -7125,7 +7125,8 @@ h2.block-title {
     margin-bottom: 0; }
 
 #block-kokoriko-theme-footer {
-  padding: 42px 42px 0 42px; }
+  padding: 42px 42px 0 42px;
+  display: inline-block; }
 
 .block-kokoriko-theme-footer {
   float: none !important; }
