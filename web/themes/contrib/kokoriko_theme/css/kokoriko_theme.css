@@ -7523,6 +7523,10 @@ form .description a {
     text-align: left;
     font-size: 30px; }
 
+#block-apps img {
+  max-width: 29%;
+  max-height: 30px; }
+
 #block-metamenu li {
   list-style: none; }
 
