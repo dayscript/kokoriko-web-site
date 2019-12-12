@@ -7893,10 +7893,15 @@ span.success {
   font-weight: 400;
   color: #ec333b; }
 
+.field-node--field-precios .columns {
+  margin: 0; }
+
 .field-node--field-precios .field-price {
   font-size: 30px;
   color: #EC333B;
-  line-height: 1em; }
+  line-height: 1em;
+  max-width: 110px;
+  display: inline-block; }
 
 .field-node--field-precios .field-label {
   font-size: 30px;
