@@ -7897,8 +7897,8 @@ span.success {
   margin: 0; }
 
 .field-node--field-precios .field-price {
-  font-size: 30px;
-  color: #EC333B;
+  font-size: 20px;
+  color: #000000;
   line-height: 1em;
   max-width: 110px;
   display: inline-block; }
@@ -7912,3 +7912,6 @@ span.success {
 
 .field-node--field-teminos-legales p {
   font-size: 10px; }
+
+.field-node--field-teminos-legales {
+  margin-top: 30px; }
