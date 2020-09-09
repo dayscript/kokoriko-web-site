@@ -10,6 +10,10 @@
    */
   Drupal.behaviors.exampleBehavior = {
     attach: function (context, settings) {
+      $('a.compra-boton', context).once('exampleBehavior').on('click',function(e){
+        e.preventDefault();
+        openModal('3d2a9765b033aeb80c601c9db59a2c6e')
+      });
       //alert("I'm alive!");
       // console.log('Js kokoriko ready nuevo push');
     }
