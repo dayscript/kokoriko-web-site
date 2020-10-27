@@ -25,7 +25,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": ["../angular/node_modules/jquery/dist/jquery.min.js"]
+            "scripts": [
+              "../angular/node_modules/jquery/dist/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "angular"
+  "defaultProject": "angular",
+  "cli": {
+    "analytics": "549595e4-6d8b-4a4e-b8a5-6b92288042f0"
+  }
 }

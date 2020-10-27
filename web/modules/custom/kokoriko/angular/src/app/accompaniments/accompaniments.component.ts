@@ -207,22 +207,33 @@ export class AccompanimentsComponent implements OnInit {
   }
 
   public onSubmit(){
-
-    this.http.post( this.api +"/redemptions",this.profileForm.value,this.headers)
-         .subscribe(
-             data => {
-                 this.redemption = data;
-                 this.errors = null;
-                 },
-             error => {
-                 this.errors = error.error;
-                 console.log("error", this.errors);
-             },
-             ()=>{
-                console.log('response:', this.redemption)
-                 this.run();
-             }
-         );
+    // this.http.post( this.api +"/redemptions",this.profileForm.value,this.headers)
+    //      .subscribe(
+    //          data => {
+    //              this.redemption = data;
+    //              this.errors = null;
+    //              },
+    //          error => {
+    //              this.errors = error.error;
+    //              console.log("error", this.errors);
+    //          },
+    //          ()=>{
+    //             console.log('response:', this.redemption)
+    //              this.run();
+    //          }
+    //      );
+/* Se comentó por error en el api de incentives */
+        this.http.get(this.api + "/saveRedemption/" + this.profileForm.value.entity_id + "/" + this.profileForm.value.value, this.headers)
+        .subscribe(function (data) {
+        this.redemption = data;
+        this.errors = null;
+        }, function (error) {
+            this.errors = error.error;
+            console.log("error", this.errors);
+        }, function () {
+            console.log('response:', this.redemption);
+            this.run();
+        });
     }
 
   public getDate(){
