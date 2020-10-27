@@ -216,10 +216,21 @@ var AccompanimentsComponent = /** @class */ (function () {
     };
     AccompanimentsComponent.prototype.onSubmit = function () {
         var _this = this;
-        this.http.post(this.api + "/redemptions", this.profileForm.value, this.headers)
-            .subscribe(function (data) {
-            _this.redemption = data;
-            _this.errors = null;
+        // this.http.post(this.api + "/redemptions", this.profileForm.value, this.headers)
+        //     .subscribe(function (data) {
+        //     _this.redemption = data;
+        //     _this.errors = null;
+        // }, function (error) {
+        //     _this.errors = error.error;
+        //     console.log("error", _this.errors);
+        // }, function () {
+        //     console.log('response:', _this.redemption);
+        //     _this.run();
+        // });
+        this.http.get(this.api + "/saveRedemption/" + this.profileForm.value.entity_id + "/" + this.profileForm.value.value, this.headers)
+        .subscribe(function (data) {
+        _this.redemption = data;
+        _this.errors = null;
         }, function (error) {
             _this.errors = error.error;
             console.log("error", _this.errors);
