@@ -215,28 +215,32 @@ var AccompanimentsComponent = /** @class */ (function () {
         this.update_entity = false;
     };
     AccompanimentsComponent.prototype.onSubmit = function () {
-        var _this = this;
-        // this.http.post(this.api + "/redemptions", this.profileForm.value, this.headers)
-        //     .subscribe(function (data) {
-        //     _this.redemption = data;
-        //     _this.errors = null;
-        // }, function (error) {
-        //     _this.errors = error.error;
-        //     console.log("error", _this.errors);
-        // }, function () {
-        //     console.log('response:', _this.redemption);
-        //     _this.run();
-        // });
+        // this.http.post( this.api +"/redemptions",this.profileForm.value,this.headers)
+        //      .subscribe(
+        //          data => {
+        //              this.redemption = data;
+        //              this.errors = null;
+        //              },
+        //          error => {
+        //              this.errors = error.error;
+        //              console.log("error", this.errors);
+        //          },
+        //          ()=>{
+        //             console.log('response:', this.redemption)
+        //              this.run();
+        //          }
+        //      );
+        /* Se comentó por error en el api de incentives */
         this.http.get(this.api + "/saveRedemption/" + this.profileForm.value.entity_id + "/" + this.profileForm.value.value, this.headers)
-        .subscribe(function (data) {
-        _this.redemption = data;
-        _this.errors = null;
+            .subscribe(function (data) {
+            this.redemption = data;
+            this.errors = null;
         }, function (error) {
-            _this.errors = error.error;
-            console.log("error", _this.errors);
+            this.errors = error.error;
+            console.log("error", this.errors);
         }, function () {
-            console.log('response:', _this.redemption);
-            _this.run();
+            console.log('response:', this.redemption);
+            this.run();
         });
     };
     AccompanimentsComponent.prototype.getDate = function () {
@@ -434,7 +438,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/ariel/projects/kokoriko/web/modules/custom/kokoriko/angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /var/www/html/kokoriko-web-site/web/modules/custom/kokoriko/angular/src/main.ts */"./src/main.ts");
 
 
 /***/ })
