@@ -183,13 +183,17 @@ var AccompanimentsComponent = /** @class */ (function () {
                 console.log("error", _this.errors);
             }, function () {
                 _this.errors = null;
+                console.log(1);
                 if (_this.incentives.redemptions.length != 0) {
                     _this.redemption_last = _this.incentives.redemptions[_this.incentives.redemptions.length - 1].created_at;
                 }
+                console.log(2);
                 if (_this.incentives.invoices.length != 0) {
                     _this.invoice_last = _this.incentives.invoices[_this.incentives.invoices.length - 1].created_at;
                 }
+                console.log(3);
                 _this.incentives.points = (_this.incentives.points <= 0) ? 0 : _this.incentives.points;
+                console.log(4);
                 _this.updateEntity();
                 _this.buidForm();
             });

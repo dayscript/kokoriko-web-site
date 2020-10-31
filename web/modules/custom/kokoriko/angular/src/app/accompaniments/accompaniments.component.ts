@@ -165,16 +165,19 @@ export class AccompanimentsComponent implements OnInit {
                   },
                   ()    => {
                     this.errors = null;
+                    console.log(1);
                     if(this.incentives.redemptions.length != 0 ){
                       this.redemption_last = this.incentives.redemptions[this.incentives.redemptions.length - 1].created_at;
 
                     }
+                    console.log(2);
                     if(this.incentives.invoices.length != 0 ){
                       this.invoice_last = this.incentives.invoices[this.incentives.invoices.length - 1].created_at;
                     }
+                    console.log(3);
 
                     this.incentives.points  = (this.incentives.points <= 0) ? 0:this.incentives.points;
-
+                    console.log(4);
                     this.updateEntity();
                     this.buidForm();
 
