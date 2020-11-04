@@ -227,16 +227,19 @@ export class AccompanimentsComponent implements OnInit {
     //      );
 /* Se comentó por error en el api de incentives */
         this.http.get(this.api + "/saveRedemption/" + this.profileForm.value.entity_id + "/" + this.profileForm.value.value, this.headers)
-        .subscribe(function (data) {
-        this.redemption = data;
-        this.errors = null;
-        }, function (error) {
-            this.errors = error.error;
-            console.log("error", this.errors);
-        }, function () {
-            console.log('response:', this.redemption);
-            this.run();
-        });
+          .subscribe( 
+            data => {
+              this.redemption = data;
+              this.errors = null;
+              }, 
+            error => {
+              this.errors = error.error;
+              console.log("error", this.errors);
+            },  
+            ()=> {
+              console.log('response:', this.redemption);
+              this.run();
+          });
     }
 
   public getDate(){
@@ -294,11 +297,13 @@ export class AccompanimentsComponent implements OnInit {
           invoice_code: '',
           restaurant_code: '',
           description: '',
+          status: '',
         }
         data.date            = item.created_at;
         data.value           = item.value;
         data.points          = item.points;
         data.description     = item.description;
+        data.status          = item.status;
         data.invoice_code    = null;
         data.restaurant_code = null;
         points.push(data);

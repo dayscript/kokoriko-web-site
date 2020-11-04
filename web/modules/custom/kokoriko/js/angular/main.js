@@ -219,6 +219,7 @@ var AccompanimentsComponent = /** @class */ (function () {
         this.update_entity = false;
     };
     AccompanimentsComponent.prototype.onSubmit = function () {
+        var _this = this;
         // this.http.post( this.api +"/redemptions",this.profileForm.value,this.headers)
         //      .subscribe(
         //          data => {
@@ -237,14 +238,14 @@ var AccompanimentsComponent = /** @class */ (function () {
         /* Se comentó por error en el api de incentives */
         this.http.get(this.api + "/saveRedemption/" + this.profileForm.value.entity_id + "/" + this.profileForm.value.value, this.headers)
             .subscribe(function (data) {
-            this.redemption = data;
-            this.errors = null;
+            _this.redemption = data;
+            _this.errors = null;
         }, function (error) {
-            this.errors = error.error;
-            console.log("error", this.errors);
+            _this.errors = error.error;
+            console.log("error", _this.errors);
         }, function () {
-            console.log('response:', this.redemption);
-            this.run();
+            console.log('response:', _this.redemption);
+            _this.run();
         });
     };
     AccompanimentsComponent.prototype.getDate = function () {
@@ -291,11 +292,13 @@ var AccompanimentsComponent = /** @class */ (function () {
                 invoice_code: '',
                 restaurant_code: '',
                 description: '',
+                status: '',
             };
             data.date = item.created_at;
             data.value = item.value;
             data.points = item.points;
             data.description = item.description;
+            data.status = item.status;
             data.invoice_code = null;
             data.restaurant_code = null;
             points.push(data);
