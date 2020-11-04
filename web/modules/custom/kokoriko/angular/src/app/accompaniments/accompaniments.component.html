@@ -121,6 +121,7 @@
                             <!-- <th>VR. FACTURA</th> -->
                             <th>KOKORIPESOS</th>
                             <th class="hide-for-small-only">DESCRIPCIÓN</th>
+                            <th class="hide-for-small-only">ESTADO</th>
                         </tr>
                         </thead>
                         <tbody *ngIf="incentives">
@@ -132,6 +133,7 @@
                             <!-- <td>{{invoice.value}}</td> -->
                             <td>{{invoice.points | number: '1.0-0'}}</td>
                             <td class="hide-for-small-only">{{invoice.description}}</td>
+                            <th class="hide-for-small-only">{{invoice.status}}</th>
                         </tr>
                         <div *ngIf="!incentives?.invoices">
                            No se han encontrado datos.
