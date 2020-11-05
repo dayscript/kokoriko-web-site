@@ -305,7 +305,7 @@ export class AccompanimentsComponent implements OnInit {
         data.points          = item.points;
         data.description     = item.description;
         data.status          = item.status;
-        data.class           = item.status == 'Vencido'? 'background-color: #ff000054;':'';
+        data.class           = item.status == 'Vencido'? '#ff000054;':'';
         data.invoice_code    = null;
         data.restaurant_code = null;
         points.push(data);
