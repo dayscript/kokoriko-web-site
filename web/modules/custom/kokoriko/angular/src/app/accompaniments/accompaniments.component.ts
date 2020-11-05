@@ -310,8 +310,8 @@ export class AccompanimentsComponent implements OnInit {
         data.restaurant_code = null;
         points.push(data);
       }
-    );
-
+    );  
+      console.log('los puntos',points);
     return points;
 
   }
