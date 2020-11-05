@@ -127,13 +127,13 @@
                         <tbody *ngIf="incentives">
                         <!-- <tbody> -->
                         <tr *ngFor="let invoice of getInformationPoints()">
-                            <td>{{invoice.date | date}}</td>
-                            <td>{{invoice.invoice_code}}</td>
-                            <td class="hide-for-small-only">{{invoice.restaurant_code}}</td>
-                            <!-- <td>{{invoice.value}}</td> -->
-                            <td>{{invoice.points | number: '1.0-0'}}</td>
-                            <td class="hide-for-small-only">{{invoice.description}}</td>
-                            <th class="hide-for-small-only">{{invoice.status}}</th>
+                            <td style="{{invoice.class}}">{{invoice.date | date}}</td>
+                            <td style="{{invoice.class}}">{{invoice.invoice_code}}</td>
+                            <td style="{{invoice.class}}" class="hide-for-small-only">{{invoice.restaurant_code}}</td>
+                            <!-- <td style="{{invoice.class}}">{{invoice.value}}</td> -->
+                            <td style="{{invoice.class}}">{{invoice.points | number: '1.0-0'}}</td>
+                            <td style="{{invoice.class}}" class="hide-for-small-only">{{invoice.description}}</td>
+                            <td style="{{invoice.class}}" class="hide-for-small-only">{{invoice.status}}</td >
                         </tr>
                         <div *ngIf="!incentives?.invoices">
                            No se han encontrado datos.
