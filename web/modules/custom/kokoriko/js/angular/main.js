@@ -273,8 +273,16 @@ var AccompanimentsComponent = /** @class */ (function () {
                 invoice_code: '',
                 restaurant_code: '',
                 description: '',
+                status: '',
             };
             item.entity_information.forEach(function (element, key) {
+                var days = new Date().getDay() - new Date(element.invoice_date_up).getDay();
+                if (days <= 365) {
+                    data.status = 'Vigente';
+                }
+                else {
+                    data.status = 'Vencido';
+                }
                 data.value += parseInt(element.value);
                 data.date = element.invoice_date_up;
                 data.restaurant_code = element.restaurant_code;

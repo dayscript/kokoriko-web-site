@@ -274,9 +274,16 @@ export class AccompanimentsComponent implements OnInit {
           invoice_code: '',
           restaurant_code: '',
           description: '',
+          status: '',
         }
 
         item.entity_information.forEach( (element,key) => {
+          let days = new Date().getDay() - new Date(element.invoice_date_up).getDay();
+            if(days <= 365){
+              data.status = 'Vigente'
+            }else{
+              data.status = 'Vencido'
+            }
             data.value += parseInt(element.value);
             data.date  = element.invoice_date_up;
             data.restaurant_code = element.restaurant_code;
