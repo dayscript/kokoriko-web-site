@@ -277,6 +277,7 @@ var AccompanimentsComponent = /** @class */ (function () {
             };
             item.entity_information.forEach(function (element, key) {
                 var days = new Date().getDay() - new Date(element.invoice_date_up).getDay();
+                console.log('los dias son', days);
                 if (days <= 365) {
                     data.status = 'Vigente';
                 }

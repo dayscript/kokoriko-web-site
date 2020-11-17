@@ -279,6 +279,7 @@ export class AccompanimentsComponent implements OnInit {
 
         item.entity_information.forEach( (element,key) => {
           let days = new Date().getDay() - new Date(element.invoice_date_up).getDay();
+            console.log('los dias son',days);
             if(days <= 365){
               data.status = 'Vigente'
             }else{
