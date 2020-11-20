@@ -127,7 +127,7 @@
                         <tbody *ngIf="incentives">
                         <!-- <tbody> -->
                         <tr *ngFor="let invoice of getInformationPoints()">
-                            <td style="background-color:+{{invoice.class}}">{{invoice.date | date}}</td>
+                            <td style="background-color:+{{invoice.class}}">{{invoice.date}}</td>
                             <td style="background-color:+{{invoice.class}}">{{invoice.invoice_code}}</td>
                             <td style="background-color:+{{invoice.class}}" class="hide-for-small-only">{{invoice.restaurant_code}}</td>
                             <!-- <td style="{{invoice.class}}">{{invoice.value}}</td> -->
