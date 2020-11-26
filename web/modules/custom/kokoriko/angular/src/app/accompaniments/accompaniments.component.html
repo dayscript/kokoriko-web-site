@@ -100,7 +100,12 @@
                                    </div>
                                </div>
                                <div *ngIf="redemption?.message">
-                                     <span class="success" [innerHTML]="redemption?.message"></span>
+                                    <div *ngIf="redemption?.status == 400">
+                                        <span style="background-color: red; color: white;" [innerHTML]="redemption?.message"></span>
+                                    </div>
+                                    <div *ngIf="redemption?.status == 200">
+                                        <span class="success" [innerHTML]="redemption?.message"></span>
+                                    </div>
                                </div>
                                <div *ngIf="errors">
                                      <span class="error" *ngFor="let error of errors.value"[innerHTML]="error"></span>
