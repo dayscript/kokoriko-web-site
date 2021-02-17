@@ -45,17 +45,15 @@
     },1000);
 
   });
+  $('#edit-submit-menu').css('visibility','hidden')
 
   var path = window.location.href;
-  if (path == 'https://www.kokoriko.com.co/menu#elige_y_comparte'){
+  if (path == 'https://www.kokoriko.com.co/menu#elige_y_comparte' || path == 'https://www.kokoriko.com.co/menu?elige-y-comparte'){
     $("#edit-field-categoria-de-producto-target-id-84").prop("checked", true);
-    // $('input[id*="edit-submit-spaces"]').once().click();
-    // $('input[id*="edit-submit-spaces"]').once().trigger('mousedown');
     setTimeout(function(){
       $('input[id*="edit-submit-menu"]').trigger('click');
     },1500); 
   }
-  $('#edit-submit-menu').css('visibility','hidden')
 
   // $('#block-domicilios-block .body a').click(function(e){
   //   e.preventDefault();		//evitar el eventos del enlace normal
