@@ -74,7 +74,8 @@
         // $('.validation-messages').empty();
         $('#error-select-msg').empty();
         $('#error-select-msg').show();
-        $('.form-item-field-birthdate-0-value-date').append('<span id="error-select-msg" style="color:red;">El usuario debe ser mayor de edad</span>').delay(3000).fadeOut();
+        $('.form-item-field-birthdate-0-value-date').append('<span id="error-select-msg" style="color:red;">El usuario debe ser mayor de edad</span>');
+        $('#error-select-msg').delay(3000).fadeOut();
         $(this).val('');
       }
   });
@@ -95,7 +96,9 @@
     if(long < min || long > max){
       $('#error-select-msg-documento-identification').empty();
       $('#error-select-msg-documento-identification').show();
-      $('.form-item-field-no-identificacion-0-value').append('<span id="error-select-msg-documento-identification" style="color:red;">El número del documento no es correcto</span>').delay(3000).fadeOut();
+      $('.form-item-field-no-identificacion-0-value').append('<span id="error-select-msg-documento-identification" style="color:red;">El número del documento no es correcto</span>');
+      $('#error-select-msg-documento-identification').delay(3000).fadeOut();
+      $(this).val('');
     }
   });
 
