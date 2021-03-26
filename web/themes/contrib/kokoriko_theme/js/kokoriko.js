@@ -64,15 +64,15 @@
       let age = Math.abs(ageDate.getUTCFullYear() - 1970);
       if(age > maximun_age) {
           // $('.validation-messages').empty();
-          $('.error-select-msg').empty();
-          $('.error-select-msg').show();
+          $('#error-select-msg').empty();
+          $('#error-select-msg').show();
           $('.form-item-field-birthdate-0-value-date').append('<span id="error-select-msg" style="color:red;">El usuario no puede tener mas de ' + maximun_age + ' años</span>').delay(3000).fadeOut();
           $(this).val('');
       }
       if(age < minimum_age) {
         // $('.validation-messages').empty();
-        $('.error-select-msg').empty();
-        $('.error-select-msg').show();
+        $('#error-select-msg').empty();
+        $('#error-select-msg').show();
         $('.form-item-field-birthdate-0-value-date').append('<span id="error-select-msg" style="color:red;">El usuario debe ser mayor de edad</span>').delay(3000).fadeOut();
         $(this).val('');
       }
@@ -92,9 +92,9 @@
     const max = 10;
     let long = $(this).val().length;
     if(long < min || long > max){
-      $('.error-select-msg-documento-identification').empty();
-      $('.error-select-msg-documento-identification').show();
-      $('.form-item-field-no-identificacion-0-value').append('<span id="error-select-msg-documento-identification" style="color:red;">El usuario debe ser mayor de edad</span>').delay(3000).fadeOut();
+      $('#error-select-msg-documento-identification').empty();
+      $('#error-select-msg-documento-identification').show();
+      $('.form-item-field-no-identificacion-0-value').append('<span id="error-select-msg-documento-identification" style="color:red;">El número del documento no es correcto</span>').delay(3000).fadeOut();
     }
   });
 
