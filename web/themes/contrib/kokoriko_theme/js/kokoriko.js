@@ -96,7 +96,7 @@
       $('.error-select-msg-documento-identification').show();
       $('.form-item-field-no-identificacion-0-value').append('<span id="error-select-msg-documento-identification" style="color:red;">El usuario debe ser mayor de edad</span>').delay(3000).fadeOut();
     }
-  }
+  });
 
 
   // $('#block-domicilios-block .body a').click(function(e){
