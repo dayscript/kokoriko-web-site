@@ -66,7 +66,8 @@
           // $('.validation-messages').empty();
           $('#error-select-msg').empty();
           $('#error-select-msg').show();
-          $('.form-item-field-birthdate-0-value-date').append('<span id="error-select-msg" style="color:red;">El usuario no puede tener mas de ' + maximun_age + ' años</span>').delay(3000).fadeOut();
+          $('.form-item-field-birthdate-0-value-date').append('<span id="error-select-msg" style="color:red;">El usuario no puede tener mas de ' + maximun_age + ' años</span>');
+          $('#error-select-msg').delay(3000).fadeOut();
           $(this).val('');
       }
       if(age < minimum_age) {
