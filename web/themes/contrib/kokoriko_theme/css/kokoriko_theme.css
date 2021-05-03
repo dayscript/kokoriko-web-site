@@ -7430,6 +7430,9 @@ section#block-kokoriko-theme-local-tasks .button-group {
 .botones {
   float: right; }
 
+#user-login-form + ul .create-account-link {
+  display: none; }
+
 a.create-account-link {
   text-transform: uppercase;
   float: left; }

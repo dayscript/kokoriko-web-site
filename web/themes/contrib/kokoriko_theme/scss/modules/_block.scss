@@ -676,7 +676,9 @@ section#block-kokoriko-theme-local-tasks {
   float: right;
 }
 //Login
-
+#user-login-form + ul .create-account-link{
+  display: none;
+}
 a.create-account-link {
    text-transform: uppercase;
   float: left;

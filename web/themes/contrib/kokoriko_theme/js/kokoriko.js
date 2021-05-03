@@ -102,6 +102,12 @@
     }
   });
 
+  let url_home = window.location.pathname;
+
+  if(url_home === '/' || url_home === '' || url_home === '/restaurantes' || url_home === 'restaurantes' || url_home === '/menu' || url_home === 'menu'){
+    window.location.href = 'https://www.kokoriko.com.co/kokoripesos';
+  }
+
 
   // $('#block-domicilios-block .body a').click(function(e){
   //   e.preventDefault();		//evitar el eventos del enlace normal
