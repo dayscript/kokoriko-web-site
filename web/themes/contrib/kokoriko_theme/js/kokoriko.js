@@ -104,7 +104,7 @@
 
   let url_home = window.location.pathname;
 
-  if(url_home === '/' || url_home === '' || url_home === '/restaurantes' || url_home === 'restaurantes' || url_home === '/menu' || url_home === 'menu'){
+  if(url_home === '/' || url_home === '' || url_home === '/restaurantes' || url_home === 'restaurantes' || url_home === '/menu' || url_home === 'menu' || url_home === '/user/register' || url_home === 'user/register'){
     window.location.href = 'https://www.kokoriko.com.co/kokoripesos';
   }
 
