@@ -102,11 +102,15 @@
     }
   });
 
-  let url_home = window.location.pathname;
-
-  if(url_home === '/' || url_home === '' || url_home === '/restaurantes' || url_home === 'restaurantes' || url_home === '/menu' || url_home === 'menu' || url_home === '/user/register' || url_home === 'user/register'){
+  // let url_home = window.location.pathname;
+  // if(url_home === '/' || url_home === '' || url_home === '/restaurantes' || url_home === 'restaurantes' || url_home === '/menu' || url_home === 'menu' || url_home === '/user/register' || url_home === 'user/register'){
+  //   window.location.href = 'https://kokoripesos.kokoriko.com.co/kokoripesos';
+  // }
+  let url2 = window.location.href
+  if(url2 === 'https://kokoripesos.kokoriko.com.co/' || url2 === 'https://kokoripesos.kokoriko.com.co'){
     window.location.href = 'https://kokoripesos.kokoriko.com.co/kokoripesos';
   }
+
 
 
   // $('#block-domicilios-block .body a').click(function(e){
